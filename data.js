@@ -13,5 +13,9 @@ module.exports = [{
     id: 3,
     name: "Push Button",
     solution: require('./03-push-button'),
+  }, {
+    id: 4,
+    name: "Ups n Downs",
+    solution: require('./04-ups-n-downs'),
   }],
-}]
+}];
