@@ -33,5 +33,9 @@ module.exports = [{
     id: 8,
     name: "Forking Crazy",
     solution: require('./08-forking-crazy'),
+  }, {
+    id: 9,
+    name: "Tesseract",
+    solution: require('./09-tesseract'),
   }],
 }];
