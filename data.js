@@ -17,5 +17,9 @@ module.exports = [{
     id: 4,
     name: "Ups n Downs",
     solution: require('./04-ups-n-downs'),
+  }, {
+    id: 5,
+    name: "Acid Rain",
+    solution: require('./05-acid-rain'),
   }],
 }];
