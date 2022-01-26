@@ -28,6 +28,10 @@ module.exports = [{
   }, {
     id: 7,
     name: "Leafy Trail",
-    solution: require('./06-missing-slice'),
+    solution: require('./07-leafy-trail'),
+  }, {
+    id: 8,
+    name: "Forking Crazy",
+    solution: require('./08-forking-crazy'),
   }],
 }];
