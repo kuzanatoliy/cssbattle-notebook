@@ -25,5 +25,9 @@ module.exports = [{
     id: 6,
     name: "Missing Slice",
     solution: require('./06-missing-slice'),
+  }, {
+    id: 7,
+    name: "Leafy Trail",
+    solution: require('./06-missing-slice'),
   }],
 }];
