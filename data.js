@@ -21,5 +21,9 @@ module.exports = [{
     id: 5,
     name: "Acid Rain",
     solution: require('./05-acid-rain'),
+  }, {
+    id: 6,
+    name: "Missing Slice",
+    solution: require('./06-missing-slice'),
   }],
 }];
