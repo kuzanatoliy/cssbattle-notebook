@@ -37,5 +37,17 @@ module.exports = [{
     id: 9,
     name: "Tesseract",
     solution: require('./09-tesseract'),
+  }, {
+    id: 10,
+    name: "Cloaked Spirits",
+    solution: require('./10-cloaked-sprits'),
+  }, {
+    id: 11,
+    name: "Eye of sauron",
+    solution: require('./11-eye-of-sauron'),
+  }, {
+    id: 12,
+    name: "Wiggly Moustache",
+    solution: require('./12-wiggly-moustache'),
   }],
 }];
