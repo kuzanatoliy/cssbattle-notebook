@@ -22,7 +22,7 @@ module.exports = ({ name, id, solution }) => `
     <iframe width="400px" height="300px" srcdoc="${solution}"></iframe>
     <div>
       <pre>
-{solution}
+${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       </pre>
     </div>
     <div><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></div>
