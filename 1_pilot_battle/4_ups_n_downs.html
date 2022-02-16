@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS battle: solutions (#4 - Ups n Downs)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Solution of CSS battle #{id} - Ups n Downs">
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, Ups n Downs">
+    <meta name="author" content="Anatoli Kuzmiankou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      iframe {
+        border: none;
+        float: left;
+        margin-right: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>#1 - Simply Square</h1>
+    <hr>
+    <iframe width="400px" height="300px" srcdoc="
+<p/><p a/><p/><p a b/><p/><p a b/>
+<style>
+  * {
+    margin: 0;
+  }
+  body { 
+    background: #62306D;
+    padding: 50px;
+  }
+  p {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  [a] {
+    background: #F7EC7D;
+    border-radius: 50% 50% 0 0;
+  }
+  [b] {
+    transform: rotate(180deg);
+  }
+</style>
+"></iframe>
+    <div>
+      <pre>
+
+&#60;p/&#62;&#60;p a/&#62;&#60;p/&#62;&#60;p a b/&#62;&#60;p/&#62;&#60;p a b/&#62;
+&#60;style&#62;
+  * {
+    margin: 0;
+  }
+  body { 
+    background: #62306D;
+    padding: 50px;
+  }
+  p {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+  [a] {
+    background: #F7EC7D;
+    border-radius: 50% 50% 0 0;
+  }
+  [b] {
+    transform: rotate(180deg);
+  }
+&#60;/style&#62;
+
+      </pre>
+    </div>
+    <div><a href="https://cssbattle.dev/play/4">Move to play &#8594;</a></div>
+  </body>
+</html>

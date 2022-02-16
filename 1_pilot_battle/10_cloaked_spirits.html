@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS battle: solutions (#10 - Cloaked Spirits)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Solution of CSS battle #{id} - Cloaked Spirits">
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, Cloaked Spirits">
+    <meta name="author" content="Anatoli Kuzmiankou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      iframe {
+        border: none;
+        float: left;
+        margin-right: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>#1 - Simply Square</h1>
+    <hr>
+    <iframe width="400px" height="300px" srcdoc="
+<p a><i></i></p><p b><i></i></p><p a><i></i></p>
+<style>	
+  body {
+  	margin: 0 50px;
+    background: #62306D;
+  }
+  p {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+  }
+  i {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #E38F66;
+    border: solid 20px #AA445F;
+    border-radius: 50%;
+    margin-top: -50px;
+  }
+  [a]{
+    margin-top: 200px;
+  }
+  [b]{
+    height: 200px;
+  }
+  [b] > i {
+    background: #AA445F;
+    border: solid 20px #E38F66;
+  }
+</style>
+"></iframe>
+    <div>
+      <pre>
+
+&#60;p a&#62;&#60;i&#62;&#60;/i&#62;&#60;/p&#62;&#60;p b&#62;&#60;i&#62;&#60;/i&#62;&#60;/p&#62;&#60;p a&#62;&#60;i&#62;&#60;/i&#62;&#60;/p&#62;
+&#60;style&#62;	
+  body {
+  	margin: 0 50px;
+    background: #62306D;
+  }
+  p {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #F7EC7D;
+  }
+  i {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #E38F66;
+    border: solid 20px #AA445F;
+    border-radius: 50%;
+    margin-top: -50px;
+  }
+  [a]{
+    margin-top: 200px;
+  }
+  [b]{
+    height: 200px;
+  }
+  [b] &#62; i {
+    background: #AA445F;
+    border: solid 20px #E38F66;
+  }
+&#60;/style&#62;
+
+      </pre>
+    </div>
+    <div><a href="https://cssbattle.dev/play/10">Move to play &#8594;</a></div>
+  </body>
+</html>
