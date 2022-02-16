@@ -1,7 +1,7 @@
 module.exports = `
-<div id="l"></div>
-<div id="c"></div>
-<div id="r"></div>
+<div id='l'></div>
+<div id='c'></div>
+<div id='r'></div>
 <style>
   *{
     background: #F5D6B4;
@@ -28,7 +28,7 @@ module.exports = `
     border-bottom: 0;
   }
   #l:before, #r:after{
-    content: "";
+    content: '';
     width: 20px;
     height: 10px;
     position: absolute;
@@ -43,4 +43,4 @@ module.exports = `
     left: 60px;
   }
 </style>
-`
+`;

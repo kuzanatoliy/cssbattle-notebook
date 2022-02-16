@@ -1,18 +1,18 @@
 module.exports = `
-<div class="bg">
-    <div class="upward-circle"></div>
-    <div class="upward-circle left-margin"></div>
-    <div class="upward-circle left-margin"></div>
-    <div class="upward-circle left-margin"></div>
+<div class='bg'>
+    <div class='upward-circle'></div>
+    <div class='upward-circle left-margin'></div>
+    <div class='upward-circle left-margin'></div>
+    <div class='upward-circle left-margin'></div>
 </div>
-<div id="striped"></div>
-<div class="bg darker">
-    <div class="downward-circle left-margin"></div>
-    <div class="downward-circle left-margin"></div>
-    <div class="downward-circle left-margin"></div>
+<div id='striped'></div>
+<div class='bg darker'>
+    <div class='downward-circle left-margin'></div>
+    <div class='downward-circle left-margin'></div>
+    <div class='downward-circle left-margin'></div>
 </div>
-<div id="bottom"></div>
-<div id="stick"></div>
+<div id='bottom'></div>
+<div id='stick'></div>
 
 <style>
   body {
@@ -70,4 +70,4 @@ module.exports = `
     margin-left: 60px;
   }
 </style>
-`
+`;
