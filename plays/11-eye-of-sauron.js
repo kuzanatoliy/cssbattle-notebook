@@ -1,5 +1,5 @@
 module.exports = `
-<div id="l"></div><div id="c"></div><div id="r"></div>
+<div id='l'></div><div id='c'></div><div id='r'></div>
 <style>
   body {
     background: #191210;
@@ -36,4 +36,4 @@ module.exports = `
     left: 250px;
   }
 </style>
-`
+`;

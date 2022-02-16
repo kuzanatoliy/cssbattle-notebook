@@ -17,9 +17,9 @@ module.exports = ({ name, id, solution }) => `
     </style>
   </head>
   <body>
-    <h1>#1 - Simply Square</h1>
+    <h1>#${id} - ${name}</h1>
     <hr>
-    <iframe width="400px" height="300px" srcdoc="${solution}"></iframe>
+    <iframe style="html { width: 400px; height: 300px; }" srcdoc="${solution}"></iframe>
     <div>
       <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
@@ -28,4 +28,4 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
     <div><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></div>
   </body>
 </html>
-`
+`;
