@@ -1,10 +1,5 @@
-name: deploy
-on:
-  pull_request:
-    branches:
-      - master
 jobs:
-  deploy:
+  pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -12,7 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: git branch -D gh-pages
+      - name: deploy
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          git add -f dist
+          git commit -am "deploy preview to ng-pages"
+          git push origin `git subtree split --prefix dist deploy`:refs/heads/gh-pages --force
+          git reset --hard HEAD~1
