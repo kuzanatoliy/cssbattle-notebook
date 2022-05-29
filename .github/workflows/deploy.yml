@@ -1,8 +1,9 @@
 name: deploy
-on:
-  push:
-    branches:
-      - master
+on: ["push"]
+#on:
+#  push:
+#    branches:
+#      - master
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -17,11 +18,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: build
         run: node script.js
+      - name: seo
+        run: |
+          cp robots.txt dist/robots.txt
+          cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
       - name: deploy
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
           git add -f dist
           git commit -am "deploy preview to ng-pages"
-          git push origin `git subtree split --prefix dist deploy`:refs/heads/gh-pages --force
+          git push origin `git subtree split --prefix dist`:refs/heads/gh-pages --force
           git reset --hard HEAD~1
