@@ -22,6 +22,7 @@ jobs:
         run: |
           cp robots.txt dist/robots.txt
           cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
+          cp sitemap.xml dist/sitemap.xml
       - name: deploy
         run: |
           git config --global user.email "njkznu@gmail.com"
