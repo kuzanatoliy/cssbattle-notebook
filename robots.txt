@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /plays
-Disallow: /create-play.js
-Disallow: /script.js
+Allow: *
 Host: https://kuzanatoliy.github.io/cssbattle-notebook
 Sitemap: https://kuzanatoliy.github.io/cssbattle-notebook/sitemap.xml
