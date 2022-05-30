@@ -1,22 +1,28 @@
 const createPlay = require("./create-play");
 const data = require("./plays/data");
-const { writeFile, mkdir } = require("fs/promises");
+const { writeFile, mkdir, rm } = require("fs/promises");
 
-const files = data[0].plays;
+const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
 
 const runDeploy = async () => {
+  await rm("dist", { recursive: true });
   await mkdir("dist");
-  await mkdir("dist/1_pilot_battle");
 
   await Promise.all(
-    files.map((item) =>
-      writeFile(
-        `dist/1_pilot_battle/${item.id}_${item.name
-          .toLocaleLowerCase()
-          .replaceAll(" ", "_")}.html`,
-        createPlay(item)
-      )
-    )
+    data.map(async ({ id, name, plays }) => {
+      const folderName = `dist/${id}_${prepareName(name)}`;
+
+      await mkdir(folderName);
+
+      await Promise.all(
+        plays.map((item) =>
+          writeFile(
+            `${folderName}/${item.id}_${prepareName(item.name)}.html`,
+            createPlay(item)
+          )
+        )
+      );
+    })
   );
 };
 
