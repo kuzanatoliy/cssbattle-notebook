@@ -79,6 +79,11 @@ module.exports = [
         name: "Web Maker Logo",
         solution: require("./14-web_maker_logo"),
       },
+      {
+        id: 15,
+        name: "Overlap",
+        solution: require("./15-overlap"),
+      },
     ],
   },
 ];
