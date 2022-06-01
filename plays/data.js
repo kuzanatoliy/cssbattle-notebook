@@ -65,4 +65,40 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 2,
+    name: "Visibility",
+    plays: [
+      {
+        id: 13,
+        name: "Totally Triangle",
+        solution: require("./13-totally_triangle"),
+      },
+      {
+        id: 14,
+        name: "Web Maker Logo",
+        solution: require("./14-web_maker_logo"),
+      },
+      {
+        id: 15,
+        name: "Overlap",
+        solution: require("./15-overlap"),
+      },
+      {
+        id: 16,
+        name: "Eye of the Tiger",
+        solution: require("./16-eye_of_the_tiger"),
+      },
+      {
+        id: 17,
+        name: "Fidget Spinner",
+        solution: require("./17-fidget_spinner"),
+      },
+      {
+        id: 18,
+        name: "Matrix",
+        solution: require("./18-matrix"),
+      },
+    ],
+  },
 ];
