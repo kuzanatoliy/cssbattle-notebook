@@ -89,6 +89,11 @@ module.exports = [
         name: "Eye of the Tiger",
         solution: require("./16-eye_of_the_tiger"),
       },
+      {
+        id: 17,
+        name: "Fidget Spinner",
+        solution: require("./17-fidget_spinner"),
+      },
     ],
   },
 ];
