@@ -5,7 +5,7 @@ const { writeFile, mkdir, rm } = require("fs/promises");
 const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
 
 const runDeploy = async () => {
-  await rm("dist", { recursive: true });
+  await rm("dist", { recursive: true, force: true });
   await mkdir("dist");
 
   await Promise.all(
