@@ -74,6 +74,11 @@ module.exports = [
         name: "Totally Triangle",
         solution: require("./13-totally_triangle"),
       },
+      {
+        id: 14,
+        name: "Web Maker Logo",
+        solution: require("./14-web_maker_logo"),
+      },
     ],
   },
 ];
