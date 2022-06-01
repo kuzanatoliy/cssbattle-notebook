@@ -65,4 +65,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 2,
+    name: "Visibility",
+    plays: [
+      {
+        id: 13,
+        name: "Totally Triangle",
+        solution: require("./13-totally_triangle"),
+      },
+    ],
+  },
 ];
