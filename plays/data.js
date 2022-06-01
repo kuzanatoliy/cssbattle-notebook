@@ -94,6 +94,11 @@ module.exports = [
         name: "Fidget Spinner",
         solution: require("./17-fidget_spinner"),
       },
+      {
+        id: 18,
+        name: "Matrix",
+        solution: require("./18-matrix"),
+      },
     ],
   },
 ];
