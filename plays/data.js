@@ -84,6 +84,11 @@ module.exports = [
         name: "Overlap",
         solution: require("./15-overlap"),
       },
+      {
+        id: 16,
+        name: "Eye of the Tiger",
+        solution: require("./16-eye_of_the_tiger"),
+      },
     ],
   },
 ];
