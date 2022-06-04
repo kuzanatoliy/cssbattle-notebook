@@ -1,6 +1,8 @@
-const createPlay = require("./create-play");
-const data = require("./plays/data");
 const { writeFile, mkdir, rm } = require("fs/promises");
+
+const createPlay = require("./create-play");
+const createPlaysList = require("./create-plays-list");
+const data = require("./plays/data");
 
 const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
 
@@ -10,17 +12,29 @@ const runDeploy = async () => {
 
   await Promise.all(
     data.map(async ({ id, name, plays }) => {
-      const folderName = `dist/${id}_${prepareName(name)}`;
+      const folderName = `${id}_${prepareName(name)}`;
 
-      await mkdir(folderName);
+      await mkdir(`dist/${folderName}`);
 
-      await Promise.all(
-        plays.map((item) =>
-          writeFile(
-            `${folderName}/${item.id}_${prepareName(item.name)}.html`,
-            createPlay(item)
-          )
-        )
+      const playsList = await Promise.all(
+        plays.map(async (item) => {
+          const path = `${folderName}/${item.id}_${prepareName(
+            item.name
+          )}.html`;
+
+          await writeFile(`dist/${path}`, createPlay(item));
+
+          return {
+            path: `/cssbattle-notebook/${path}`,
+            name: item.name,
+            id: item.id,
+          };
+        })
+      );
+
+      writeFile(
+        `dist/${folderName}/index.html`,
+        createPlaysList({ id, name, playsList })
       );
     })
   );
