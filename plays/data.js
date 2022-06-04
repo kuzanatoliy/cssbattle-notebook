@@ -110,6 +110,11 @@ module.exports = [
         name: "Cube",
         solution: require("./019-cube"),
       },
+      {
+        id: 20,
+        name: "Ticket",
+        solution: require("./020-ticket"),
+      },
     ],
   },
 ];
