@@ -19,7 +19,7 @@ module.exports = ({ name, id, solution }) => `
   <body>
     <h1>#${id} - ${name}</h1>
     <hr>
-    <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px'><body>${solution}</body></html>"></iframe>
+    <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>${solution}</body></html>"></iframe>
     <div>
       <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}

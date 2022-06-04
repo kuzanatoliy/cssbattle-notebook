@@ -101,4 +101,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 3,
+    name: "Cube",
+    plays: [
+      {
+        id: 19,
+        name: "Cube",
+        solution: require("./019-cube"),
+      },
+    ],
+  },
 ];
