@@ -136,6 +136,11 @@ module.exports = [
         name: "Boxception",
         solution: require("./023-boxception"),
       },
+      {
+        id: 24,
+        name: "Switches",
+        solution: require("./024-switches"),
+      },
     ],
   },
 ];
