@@ -151,6 +151,11 @@ module.exports = [
         name: "Smiley",
         solution: require("./026-smiley"),
       },
+      {
+        id: 27,
+        name: "Lock up",
+        solution: require("./027-lock_up"),
+      },
     ],
   },
 ];
