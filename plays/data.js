@@ -117,4 +117,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "Display",
+    plays: [
+      {
+        id: 21,
+        name: "SitePoint Logo",
+        solution: require("./021-sitepoint_logo"),
+      },
+    ],
+  },
 ];
