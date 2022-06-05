@@ -126,6 +126,11 @@ module.exports = [
         name: "SitePoint Logo",
         solution: require("./021-sitepoint_logo"),
       },
+      {
+        id: 22,
+        name: "Cloud",
+        solution: require("./022-cloud"),
+      },
     ],
   },
 ];
