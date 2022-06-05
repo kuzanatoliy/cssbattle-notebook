@@ -131,6 +131,11 @@ module.exports = [
         name: "Cloud",
         solution: require("./022-cloud"),
       },
+      {
+        id: 23,
+        name: "Boxception",
+        solution: require("./023-boxception"),
+      },
     ],
   },
 ];
