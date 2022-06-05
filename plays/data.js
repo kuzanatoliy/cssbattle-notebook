@@ -156,6 +156,11 @@ module.exports = [
         name: "Lock up",
         solution: require("./027-lock_up"),
       },
+      {
+        id: 28,
+        name: "Cups & Balls",
+        solution: require("./028-cups_&_balls"),
+      },
     ],
   },
 ];
