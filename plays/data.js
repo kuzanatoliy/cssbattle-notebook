@@ -117,4 +117,50 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 4,
+    name: "Display",
+    plays: [
+      {
+        id: 21,
+        name: "SitePoint Logo",
+        solution: require("./021-sitepoint_logo"),
+      },
+      {
+        id: 22,
+        name: "Cloud",
+        solution: require("./022-cloud"),
+      },
+      {
+        id: 23,
+        name: "Boxception",
+        solution: require("./023-boxception"),
+      },
+      {
+        id: 24,
+        name: "Switches",
+        solution: require("./024-switches"),
+      },
+      {
+        id: 25,
+        name: "Blossom",
+        solution: require("./025-blossom"),
+      },
+      {
+        id: 26,
+        name: "Smiley",
+        solution: require("./026-smiley"),
+      },
+      {
+        id: 27,
+        name: "Lock up",
+        solution: require("./027-lock_up"),
+      },
+      {
+        id: 28,
+        name: "Cups & Balls",
+        solution: require("./028-cups_&_balls"),
+      },
+    ],
+  },
 ];
