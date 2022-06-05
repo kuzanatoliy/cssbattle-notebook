@@ -146,6 +146,11 @@ module.exports = [
         name: "Blossom",
         solution: require("./025-blossom"),
       },
+      {
+        id: 26,
+        name: "Smiley",
+        solution: require("./026-smiley"),
+      },
     ],
   },
 ];
