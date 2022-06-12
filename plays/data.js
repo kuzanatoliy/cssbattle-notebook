@@ -172,6 +172,11 @@ module.exports = [
         name: "Suffocate",
         solution: require("./029-suffocate"),
       },
+      {
+        id: 30,
+        name: "Horizon",
+        solution: require("./030-horizon"),
+      },
     ],
   },
 ];
