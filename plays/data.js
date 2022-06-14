@@ -179,4 +179,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 6,
+    name: "Conic",
+    plays: [
+      {
+        id: 31,
+        name: "Equals",
+        solution: require("./031-equals"),
+      },
+    ],
+  },
 ];
