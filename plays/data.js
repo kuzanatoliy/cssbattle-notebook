@@ -188,6 +188,11 @@ module.exports = [
         name: "Equals",
         solution: require("./031-equals"),
       },
+      {
+        id: 32,
+        name: "Band-aid",
+        solution: require("./032-band-aid"),
+      },
     ],
   },
 ];
