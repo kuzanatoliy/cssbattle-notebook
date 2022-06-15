@@ -195,4 +195,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 7,
+    name: "Backface",
+    plays: [
+      {
+        id: 33,
+        name: "Birdie",
+        solution: require("./033-birdie"),
+      },
+    ],
+  },
 ];
