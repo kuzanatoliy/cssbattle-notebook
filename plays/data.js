@@ -229,6 +229,11 @@ module.exports = [
         name: "Not Simply Square",
         solution: require("./038-not_simply_square"),
       },
+      {
+        id: 39,
+        name: "Sunset",
+        solution: require("./039-sunset"),
+      },
     ],
   },
 ];
