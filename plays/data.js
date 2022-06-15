@@ -219,6 +219,11 @@ module.exports = [
         name: "Interleaved",
         solution: require("./036-interleaved"),
       },
+      {
+        id: 37,
+        name: "Tunnel",
+        solution: require("./037-tunnel"),
+      },
     ],
   },
 ];
