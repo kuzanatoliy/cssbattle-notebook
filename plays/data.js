@@ -224,6 +224,11 @@ module.exports = [
         name: "Tunnel",
         solution: require("./037-tunnel"),
       },
+      {
+        id: 38,
+        name: "Not Simply Square",
+        solution: require("./038-not_simply_square"),
+      },
     ],
   },
 ];
