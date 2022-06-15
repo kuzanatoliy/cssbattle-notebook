@@ -214,6 +214,11 @@ module.exports = [
         name: "Ice Cream",
         solution: require("./035-ice_cream"),
       },
+      {
+        id: 36,
+        name: "Interleaved",
+        solution: require("./036-interleaved"),
+      },
     ],
   },
 ];
