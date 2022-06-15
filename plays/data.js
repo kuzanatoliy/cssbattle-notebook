@@ -239,6 +239,11 @@ module.exports = [
         name: "Letter B",
         solution: require("./040-letter_b"),
       },
+      {
+        id: 41,
+        name: "Fox Head",
+        solution: require("./041-fox_head"),
+      },
     ],
   },
 ];
