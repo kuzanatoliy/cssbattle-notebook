@@ -195,4 +195,55 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 7,
+    name: "Backface",
+    plays: [
+      {
+        id: 33,
+        name: "Birdie",
+        solution: require("./033-birdie"),
+      },
+      {
+        id: 34,
+        name: "Chrismas Tree",
+        solution: require("./034-chrismas_tree"),
+      },
+      {
+        id: 35,
+        name: "Ice Cream",
+        solution: require("./035-ice_cream"),
+      },
+      {
+        id: 36,
+        name: "Interleaved",
+        solution: require("./036-interleaved"),
+      },
+      {
+        id: 37,
+        name: "Tunnel",
+        solution: require("./037-tunnel"),
+      },
+      {
+        id: 38,
+        name: "Not Simply Square",
+        solution: require("./038-not_simply_square"),
+      },
+      {
+        id: 39,
+        name: "Sunset",
+        solution: require("./039-sunset"),
+      },
+      {
+        id: 40,
+        name: "Letter B",
+        solution: require("./040-letter_b"),
+      },
+      {
+        id: 41,
+        name: "Fox Head",
+        solution: require("./041-fox_head"),
+      },
+    ],
+  },
 ];
