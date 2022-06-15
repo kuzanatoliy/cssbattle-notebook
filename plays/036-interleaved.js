@@ -2,6 +2,7 @@ module.exports = `
 <p a><p><p a><p><p a>
 <style>
   body {
+    height: 100%;
     margin: 0 25px;
     background: #1A4341;
     display: flex;

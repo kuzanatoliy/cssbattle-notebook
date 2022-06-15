@@ -2,6 +2,7 @@ module.exports = `
 <div><p>
 <style>
   body {
+    height: 200px;
     margin: 50px 100px;
     background: #6592CF;
   }

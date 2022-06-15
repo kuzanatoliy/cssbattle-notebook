@@ -2,6 +2,7 @@ module.exports = `
 <p a><p a><p b><p b>
 <style>
   * {
+    height: 140px;
     margin: 0;
     background: #293462;
   }
