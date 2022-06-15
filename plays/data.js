@@ -234,6 +234,11 @@ module.exports = [
         name: "Sunset",
         solution: require("./039-sunset"),
       },
+      {
+        id: 40,
+        name: "Letter B",
+        solution: require("./040-letter_b"),
+      },
     ],
   },
 ];
