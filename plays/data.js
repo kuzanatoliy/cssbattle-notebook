@@ -204,6 +204,11 @@ module.exports = [
         name: "Birdie",
         solution: require("./033-birdie"),
       },
+      {
+        id: 34,
+        name: "Chrismas Tree",
+        solution: require("./034-chrismas_tree"),
+      },
     ],
   },
 ];
