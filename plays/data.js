@@ -267,4 +267,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 9,
+    name: "Margin",
+    plays: [
+      {
+        id: 45,
+        name: "Magical Tree",
+        solution: require("./045-magical_tree"),
+      },
+    ],
+  },
 ];
