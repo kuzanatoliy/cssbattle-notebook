@@ -5,6 +5,7 @@ module.exports = `
     background: #1A4341;
   }
   body {
+    height: 180px;
     margin: 60px;
   }
   [a] {
