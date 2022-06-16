@@ -255,6 +255,11 @@ module.exports = [
         name: "Baby",
         solution: require("./042-baby"),
       },
+      {
+        id: 43,
+        name: "Wrench",
+        solution: require("./043-wrench"),
+      },
     ],
   },
 ];
