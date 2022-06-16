@@ -276,6 +276,11 @@ module.exports = [
         name: "Magical Tree",
         solution: require("./045-magical_tree"),
       },
+      {
+        id: 46,
+        name: "Mountains",
+        solution: require("./046-mountains"),
+      },
     ],
   },
 ];
