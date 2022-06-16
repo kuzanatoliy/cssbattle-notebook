@@ -246,4 +246,25 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 8,
+    name: "Transition",
+    plays: [
+      {
+        id: 42,
+        name: "Baby",
+        solution: require("./042-baby"),
+      },
+      {
+        id: 43,
+        name: "Wrench",
+        solution: require("./043-wrench"),
+      },
+      {
+        id: 44,
+        name: "Stripes",
+        solution: require("./044-stripes"),
+      },
+    ],
+  },
 ];
