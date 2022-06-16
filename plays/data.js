@@ -246,4 +246,15 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 8,
+    name: "Transition",
+    plays: [
+      {
+        id: 42,
+        name: "Baby",
+        solution: require("./042-baby"),
+      },
+    ],
+  },
 ];
