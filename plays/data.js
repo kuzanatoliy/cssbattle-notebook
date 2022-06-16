@@ -260,6 +260,11 @@ module.exports = [
         name: "Wrench",
         solution: require("./043-wrench"),
       },
+      {
+        id: 44,
+        name: "Stripes",
+        solution: require("./044-stripes"),
+      },
     ],
   },
 ];
