@@ -8,6 +8,7 @@ module.exports = `
     background: #293462;
   }
   body {
+    height: 100%;
     background: #FFF1C1;
     clip-path: circle(100px at 200px 150px);
   }
