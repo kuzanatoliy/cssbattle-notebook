@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS battle: solutions (#36 - Interleaved)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Solution of CSS battle #36 - Interleaved">
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, Interleaved">
+    <meta name="author" content="Anatoli Kuzmiankou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      iframe {
+        border: none;
+        float: left;
+        margin-right: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>#36 - Interleaved</h1>
+    <hr>
+    <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>
+<p a><p><p a><p><p a>
+<style>
+  body {
+    height: 100%;
+    margin: 0 25px;
+    background: #1A4341;
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    margin: 0;
+    width: 50px;
+    height: 200px;
+    background: #998235;
+    border-radius: 0 0 50px 50px;
+  }
+  [a] {
+    align-self: flex-end;
+    transform: rotateX(180deg);
+    background: #F3AC3C;
+  }
+</style>
+</body></html>"></iframe>
+    <div>
+      <pre>
+
+&#60;p a&#62;&#60;p&#62;&#60;p a&#62;&#60;p&#62;&#60;p a&#62;
+&#60;style&#62;
+  body {
+    height: 100%;
+    margin: 0 25px;
+    background: #1A4341;
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    margin: 0;
+    width: 50px;
+    height: 200px;
+    background: #998235;
+    border-radius: 0 0 50px 50px;
+  }
+  [a] {
+    align-self: flex-end;
+    transform: rotateX(180deg);
+    background: #F3AC3C;
+  }
+&#60;/style&#62;
+
+      </pre>
+    </div>
+    <div><a href="https://cssbattle.dev/play/36">Move to play &#8594;</a></div>
+  </body>
+</html>

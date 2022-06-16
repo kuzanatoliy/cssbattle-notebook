@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS battle: solutions (#21 - SitePoint Logo)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Solution of CSS battle #21 - SitePoint Logo">
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, SitePoint Logo">
+    <meta name="author" content="Anatoli Kuzmiankou">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      iframe {
+        border: none;
+        float: left;
+        margin-right: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>#21 - SitePoint Logo</h1>
+    <hr>
+    <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>
+<div a><p/><p/></div><div b><p/><p/></div>
+<style>
+  body {
+    background: #222;
+  }
+  div {
+    position: fixed;
+  }
+  [a] {
+    transform: rotate(-45deg);
+    left: 138px;
+    top: 85px;
+  }
+  [b] {
+    transform: rotate(135deg);
+    right: 140px;
+    bottom: 86px;
+  }
+  [a] > p {
+    background: #F2994A;
+  }
+  [b] > p {
+    background: #2D9CDB;
+  }
+  p {
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px 0 0;
+  }
+  p + p {
+    margin: -1px 0;
+    width: 29px;
+    height: 51px;
+    border-radius: 0 0 5px;
+  }
+</style>
+</body></html>"></iframe>
+    <div>
+      <pre>
+
+&#60;div a&#62;&#60;p/&#62;&#60;p/&#62;&#60;/div&#62;&#60;div b&#62;&#60;p/&#62;&#60;p/&#62;&#60;/div&#62;
+&#60;style&#62;
+  body {
+    background: #222;
+  }
+  div {
+    position: fixed;
+  }
+  [a] {
+    transform: rotate(-45deg);
+    left: 138px;
+    top: 85px;
+  }
+  [b] {
+    transform: rotate(135deg);
+    right: 140px;
+    bottom: 86px;
+  }
+  [a] &#62; p {
+    background: #F2994A;
+  }
+  [b] &#62; p {
+    background: #2D9CDB;
+  }
+  p {
+    margin: 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px 0 0;
+  }
+  p + p {
+    margin: -1px 0;
+    width: 29px;
+    height: 51px;
+    border-radius: 0 0 5px;
+  }
+&#60;/style&#62;
+
+      </pre>
+    </div>
+    <div><a href="https://cssbattle.dev/play/21">Move to play &#8594;</a></div>
+  </body>
+</html>
