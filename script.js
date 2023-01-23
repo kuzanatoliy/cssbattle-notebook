@@ -12,7 +12,7 @@ const runDeploy = async () => {
   await mkdir("dist");
 
   const list = await Promise.all(
-    data.map(async ({ id, name, plays }) => {
+    data.map(async ({ id, name, plays, date }) => {
       const folderName = `${id}_${prepareName(name)}`;
 
       await mkdir(`dist/${folderName}`);
@@ -29,6 +29,8 @@ const runDeploy = async () => {
             path: `/cssbattle-notebook/${path}`,
             name: item.name,
             id: item.id,
+            mapPath: path,
+            date: item.date
           };
         })
       );
@@ -42,6 +44,8 @@ const runDeploy = async () => {
         path: `/cssbattle-notebook/${folderName}`,
         name,
         id,
+        mapPath: folderName,
+        date
       };
     })
   );
