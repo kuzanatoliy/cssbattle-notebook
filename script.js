@@ -3,6 +3,7 @@ const { writeFile, mkdir, rm } = require("fs/promises");
 const createPlay = require("./create-play");
 const createPlaysList = require("./create-plays-list");
 const createRoot = require("./create-root");
+const createSitemap = require("./create-sitemap");
 const data = require("./plays/data");
 
 const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
@@ -12,7 +13,7 @@ const runDeploy = async () => {
   await mkdir("dist");
 
   const list = await Promise.all(
-    data.map(async ({ id, name, plays }) => {
+    data.map(async ({ id, name, plays, date }) => {
       const folderName = `${id}_${prepareName(name)}`;
 
       await mkdir(`dist/${folderName}`);
@@ -29,6 +30,8 @@ const runDeploy = async () => {
             path: `/cssbattle-notebook/${path}`,
             name: item.name,
             id: item.id,
+            mapPath: path,
+            date: item.date
           };
         })
       );
@@ -38,10 +41,17 @@ const runDeploy = async () => {
         createPlaysList({ id, name, playsList })
       );
 
+      writeFile(
+        `dist/${folderName}/sitemap.xml`,
+        createSitemap({ list: playsList, root: { mapPath: `${folderName}/index.html` } })
+      );
+
       return {
         path: `/cssbattle-notebook/${folderName}`,
         name,
         id,
+        mapPath: `${folderName}/sitemap.xml`,
+        date
       };
     })
   );
@@ -49,6 +59,11 @@ const runDeploy = async () => {
   writeFile(
     `dist/index.html`,
     createRoot({ list })
+  );
+
+  writeFile(
+    `dist/sitemap.xml`,
+    createSitemap({ list, root: { mapPath: `index.html` } })
   );
 };
 
