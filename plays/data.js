@@ -338,4 +338,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 10,
+    name: "Block",
+    date: "2023-02-13",
+    plays: [
+      {
+        id: 47,
+        name: "Corona virus",
+        solution: require("./047-corona-virus.js"),
+        date: "2023-02-13",
+      },
+    ],
+  },
 ];
