@@ -14,17 +14,26 @@ module.exports = ({ name, id, solution }) => `
         float: left;
         margin-right: 3rem;
       }
+      main {
+        display: flex;
+      }
+      .game {
+        min-width: 400px;
+      }
     </style>
   </head>
   <body>
     <h1>#${id} - ${name}</h1>
     <hr>
-    <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>${solution}</body></html>"></iframe>
-    <div>
-      <pre>
+    <main>
+      <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>${solution}</body></html>"></iframe>
+      <div class="game">
+        <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
-      </pre>
-    </div>
+        </pre>
+      </div>
+    </main>
+    <hr>
     <div><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></div>
   </body>
 </html>
