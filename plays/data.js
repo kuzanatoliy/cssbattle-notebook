@@ -367,6 +367,12 @@ module.exports = [
         solution: require("./050-use-hand-sanitizer.js"),
         date: "2023-02-17",
       },
+      {
+        id: 51,
+        name: "Wear a Mask",
+        solution: require("./050-wear-a-mask.js"),
+        date: "2023-02-17",
+      },
     ],
   },
 ];
