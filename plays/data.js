@@ -341,19 +341,25 @@ module.exports = [
   {
     id: 10,
     name: "Block",
-    date: "2023-02-14",
+    date: "2023-02-17",
     plays: [
       {
         id: 47,
         name: "Corona virus",
         solution: require("./047-corona-virus.js"),
-        date: "2023-02-14",
+        date: "2023-02-17",
       },
       {
         id: 48,
         name: "Wash Your Hands",
         solution: require("./048-wash-your-hands.js"),
-        date: "2023-02-14",
+        date: "2023-02-17",
+      },
+      {
+        id: 49,
+        name: "Stay at home",
+        solution: require("./049-stay-at-home.js"),
+        date: "2023-02-17",
       },
     ],
   },
