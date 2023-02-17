@@ -345,7 +345,7 @@ module.exports = [
     plays: [
       {
         id: 47,
-        name: "Corona virus",
+        name: "Corona Virus",
         solution: require("./047-corona-virus.js"),
         date: "2023-02-17",
       },
@@ -357,8 +357,14 @@ module.exports = [
       },
       {
         id: 49,
-        name: "Stay at home",
+        name: "Stay at Home",
         solution: require("./049-stay-at-home.js"),
+        date: "2023-02-17",
+      },
+      {
+        id: 50,
+        name: "Use Hand Sanitizer",
+        solution: require("./050-use-hand-sanitizer.js"),
         date: "2023-02-17",
       },
     ],
