@@ -404,6 +404,12 @@ module.exports = [
         solution: require("./055-windmill"),
         date: "2023-03-01",
       },
+      {
+        id: 56,
+        name: "Skull",
+        solution: require("./056-skull"),
+        date: "2023-03-01",
+      },
     ],
   },
 ];
