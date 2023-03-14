@@ -422,6 +422,12 @@ module.exports = [
         solution: require("./058-rose"),
         date: "2023-03-14",
       },
+      {
+        id: 59,
+        name: "Earth",
+        solution: require("./059-earth"),
+        date: "2023-03-14",
+      },
     ],
   },
 ];
