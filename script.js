@@ -1,4 +1,4 @@
-const { writeFile, mkdir, rm } = require("fs/promises");
+const { writeFile, mkdir, rm, cp } = require("fs/promises");
 
 const createPlay = require("./create-play");
 const createPlaysList = require("./create-plays-list");
@@ -55,6 +55,8 @@ const runDeploy = async () => {
       };
     })
   );
+
+  cp('assets', 'dist/assets', { recursive: true });
 
   writeFile(
     `dist/index.html`,
