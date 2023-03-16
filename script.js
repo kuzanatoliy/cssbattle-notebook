@@ -24,14 +24,21 @@ const runDeploy = async () => {
             item.name
           )}.html`;
 
-          writeFile(`dist/${path}`, createPlay(item));
+          writeFile(
+            `dist/${path}`,
+            createPlay({
+              id: item.id,
+              name: item.name,
+              solution: item.solution.trim(),
+            })
+          );
 
           return {
             path: `/cssbattle-notebook/${path}`,
             name: item.name,
             id: item.id,
             mapPath: path,
-            date: item.date
+            date: item.date,
           };
         })
       );
@@ -43,7 +50,10 @@ const runDeploy = async () => {
 
       writeFile(
         `dist/${folderName}/sitemap.xml`,
-        createSitemap({ list: playsList, root: { mapPath: `${folderName}/index.html` } })
+        createSitemap({
+          list: playsList,
+          root: { mapPath: `${folderName}/index.html` },
+        })
       );
 
       return {
@@ -51,17 +61,14 @@ const runDeploy = async () => {
         name,
         id,
         mapPath: `${folderName}/sitemap.xml`,
-        date
+        date,
       };
     })
   );
 
-  cp('assets', 'dist/assets', { recursive: true });
+  cp("assets", "dist/assets", { recursive: true });
 
-  writeFile(
-    `dist/index.html`,
-    createRoot({ list })
-  );
+  writeFile(`dist/index.html`, createRoot({ list }));
 
   writeFile(
     `dist/sitemap.xml`,
