@@ -20,6 +20,24 @@ module.exports = ({ name, id, solution }) => `
       .game {
         min-width: 400px;
       }
+      button {
+        background: none;
+        border: none;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        width: fit-content;
+        height: fit-content;
+      }
+      button:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      button img {
+        width: 20px;
+        height: 20px;
+      }
+      pre {
+        margin: 0;
+      }
     </style>
   </head>
   <body>
@@ -28,6 +46,9 @@ module.exports = ({ name, id, solution }) => `
     <main>
       <iframe width="400px" height="300px" srcdoc="<html style='width: 400px; height: 300px; overflow: hidden'><body>${solution}</body></html>"></iframe>
       <div class="game">
+        <button class="copy-game">
+          <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
+        </button>
         <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         </pre>
@@ -35,6 +56,15 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
     </main>
     <hr>
     <footer><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
+    <script>
+
+const copyButton = document.querySelector('.copy-game');
+
+copyButton.addEventListener('click', () => {
+  navigator.clipboard.writeText(\`${solution}\`)
+});
+
+    </script>
   </body>
 </html>
 `;
