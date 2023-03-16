@@ -23,8 +23,8 @@ module.exports = ({ name, id, solution }) => `
       button {
         background: none;
         border: none;
-        padding: 2rem;
-        border-radius: 1.5rem;
+        padding: 0.5rem;
+        border-radius: 0.75rem;
         width: fit-content;
         height: fit-content;
       }
@@ -49,6 +49,9 @@ module.exports = ({ name, id, solution }) => `
         <button class="copy-game">
           <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
         </button>
+        <button class="download-game">
+          <img src='../assets/download.svg' alt='Download play' title="Download play"/>
+        </button>
         <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         </pre>
@@ -59,10 +62,19 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
     <script>
 
 const copyButton = document.querySelector('.copy-game');
+const downloadButton = document.querySelector('.download-game');
 
 copyButton.addEventListener('click', () => {
   navigator.clipboard.writeText(\`${solution}\`)
 });
+
+downloadButton.addEventListener('click', () => {
+  const blob = new Blob([\`${solution}\`], { type: 'text/txt' });
+  const elem = document.createElement('a');
+  elem.href = URL.createObjectURL(blob);
+  elem.download = '${id}.${name}.txt';
+  elem.click();
+})
 
     </script>
   </body>
