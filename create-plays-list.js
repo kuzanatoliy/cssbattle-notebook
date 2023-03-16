@@ -10,11 +10,13 @@ module.exports = ({ name, id, playsList }) => `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <h1>#${id} - ${name}</h1>
+    <header><h1>#${id} - ${name}</h1></header>
     <hr>
+    <main>
     ${playsList
       .map((item) => `<a href=${item.path}>${item.id} - ${item.name}</a>`)
       .join("<br/>")}
+    </main>
   </body>
 </html>
 `;
