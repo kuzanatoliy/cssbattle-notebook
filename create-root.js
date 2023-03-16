@@ -10,11 +10,13 @@ module.exports = ({ list }) => `
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <h1>CSS battle solutions</h1>
+    <header><h1>CSS battle solutions</h1></header>
     <hr>
+    <main>
     ${list
       .map((item) => `<a href=${item.path}>${item.id} - ${item.name}</a>`)
       .join("<br/>")}
+    </main>
   </body>
 </html>
 `;
