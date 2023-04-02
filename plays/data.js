@@ -490,5 +490,16 @@ module.exports = [
         date: "2023-04-06",
       },
     ],
+    id: 24,
+    name: "Offset",
+    date: "2023-04-02",
+    plays: [
+      {
+        id: 143,
+        name: "Simply Circle",
+        solution: require("./143-simply-circle.js"),
+        date: "2023-04-02",
+      },
+    ],
   },
 ];
