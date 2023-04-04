@@ -441,6 +441,12 @@ module.exports = [
     name: "Blend",
     date: "2023-03-16",
     plays: [
+      {
+        id: 61,
+        name: "ImproveMX",
+        solution: require("./061-improvemx"),
+        date: "2023-04-04",
+      },
     ],
   },
 ];
