@@ -453,6 +453,12 @@ module.exports = [
         solution: require("./062-sunset"),
         date: "2023-04-05",
       },
+      {
+        id: 63,
+        name: "Command Key",
+        solution: require("./063-command-key"),
+        date: "2023-04-05",
+      },
     ],
   },
 ];
