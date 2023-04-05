@@ -459,6 +459,12 @@ module.exports = [
         solution: require("./063-command-key"),
         date: "2023-04-05",
       },
+      {
+        id: 64,
+        name: "Door knob",
+        solution: require("./064-door-knob"),
+        date: "2023-04-05",
+      },
     ],
   },
 ];
