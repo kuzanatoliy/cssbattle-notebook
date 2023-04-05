@@ -439,13 +439,19 @@ module.exports = [
   {
     id: 12,
     name: "Blend",
-    date: "2023-03-16",
+    date: "2023-04-05",
     plays: [
       {
         id: 61,
         name: "ImproveMX",
         solution: require("./061-improvemx"),
-        date: "2023-04-04",
+        date: "2023-04-05",
+      },
+      {
+        id: 62,
+        name: "Sunset",
+        solution: require("./062-sunset"),
+        date: "2023-04-05",
       },
     ],
   },
