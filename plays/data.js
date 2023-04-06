@@ -483,6 +483,12 @@ module.exports = [
         solution: require("./067-video-reel"),
         date: "2023-04-06",
       },
+      {
+        id: 68,
+        name: "Bell",
+        solution: require("./068-bell"),
+        date: "2023-04-06",
+      },
     ],
   },
 ];
