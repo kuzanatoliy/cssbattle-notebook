@@ -436,4 +436,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 12,
+    name: "Blend",
+    date: "2023-04-06",
+    plays: [
+      {
+        id: 61,
+        name: "ImproveMX",
+        solution: require("./061-improvemx"),
+        date: "2023-04-06",
+      },
+      {
+        id: 62,
+        name: "Sunset",
+        solution: require("./062-sunset"),
+        date: "2023-04-06",
+      },
+      {
+        id: 63,
+        name: "Command Key",
+        solution: require("./063-command-key"),
+        date: "2023-04-06",
+      },
+      {
+        id: 64,
+        name: "Door knob",
+        solution: require("./064-door-knob"),
+        date: "2023-04-06",
+      },
+      {
+        id: 65,
+        name: "Max Volume",
+        solution: require("./065-max-volume"),
+        date: "2023-04-06",
+      },
+      {
+        id: 66,
+        name: "Batmicky",
+        solution: require("./066-batmicky"),
+        date: "2023-04-06",
+      },
+      {
+        id: 67,
+        name: "Video reel",
+        solution: require("./067-video-reel"),
+        date: "2023-04-06",
+      },
+      {
+        id: 68,
+        name: "Bell",
+        solution: require("./068-bell"),
+        date: "2023-04-06",
+      },
+    ],
+  },
 ];
