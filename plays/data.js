@@ -471,6 +471,12 @@ module.exports = [
         solution: require("./065-max-volume"),
         date: "2023-04-06",
       },
+      {
+        id: 66,
+        name: "Batmicky",
+        solution: require("./066-batmicky"),
+        date: "2023-04-06",
+      },
     ],
   },
 ];
