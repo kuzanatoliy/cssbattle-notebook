@@ -189,7 +189,7 @@ module.exports = [
       },
       {
         id: 28,
-        name: "Cups & Balls",
+        name: "Cups and Balls",
         solution: require("./028-cups_&_balls"),
         date: "2023-01-23",
       },
