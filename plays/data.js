@@ -524,6 +524,12 @@ module.exports = [
         solution: require("./147-splash"),
         date: "2023-04-16",
       },
+      {
+        id: 148,
+        name: "Eight",
+        solution: require("./148-eight"),
+        date: "2023-04-16",
+      },
     ],
   },
 ];
