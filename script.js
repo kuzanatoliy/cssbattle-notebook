@@ -4,6 +4,7 @@ const createPlay = require("./create-play");
 const createPlaysList = require("./create-plays-list");
 const createRoot = require("./create-root");
 const createSitemap = require("./create-sitemap");
+const createSitemapindex = require("./create-sitemapindex");
 const data = require("./plays/data");
 
 const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
@@ -71,8 +72,13 @@ const runDeploy = async () => {
   writeFile(`dist/index.html`, createRoot({ list }));
 
   writeFile(
+    `dist/root.xml`,
+    createSitemap({ list: [], root: { mapPath: `index.html` } })
+  );
+
+  writeFile(
     `dist/sitemap.xml`,
-    createSitemap({ list, root: { mapPath: `index.html` } })
+    createSitemapindex({ list, root: { mapPath: `root.xml` } })
   );
 };
 
