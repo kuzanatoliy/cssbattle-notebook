@@ -502,6 +502,12 @@ module.exports = [
         solution: require("./069-pushowl"),
         date: "2023-04-21",
       },
+      {
+        id: 70,
+        name: "Froggy",
+        solution: require("./070-froggy"),
+        date: "2023-04-21",
+      },
     ],
   },
   {
