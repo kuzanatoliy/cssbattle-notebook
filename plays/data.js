@@ -495,7 +495,14 @@ module.exports = [
     id: 13,
     name: "Blend",
     date: "2023-04-16",
-    plays: [],
+    plays: [
+      {
+        id: 69,
+        name: "PushOwl",
+        solution: require("./069-pushowl"),
+        date: "2023-04-21",
+      },
+    ],
   },
   {
     id: 24,
