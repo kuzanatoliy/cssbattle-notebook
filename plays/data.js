@@ -490,5 +490,58 @@ module.exports = [
         date: "2023-04-06",
       },
     ],
+    id: 24,
+    name: "Offset",
+    date: "2023-04-22",
+    plays: [
+      {
+        id: 143,
+        name: "Simply Circle",
+        solution: require("./143-simply-circle"),
+        date: "2023-04-22",
+      },
+      {
+        id: 144,
+        name: "Long Heart",
+        solution: require("./144-long-heart"),
+        date: "2023-04-22",
+      },
+      {
+        id: 145,
+        name: "Spotlight",
+        solution: require("./145-spotlight"),
+        date: "2023-04-22",
+      },
+      {
+        id: 146,
+        name: "Spotlight",
+        solution: require("./146-streaks"),
+        date: "2023-04-22",
+      },
+      {
+        id: 147,
+        name: "Splash",
+        solution: require("./147-splash"),
+        date: "2023-04-22",
+      },
+      {
+        id: 148,
+        name: "Eight",
+        solution: require("./148-eight"),
+        date: "2023-04-22",
+      },
+      {
+        id: 149,
+        name: "Earthworm",
+        solution: require("./149-earthworm"),
+        date: "2023-04-22",
+      },
+      {
+        id: 150,
+        name: "Finger Heart",
+        solution: require("./150-finger-heart"),
+        date: "2023-04-22",
+      },
+    ],
   },
 ];
