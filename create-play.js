@@ -44,7 +44,7 @@ module.exports = ({ name, id, solution }) => `
     <header><h1>#${id} - ${name}</h1></header>
     <hr>
     <main>
-    <img alt="" width="400" class="levelpage__target" src="https://cssbattle.dev/targets/${id}.png" srcset="https://cssbattle.dev/targets/${id}@2x.png 2x">
+      <img alt="" width="400" height="300" class="levelpage__target" src="https://cssbattle.dev/targets/${id}.png" srcset="https://cssbattle.dev/targets/${id}@2x.png 2x">
       <div class="game">
         <button class="copy-game">
           <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
