@@ -530,6 +530,12 @@ module.exports = [
         solution: require("./148-eight"),
         date: "2023-04-16",
       },
+      {
+        id: 149,
+        name: "Earthworm",
+        solution: require("./149-earthworm"),
+        date: "2023-04-16",
+      },
     ],
   },
 ];
