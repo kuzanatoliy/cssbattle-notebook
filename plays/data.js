@@ -514,7 +514,7 @@ module.exports = [
       },
       {
         id: 146,
-        name: "Spotlight",
+        name: "Streaks",
         solution: require("./146-streaks"),
         date: "2023-04-22",
       },
