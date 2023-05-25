@@ -508,6 +508,12 @@ module.exports = [
         solution: require("./070-froggy"),
         date: "2023-04-21",
       },
+      {
+        id: 71,
+        name: "Elephant",
+        solution: require("./071-elephant"),
+        date: "2023-04-21",
+      },
     ],
   },
   {
