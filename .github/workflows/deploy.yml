@@ -21,6 +21,7 @@ jobs:
         run: |
           cp robots.txt dist/robots.txt
           cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
+          cp yandex_f56e6bf2af5f6379.html dist/yandex_f56e6bf2af5f6379.html
       - name: deploy
         run: |
           git config --global user.email "njkznu@gmail.com"
