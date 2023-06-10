@@ -550,6 +550,13 @@ module.exports = [
     id: 25,
     name: "Flex",
     date: "2023-06-11",
-    plays: [],
+    plays: [
+      {
+        id: 151,
+        name: "Pawn",
+        solution: require("./151-pawn"),
+        date: "2023-06-11",
+      },
+    ],
   },
 ];
