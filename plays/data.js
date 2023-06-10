@@ -557,6 +557,12 @@ module.exports = [
         solution: require("./151-pawn"),
         date: "2023-06-11",
       },
+      {
+        id: 152,
+        name: "Rook",
+        solution: require("./152-rook"),
+        date: "2023-06-11",
+      },
     ],
   },
 ];
