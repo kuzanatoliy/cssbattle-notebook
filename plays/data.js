@@ -569,6 +569,12 @@ module.exports = [
         solution: require("./153-checkers"),
         date: "2023-06-16",
       },
+      {
+        id: 154,
+        name: "Poker Chip",
+        solution: require("./154-poker-chip"),
+        date: "2023-06-16",
+      },
     ],
   },
 ];
