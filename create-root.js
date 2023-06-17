@@ -8,7 +8,15 @@ module.exports = ({ list, canonicalPath }) =>
       "html, css, cssbattle, coding, development, engineering, inclusive, community, programming",
     canonicalPath,
     injectBody: () =>
-      list
-        .map((item) => `<a href=${item.path}>${item.id} - ${item.name}</a>`)
-        .join("<br/>"),
+      `<ul>${list
+        .map(
+          (item) =>
+            `<li><a href=${item.path}>${item.id} - ${item.name}</a></li>`
+        )
+        .join("<br/>")}<ul>`,
+    injectStyles: () => `
+      ul {
+        list-style-type: none;
+      }
+    `,
   });
