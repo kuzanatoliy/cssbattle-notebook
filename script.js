@@ -46,7 +46,12 @@ const runDeploy = async () => {
 
       writeFile(
         `dist/${folderName}/index.html`,
-        createPlaysList({ id, name, playsList })
+        createPlaysList({
+          id,
+          name,
+          playsList,
+          canonicalPath: `/cssbattle-notebook/${folderName}/index.html`,
+        })
       );
 
       writeFile(
@@ -69,7 +74,10 @@ const runDeploy = async () => {
 
   cp("assets", "dist/assets", { recursive: true });
 
-  writeFile(`dist/index.html`, createRoot({ list }));
+  writeFile(
+    `dist/index.html`,
+    createRoot({ list, canonicalPath: "/cssbattle-notebook/index.html" })
+  );
 
   writeFile(
     `dist/root.xml`,
