@@ -58,7 +58,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       </div>
     </main>
     <hr>
-    <footer><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
+    <footer><a rel="nofollow" href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
     <script>
 
 const copyButton = document.querySelector('.copy-game');
