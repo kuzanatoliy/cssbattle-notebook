@@ -1,4 +1,4 @@
-module.exports = ({ list }) => `
+module.exports = ({ list, canonicalPath }) => `
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +7,12 @@ module.exports = ({ list }) => `
     <meta name="description" content="Solution of CSS battle">
     <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming">
     <meta name="author" content="Anatoli Kuzmiankou">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    ${
+      canonicalPath
+        ? `<link rel="canonical" href="https://kuzanatoliy.github.io${canonicalPath}"/>`
+        : ""
+    }
   </head>
   <body>
     <header><h1>CSS battle solutions</h1></header>

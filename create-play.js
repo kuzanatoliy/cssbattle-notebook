@@ -1,5 +1,5 @@
 module.exports = ({ name, id, solution }) => `
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>CSS battle: solutions (#${id} - ${name})</title>
@@ -7,7 +7,7 @@ module.exports = ({ name, id, solution }) => `
     <meta name="description" content="Solution of CSS battle #${id} - ${name}">
     <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}">
     <meta name="author" content="Anatoli Kuzmiankou">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
       .levelpage {
         border: none;
@@ -58,7 +58,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       </div>
     </main>
     <hr>
-    <footer><a href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
+    <footer><a rel="nofollow" href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
     <script>
 
 const copyButton = document.querySelector('.copy-game');
