@@ -19,7 +19,7 @@ module.exports = ({
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     ${
       canonicalPath
-        ? `<link rel="canonical" href="https://kuzanatoliy.github.io${canonicalPath}"/>`
+        ? `<link rel="canonical" href="${canonicalPath}"/>`
         : ""
     }
     <style>
