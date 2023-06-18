@@ -19,8 +19,8 @@ module.exports = ({ list, canonicalPath }) =>
                 (play) =>
                   `<img
                   alt="#${play.id} - ${play.name} preview"
-                  src="https://cssbattle.dev/targets/${play.id}.png"
-                  srcset="https://cssbattle.dev/targets/${play.id}@2x.png 2x"
+                  src="${CSSBATTLE_HOST_NAME}/targets/${play.id}.png"
+                  srcset="${CSSBATTLE_HOST_NAME}/targets/${play.id}@2x.png 2x"
                 />`
               )
               .join("")}</div></a></li>`
