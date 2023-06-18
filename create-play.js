@@ -12,10 +12,10 @@ module.exports = ({ name, id, solution }) =>
       <section>
         <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
         <div class="game">
-          <button class="copy-game">
+          <button class="copy-game" aria-label="Copy game code">
             <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
           </button>
-          <button class="download-game">
+          <button class="download-game" aria-label="Download game code">
             <img src='../assets/download.svg' alt='Download play' title="Download play"/>
           </button>
           <pre>
