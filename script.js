@@ -50,7 +50,7 @@ const runDeploy = async () => {
           id,
           name,
           playsList,
-          canonicalPath: `/cssbattle-notebook/${folderName}/index.html`,
+          canonicalPath: `${folderName}/index.html`,
         })
       );
 
@@ -68,6 +68,7 @@ const runDeploy = async () => {
         id,
         mapPath: `${folderName}/sitemap.xml`,
         date,
+        playsList,
       };
     })
   );
@@ -76,7 +77,7 @@ const runDeploy = async () => {
 
   writeFile(
     `dist/index.html`,
-    createRoot({ list, canonicalPath: "/cssbattle-notebook/index.html" })
+    createRoot({ list, canonicalPath: "index.html" })
   );
 
   writeFile(
