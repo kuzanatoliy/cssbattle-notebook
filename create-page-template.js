@@ -74,6 +74,7 @@ main {
 }
 
 header {
+  z-index: 1;
   color: var(--color-white);
   position: sticky;
   top: 0;
