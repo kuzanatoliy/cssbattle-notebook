@@ -3,6 +3,7 @@ module.exports = ({
   description,
   keyworkds,
   canonicalPath,
+  headerText,
   injectStyles,
   injectScripts,
   injectBody,
@@ -52,6 +53,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 16px;
+  background-color: var(--color-white);
 }
 
 header, main, footer {
@@ -95,7 +97,7 @@ ${injectStyles ? injectStyles() : ""}
     </style>
   </head>
   <body>
-    <header><h1>CSS battle solutions</h1></header>
+    <header><h1>${headerText}</h1></header>
     <main>
 
 ${injectBody ? injectBody() : ""}

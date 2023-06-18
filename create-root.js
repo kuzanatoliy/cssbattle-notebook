@@ -1,5 +1,5 @@
 const createPageTemplate = require("./create-page-template");
-const { HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
 
 module.exports = ({ list, canonicalPath }) =>
   createPageTemplate({
@@ -8,6 +8,7 @@ module.exports = ({ list, canonicalPath }) =>
     keyworkds:
       "html, css, cssbattle, coding, development, engineering, inclusive, community, programming",
     canonicalPath: `${HOST_NAME}/${ROOT_PATH}/${canonicalPath}`,
+    headerText: "CSS battle solutions",
     injectBody: () =>
       `<ul>${list
         .map(
