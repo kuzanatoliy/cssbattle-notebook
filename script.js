@@ -50,7 +50,7 @@ const runDeploy = async () => {
           id,
           name,
           playsList,
-          canonicalPath: `/cssbattle-notebook/${folderName}/index.html`,
+          canonicalPath: `${folderName}/index.html`,
         })
       );
 

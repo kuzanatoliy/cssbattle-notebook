@@ -1,25 +1,51 @@
-module.exports = ({ name, id, solution }) => `
- <!DOCTYPE html>
-<html>
-  <head>
-    <title>CSS battle: solutions (#${id} - ${name})</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Solution of CSS battle #${id} - ${name}">
-    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}">
-    <meta name="author" content="Anatoli Kuzmiankou">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <style>
-      .levelpage {
-        border: none;
-        float: left;
-        margin-right: 3rem;
-      }
-      main {
+const createPageTemplate = require("./create-page-template");
+const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+
+module.exports = ({ name, id, solution }) =>
+  createPageTemplate({
+    title: `CSS battle: solutions (#${id} - ${name})`,
+    description: `Solution of CSS battle #${id} - ${name}`,
+    keyworkds:
+      `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
+    headerText: `#${id} - ${name}`,
+    injectBody: () => `
+      <section>
+        <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
+        <div class="game">
+          <button class="copy-game">
+            <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
+          </button>
+          <button class="download-game">
+            <img src='../assets/download.svg' alt='Download play' title="Download play"/>
+          </button>
+          <pre>
+    ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
+          </pre>
+        </div>
+      </section>
+      <aside>
+        <a rel="nofollow" href="${CSSBATTLE_HOST_NAME}/play/${id}">Move to play &#8594;</a>
+      </aside>
+    `,
+    injectStyles: () => `
+      section {
         display: flex;
+        flex-wrap: wrap;
+        gap: var(--size-triple);
       }
+
+      img {
+        border: none;
+        width: 400px;
+        max-width: 100%;
+        max-height: 300px;
+      }
+      
       .game {
-        min-width: 400px;
+        flex: 1;
+        min-width: calc(var(--breakpoint-mobile-s) - var(--size-double) * 2);
       }
+      
       button {
         background: none;
         border: none;
@@ -28,55 +54,49 @@ module.exports = ({ name, id, solution }) => `
         width: fit-content;
         height: fit-content;
       }
+      
       button:hover {
         background-color: rgba(0, 0, 0, 0.2);
       }
+      
       button img {
         width: 20px;
         height: 20px;
       }
+      
       pre {
         margin: 0;
+        overflow: auto;
       }
-    </style>
-  </head>
-  <body>
-    <header><h1>#${id} - ${name}</h1></header>
-    <hr>
-    <main>
-      <img alt="" width="400" height="300" class="levelpage" src="https://cssbattle.dev/targets/${id}.png" srcset="https://cssbattle.dev/targets/${id}@2x.png 2x">
-      <div class="game">
-        <button class="copy-game">
-          <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
-        </button>
-        <button class="download-game">
-          <img src='../assets/download.svg' alt='Download play' title="Download play"/>
-        </button>
-        <pre>
-${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
-        </pre>
-      </div>
-    </main>
-    <hr>
-    <footer><a rel="nofollow" href="https://cssbattle.dev/play/${id}">Move to play &#8594;</a></footer>
-    <script>
+      
+      aside {
+        padding: var(--size-double) 0;
+      }
 
-const copyButton = document.querySelector('.copy-game');
-const downloadButton = document.querySelector('.download-game');
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--color-light);
+      }
 
-copyButton.addEventListener('click', () => {
-  navigator.clipboard.writeText(\`${solution}\`)
-});
-
-downloadButton.addEventListener('click', () => {
-  const blob = new Blob([\`${solution}\`], { type: 'text/txt' });
-  const elem = document.createElement('a');
-  elem.href = URL.createObjectURL(blob);
-  elem.download = '${id}.${name}.txt';
-  elem.click();
-})
-
-    </script>
-  </body>
-</html>
-`;
+      a:hover {
+        color: var(--color-dark);
+      }
+    `,
+    injectScripts: () => `
+      const copyButton = document.querySelector('.copy-game');
+      const downloadButton = document.querySelector('.download-game');
+      
+      copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(\`${solution}\`)
+      });
+      
+      downloadButton.addEventListener('click', () => {
+        const blob = new Blob([\`${solution}\`], { type: 'text/txt' });
+        const elem = document.createElement('a');
+        elem.href = URL.createObjectURL(blob);
+        elem.download = '${id}.${name}.txt';
+        elem.click();
+      });
+    `
+  });
