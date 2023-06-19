@@ -494,31 +494,37 @@ module.exports = [
   {
     id: 13,
     name: "Blend",
-    date: "2023-06-11",
+    date: "2023-06-19",
     plays: [
       {
         id: 69,
         name: "PushOwl",
         solution: require("./069-pushowl"),
-        date: "2023-06-11",
+        date: "2023-06-19",
       },
       {
         id: 70,
         name: "Froggy",
         solution: require("./070-froggy"),
-        date: "2023-06-11",
+        date: "2023-06-19",
       },
       {
         id: 71,
         name: "Elephant",
         solution: require("./071-elephant"),
-        date: "2023-06-11",
+        date: "2023-06-19",
       },
       {
         id: 72,
         name: "Sheep",
         solution: require("./072-sheep"),
-        date: "2023-06-11",
+        date: "2023-06-19",
+      },
+      {
+        id: 73,
+        name: "Happy Tiger",
+        solution: require("./073-happy-tiger"),
+        date: "2023-06-19",
       },
     ],
   },
