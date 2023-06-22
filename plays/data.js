@@ -549,31 +549,37 @@ module.exports = [
   {
     id: 25,
     name: "Flex",
-    date: "2023-06-16",
+    date: "2023-06-22",
     plays: [
       {
         id: 151,
         name: "Pawn",
         solution: require("./151-pawn"),
-        date: "2023-06-16",
+        date: "2023-06-22",
       },
       {
         id: 152,
         name: "Rook",
         solution: require("./152-rook"),
-        date: "2023-06-16",
+        date: "2023-06-22",
       },
       {
         id: 153,
         name: "Checkers",
         solution: require("./153-checkers"),
-        date: "2023-06-16",
+        date: "2023-06-22",
       },
       {
         id: 154,
         name: "Poker Chip",
         solution: require("./154-poker-chip"),
-        date: "2023-06-16",
+        date: "2023-06-22",
+      },
+      {
+        id: 155,
+        name: "Snake and symbol",
+        solution: require("./155-snake-and-symbol"),
+        date: "2023-06-22",
       },
     ],
   },
