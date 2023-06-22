@@ -581,6 +581,12 @@ module.exports = [
         solution: require("./155-snake-and-symbol"),
         date: "2023-06-22",
       },
+      {
+        id: 156,
+        name: "Chinese checkers",
+        solution: require("./156-chinese-checkers"),
+        date: "2023-06-22",
+      },
     ],
   },
 ];
