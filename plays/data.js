@@ -526,6 +526,12 @@ module.exports = [
         solution: require("./073-happy-tiger"),
         date: "2023-06-19",
       },
+      {
+        id: 73,
+        name: "Danger Noodle",
+        solution: require("./074-danger-noodle"),
+        date: "2023-06-19",
+      },
     ],
   },
   {
