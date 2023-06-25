@@ -122,7 +122,7 @@ ${injectStyles ? injectStyles() : ""}
     <header>
       ${
         parentUrl
-          ? `<a href="${parentUrl}"><img src='../assets/back.svg' title="Download game code"/></a>`
+          ? `<a href="${parentUrl}" aria-label="Back"><img src='../assets/back.svg' title="Back"/></a>`
           : ""
       }
       <h1>${headerText}</h1>
