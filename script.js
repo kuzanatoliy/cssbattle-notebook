@@ -31,6 +31,7 @@ const runDeploy = async () => {
               id: item.id,
               name: item.name,
               solution: item.solution.trim(),
+              parentUrl: folderName,
             })
           );
 

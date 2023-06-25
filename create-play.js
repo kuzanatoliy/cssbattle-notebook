@@ -1,7 +1,7 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, ROOT_PATH } = require("./constatns");
 
-module.exports = ({ name, id, solution }) =>
+module.exports = ({ name, id, solution, parentUrl }) =>
   createPageTemplate({
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
@@ -107,4 +107,5 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         elem.click();
       });
     `,
+    parentUrl: `/${ROOT_PATH}/${parentUrl}`,
   });

@@ -65,4 +65,5 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         width: 100%;
       }
     `,
+    parentUrl: `/${ROOT_PATH}`,
   });
