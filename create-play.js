@@ -12,10 +12,10 @@ module.exports = ({ name, id, solution }) =>
         <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
         <div class="game">
           <button class="copy-game" aria-label="Copy game code">
-            <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
+            <img src='../assets/copy.svg' title="Copy game code"/>
           </button>
           <button class="download-game" aria-label="Download game code">
-            <img src='../assets/download.svg' alt='Download play' title="Download play"/>
+            <img src='../assets/download.svg' title="Download game code"/>
           </button>
           <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
