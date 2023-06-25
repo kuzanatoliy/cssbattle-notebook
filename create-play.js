@@ -1,12 +1,11 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME } = require("./constatns");
 
 module.exports = ({ name, id, solution }) =>
   createPageTemplate({
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
-    keyworkds:
-      `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
+    keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
     headerText: `#${id} - ${name}`,
     injectBody: () => `
       <section>
@@ -98,5 +97,5 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         elem.download = '${id}.${name}.txt';
         elem.click();
       });
-    `
+    `,
   });

@@ -13,7 +13,7 @@ module.exports = ({ list, canonicalPath }) =>
       `<ul>${list
         .map(
           (item) =>
-            `<li><a href=${item.path}><h2>${item.id} - ${
+            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${
               item.name
             }</h2><div>${item.playsList
               .map(

@@ -35,7 +35,7 @@ const runDeploy = async () => {
           );
 
           return {
-            path: `/cssbattle-notebook/${path}`,
+            path,
             name: item.name,
             id: item.id,
             mapPath: path,
@@ -63,7 +63,7 @@ const runDeploy = async () => {
       );
 
       return {
-        path: `/cssbattle-notebook/${folderName}`,
+        path: folderName,
         name,
         id,
         mapPath: `${folderName}/sitemap.xml`,
