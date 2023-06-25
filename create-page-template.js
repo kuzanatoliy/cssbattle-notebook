@@ -17,11 +17,7 @@ module.exports = ({
     <meta name="keywords" content="${keyworkds}">
     <meta name="author" content="Anatoli Kuzmiankou">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    ${
-      canonicalPath
-        ? `<link rel="canonical" href="${canonicalPath}"/>`
-        : ""
-    }
+    ${canonicalPath ? `<link rel="canonical" href="${canonicalPath}"/>` : ""}
     <style>
 
 :root {
@@ -83,6 +79,8 @@ header {
 }
 
 footer {
+  font-weight: bold;
+  color: var(--color-dark);
   text-align: center;
   position: sticky;
   bottom: 0;
