@@ -538,6 +538,12 @@ module.exports = [
         solution: require("./075-hippo"),
         date: "2023-06-25",
       },
+      {
+        id: 76,
+        name: "Beeee",
+        solution: require("./076-beeee"),
+        date: "2023-06-25",
+      },
     ],
   },
   {
