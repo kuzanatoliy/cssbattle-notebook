@@ -19,7 +19,7 @@ module.exports = ({ name, id, solution }) =>
             <img src='../assets/download.svg' alt='Download play' title="Download play"/>
           </button>
           <pre>
-    ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
+${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
           </pre>
         </div>
       </section>
