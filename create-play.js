@@ -84,8 +84,11 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
 
       a:hover, a:focus-visible {
         outline: none;
-        text-decoration: underline;
         color: var(--color-dark);
+      }
+
+      a:focus-visible {
+        text-decoration: underline;
       }
     `,
     injectScripts: () => `
