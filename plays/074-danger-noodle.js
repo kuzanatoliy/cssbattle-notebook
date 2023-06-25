@@ -1,12 +1,5 @@
 module.exports = `
-<p a>
-<p b>
-<p c>
-<p d>
-<p e>
-<p f></p>
-<span g></span>
-<span h></span>
+<p a><p b><p c><p d><p e><p f></p><span g></span><span h></span>
 <style>
   body {
     background: #191919;
