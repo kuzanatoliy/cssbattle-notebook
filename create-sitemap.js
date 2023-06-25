@@ -1,3 +1,5 @@
+const { HOST_NAME, ROOT_PATH } = require("./constatns");
+
 const date = new Date();
 
 module.exports = ({ list, root }) =>
@@ -7,9 +9,7 @@ module.exports = ({ list, root }) =>
     root
       ? `
     <url>
-      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/${
-        root.mapPath
-      }</loc>
+      <loc>${HOST_NAME}/${ROOT_PATH}/${root.mapPath}</loc>
       <lastmod>${date.getUTCFullYear()}-${date
           .getUTCMonth()
           .toString()
@@ -27,7 +27,7 @@ module.exports = ({ list, root }) =>
     .map(
       (item) => `
     <url>
-      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/${item.mapPath}</loc>
+      <loc>${HOST_NAME}/${ROOT_PATH}/${item.mapPath}</loc>
       <lastmod>${item.date}</lastmod>
       <changefreq>never</changefreq> 
       <priority>1</priority>

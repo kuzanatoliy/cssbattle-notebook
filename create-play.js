@@ -1,22 +1,21 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, ROOT_PATH } = require("./constatns");
 
-module.exports = ({ name, id, solution }) =>
+module.exports = ({ name, id, solution, parentUrl }) =>
   createPageTemplate({
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
-    keyworkds:
-      `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
-    headerText: `#${id} - ${name}`,
+    keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
+    headerText: `${id} - ${name}`,
     injectBody: () => `
       <section>
         <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
         <div class="game">
           <button class="copy-game" aria-label="Copy game code">
-            <img src='../assets/copy.svg' alt='Copy play' title="Copy play"/>
+            <img src='../assets/copy.svg' title="Copy game code"/>
           </button>
           <button class="download-game" aria-label="Download game code">
-            <img src='../assets/download.svg' alt='Download play' title="Download play"/>
+            <img src='../assets/download.svg' title="Download game code"/>
           </button>
           <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
@@ -55,8 +54,12 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         height: fit-content;
       }
       
+      button:active, button:focus-visible {
+        outline: solid 2px var(--color-dark);
+      }
+
       button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: brightness(0.95);
       }
       
       button img {
@@ -79,8 +82,13 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         color: var(--color-light);
       }
 
-      a:hover {
+      a:hover, a:focus-visible {
+        outline: none;
         color: var(--color-dark);
+      }
+
+      a:focus-visible {
+        text-decoration: underline;
       }
     `,
     injectScripts: () => `
@@ -98,5 +106,6 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         elem.download = '${id}.${name}.txt';
         elem.click();
       });
-    `
+    `,
+    parentUrl: `/${ROOT_PATH}/${parentUrl}`,
   });

@@ -31,11 +31,12 @@ const runDeploy = async () => {
               id: item.id,
               name: item.name,
               solution: item.solution.trim(),
+              parentUrl: folderName,
             })
           );
 
           return {
-            path: `/cssbattle-notebook/${path}`,
+            path,
             name: item.name,
             id: item.id,
             mapPath: path,
@@ -63,7 +64,7 @@ const runDeploy = async () => {
       );
 
       return {
-        path: `/cssbattle-notebook/${folderName}`,
+        path: folderName,
         name,
         id,
         mapPath: `${folderName}/sitemap.xml`,

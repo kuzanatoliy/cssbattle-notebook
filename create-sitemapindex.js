@@ -1,4 +1,4 @@
-const date = new Date();
+const { HOST_NAME, ROOT_PATH } = require("./constatns");
 
 module.exports = ({ list, root }) =>
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -7,9 +7,7 @@ module.exports = ({ list, root }) =>
     root
       ? `
     <sitemap>
-      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/${
-        root.mapPath
-      }</loc>
+      <loc>${HOST_NAME}/${ROOT_PATH}/${root.mapPath}</loc>
     </sitemap>
   `
       : {}
@@ -18,7 +16,7 @@ module.exports = ({ list, root }) =>
     .map(
       (item) => `
     <sitemap>
-      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/${item.mapPath}</loc>
+      <loc>${HOST_NAME}/${ROOT_PATH}/${item.mapPath}</loc>
     </sitemap>
   `
     )

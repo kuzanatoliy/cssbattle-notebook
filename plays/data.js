@@ -493,7 +493,7 @@ module.exports = [
   },
   {
     id: 13,
-    name: "Blend",
+    name: "Clip",
     date: "2023-06-25",
     plays: [
       {

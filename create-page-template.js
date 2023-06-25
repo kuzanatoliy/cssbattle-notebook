@@ -7,6 +7,7 @@ module.exports = ({
   injectStyles,
   injectScripts,
   injectBody,
+  parentUrl,
 }) => `
 <!DOCTYPE html>
 <html>
@@ -17,11 +18,7 @@ module.exports = ({
     <meta name="keywords" content="${keyworkds}">
     <meta name="author" content="Anatoli Kuzmiankou">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    ${
-      canonicalPath
-        ? `<link rel="canonical" href="${canonicalPath}"/>`
-        : ""
-    }
+    ${canonicalPath ? `<link rel="canonical" href="${canonicalPath}"/>` : ""}
     <style>
 
 :root {
@@ -75,6 +72,9 @@ main {
 
 header {
   z-index: 1;
+  display: flex;
+  gap: var(--size-double);
+  align-items: center;
   color: var(--color-white);
   position: sticky;
   top: 0;
@@ -83,6 +83,8 @@ header {
 }
 
 footer {
+  font-weight: bold;
+  color: var(--color-dark);
   text-align: center;
   position: sticky;
   bottom: 0;
@@ -93,12 +95,38 @@ header > h1 {
   margin: 0;
 }
 
+header a {
+  border: none;
+  padding: var(--size-quarter);
+  border-radius: var(--size-half);
+}
+
+header a:active, header a:focus-visible {
+  outline: solid 2px var(--color-white);
+}
+
+header a:hover {
+  backdrop-filter: brightness(0.8);
+}
+
+header img {
+  height: var(--size-triple);
+  width: var(--size-triple);
+}
+
 ${injectStyles ? injectStyles() : ""}
     
     </style>
   </head>
   <body>
-    <header><h1>${headerText}</h1></header>
+    <header>
+      ${
+        parentUrl
+          ? `<a href="${parentUrl}"><img src='../assets/back.svg' title="Download game code"/></a>`
+          : ""
+      }
+      <h1>${headerText}</h1>
+    </header>
     <main>
 
 ${injectBody ? injectBody() : ""}

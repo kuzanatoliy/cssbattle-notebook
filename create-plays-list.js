@@ -5,17 +5,14 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
   createPageTemplate({
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
-    keyworkds:
-      `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
+    keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
     canonicalPath: `${HOST_NAME}/${ROOT_PATH}/${canonicalPath}`,
-    headerText: `#${id} - ${name}`,
+    headerText: `${id} - ${name}`,
     injectBody: () =>
       `<ul>${playsList
         .map(
           (item) =>
-            `<li><a href=${item.path}><h2>${item.id} - ${
-              item.name
-            }</h2><div>
+            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${item.name}</h2><div>
                   <img
                   alt="Preview"
                   src="${CSSBATTLE_HOST_NAME}/targets/${item.id}.png"
@@ -68,4 +65,5 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         width: 100%;
       }
     `,
+    parentUrl: `/${ROOT_PATH}`,
   });
