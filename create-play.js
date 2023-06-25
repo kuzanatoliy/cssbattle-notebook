@@ -6,7 +6,7 @@ module.exports = ({ name, id, solution }) =>
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
     keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
-    headerText: `#${id} - ${name}`,
+    headerText: `${id} - ${name}`,
     injectBody: () => `
       <section>
         <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
@@ -54,8 +54,12 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         height: fit-content;
       }
       
+      button:active, button:focus-visible {
+        outline: solid 2px var(--color-dark);
+      }
+
       button:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: brightness(0.95);
       }
       
       button img {
@@ -78,7 +82,9 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         color: var(--color-light);
       }
 
-      a:hover {
+      a:hover, a:focus-visible {
+        outline: none;
+        text-decoration: underline;
         color: var(--color-dark);
       }
     `,
