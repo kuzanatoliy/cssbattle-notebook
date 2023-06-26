@@ -550,7 +550,14 @@ module.exports = [
     id: 14,
     name: "ZIndex",
     date: "2023-06-26",
-    plays: [],
+    plays: [
+      {
+        id: 77,
+        name: "Notes",
+        solution: require("./077-notes"),
+        date: "2023-06-26",
+      },
+    ],
   },
   {
     id: 24,
