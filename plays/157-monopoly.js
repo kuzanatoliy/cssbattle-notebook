@@ -16,7 +16,7 @@ module.exports = `
   [a] {
     width: 120px;
     height: 90px;
-    border-radius: 99q 99q 0 0
+    border-radius: 99q 99q 0 0;
   }
   [b] {
     margin: 0 110px 0;

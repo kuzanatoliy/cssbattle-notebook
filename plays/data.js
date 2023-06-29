@@ -593,6 +593,12 @@ module.exports = [
         solution: require("./157-monopoly"),
         date: "2023-06-29",
       },
+      {
+        id: 158,
+        name: "Clubs",
+        solution: require("./158-clubs"),
+        date: "2023-06-29",
+      },
     ],
   },
 ];
