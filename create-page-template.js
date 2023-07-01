@@ -86,8 +86,6 @@ footer {
   font-weight: bold;
   color: var(--color-dark);
   text-align: center;
-  position: sticky;
-  bottom: 0;
   background: linear-gradient(transparent, var(--color-white) 25%);
 }
 
