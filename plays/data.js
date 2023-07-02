@@ -563,6 +563,12 @@ module.exports = [
         solution: require("./078-ukulele"),
         date: "2023-07-01",
       },
+      {
+        id: 79,
+        name: "Tambourine",
+        solution: require("./079-tambourine"),
+        date: "2023-07-01",
+      },
     ],
   },
   {
