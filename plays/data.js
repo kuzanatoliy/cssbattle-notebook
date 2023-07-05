@@ -580,8 +580,15 @@ module.exports = [
   {
     id: 15,
     name: "Filter",
-    date: "2023-07-03",
-    plays: [],
+    date: "2023-07-05",
+    plays: [
+      {
+        id: 81,
+        name: "Odoo",
+        solution: require("./081-odoo"),
+        date: "2023-07-05",
+      },
+    ],
   },
   {
     id: 24,
