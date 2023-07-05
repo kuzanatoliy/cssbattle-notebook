@@ -588,6 +588,12 @@ module.exports = [
         solution: require("./081-odoo"),
         date: "2023-07-05",
       },
+      {
+        id: 82,
+        name: "Diamond Cut",
+        solution: require("./082-diamond-cut"),
+        date: "2023-07-05",
+      },
     ],
   },
   {
