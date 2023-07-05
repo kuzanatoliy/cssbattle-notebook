@@ -632,4 +632,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 25,
+    name: "Flex",
+    date: "2023-06-29",
+    plays: [
+      {
+        id: 151,
+        name: "Pawn",
+        solution: require("./151-pawn"),
+        date: "2023-06-29",
+      },
+      {
+        id: 152,
+        name: "Rook",
+        solution: require("./152-rook"),
+        date: "2023-06-29",
+      },
+      {
+        id: 153,
+        name: "Checkers",
+        solution: require("./153-checkers"),
+        date: "2023-06-29",
+      },
+      {
+        id: 154,
+        name: "Poker Chip",
+        solution: require("./154-poker-chip"),
+        date: "2023-06-29",
+      },
+      {
+        id: 155,
+        name: "Snake and symbol",
+        solution: require("./155-snake-and-symbol"),
+        date: "2023-06-29",
+      },
+      {
+        id: 156,
+        name: "Chinese checkers",
+        solution: require("./156-chinese-checkers"),
+        date: "2023-06-29",
+      },
+      {
+        id: 157,
+        name: "Monopoly",
+        solution: require("./157-monopoly"),
+        date: "2023-06-29",
+      },
+      {
+        id: 158,
+        name: "Clubs",
+        solution: require("./158-clubs"),
+        date: "2023-06-29",
+      },
+    ],
+  },
 ];
