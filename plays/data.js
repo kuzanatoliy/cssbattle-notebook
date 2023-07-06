@@ -600,6 +600,12 @@ module.exports = [
         solution: require("./083-supernova"),
         date: "2023-07-06",
       },
+      {
+        id: 84,
+        name: "Junction",
+        solution: require("./084-junction"),
+        date: "2023-07-06",
+      },
     ],
   },
   {
