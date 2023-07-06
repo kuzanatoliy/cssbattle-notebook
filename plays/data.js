@@ -580,19 +580,25 @@ module.exports = [
   {
     id: 15,
     name: "Filter",
-    date: "2023-07-05",
+    date: "2023-07-06",
     plays: [
       {
         id: 81,
         name: "Odoo",
         solution: require("./081-odoo"),
-        date: "2023-07-05",
+        date: "2023-07-06",
       },
       {
         id: 82,
         name: "Diamond Cut",
         solution: require("./082-diamond-cut"),
-        date: "2023-07-05",
+        date: "2023-07-06",
+      },
+      {
+        id: 83,
+        name: "Supernova",
+        solution: require("./083-supernova"),
+        date: "2023-07-06",
       },
     ],
   },
