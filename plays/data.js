@@ -620,8 +620,14 @@ module.exports = [
       },
       {
         id: 87,
-        name: "Building blocks",
-        solution: require("./086-stairway"),
+        name: "Building Blocks",
+        solution: require("./087-building-blocks"),
+        date: "2023-07-09",
+      },
+      {
+        id: 88,
+        name: "Tight Corner",
+        solution: require("./088-tight-corner"),
         date: "2023-07-09",
       },
     ],
