@@ -606,6 +606,12 @@ module.exports = [
         solution: require("./084-junction"),
         date: "2023-07-06",
       },
+      {
+        id: 85,
+        name: "Pythagoras",
+        solution: require("./085-pythagoras"),
+        date: "2023-07-06",
+      },
     ],
   },
   {
