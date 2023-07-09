@@ -612,6 +612,12 @@ module.exports = [
         solution: require("./085-pythagoras"),
         date: "2023-07-06",
       },
+      {
+        id: 86,
+        name: "Stairway",
+        solution: require("./086-stairway"),
+        date: "2023-07-09",
+      },
     ],
   },
   {
