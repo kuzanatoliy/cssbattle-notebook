@@ -618,6 +618,12 @@ module.exports = [
         solution: require("./086-stairway"),
         date: "2023-07-09",
       },
+      {
+        id: 87,
+        name: "Building blocks",
+        solution: require("./086-stairway"),
+        date: "2023-07-09",
+      },
     ],
   },
   {
