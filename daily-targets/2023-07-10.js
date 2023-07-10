@@ -20,10 +20,5 @@ module.exports = `
     margin: 20px 50px;
     box-shadow: 0 131px 0 50px #6592CF;
   }
-  div {
-    width: 100px;
-    height: 100px;
-    background: #dd6b4d;
-  }
 </style>
 `;
