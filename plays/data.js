@@ -633,10 +633,17 @@ module.exports = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     name: "Aspect",
     date: "2023-07-11",
-    plays: [],
+    plays: [
+      {
+        id: 89,
+        name: "Summit",
+        solution: require("./089-summit"),
+        date: "2023-07-11",
+      },
+    ],
   },
   {
     id: 24,
