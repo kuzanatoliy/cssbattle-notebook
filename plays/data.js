@@ -635,13 +635,19 @@ module.exports = [
   {
     id: 16,
     name: "Aspect",
-    date: "2023-07-11",
+    date: "2023-07-12",
     plays: [
       {
         id: 89,
         name: "Summit",
         solution: require("./089-summit"),
-        date: "2023-07-11",
+        date: "2023-07-12",
+      },
+      {
+        id: 90,
+        name: "Eclipse",
+        solution: require("./090-eclipse"),
+        date: "2023-07-12",
       },
     ],
   },
