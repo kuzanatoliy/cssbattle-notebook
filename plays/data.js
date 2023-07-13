@@ -655,6 +655,12 @@ module.exports = [
         solution: require("./091-reflection"),
         date: "2023-07-13",
       },
+      {
+        id: 92,
+        name: "Squeeze",
+        solution: require("./092-squeeze"),
+        date: "2023-07-13",
+      },
     ],
   },
   {
