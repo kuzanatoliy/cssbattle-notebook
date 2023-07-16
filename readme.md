@@ -1,0 +1,37 @@
+# CSSBATTLE NOTEBOOK
+
+The project contains targets of the [css battles](https://cssbattle.dev);
+
+[Battle 1: Pilot battle](https://kuzanatoliy.github.io/cssbattle-notebook/1_pilot_battle/)
+
+[Battle 2: Visibility](https://kuzanatoliy.github.io/cssbattle-notebook/2_visibility/)
+
+[Battle 3: Cube](https://kuzanatoliy.github.io/cssbattle-notebook/3_cube/)
+
+[Battle 4: Display](https://kuzanatoliy.github.io/cssbattle-notebook/4_display/)
+
+[Battle 5: Inline](https://kuzanatoliy.github.io/cssbattle-notebook/5_inline/)
+
+[Battle 6: Conic](https://kuzanatoliy.github.io/cssbattle-notebook/6_conic/)
+
+[Battle 7: Backface](https://kuzanatoliy.github.io/cssbattle-notebook/7_backface/)
+
+[Battle 8: Transition](https://kuzanatoliy.github.io/cssbattle-notebook/8_transition/)
+
+[Battle 9: Margin](https://kuzanatoliy.github.io/cssbattle-notebook/9_margin/)
+
+[Battle 10: Block](https://kuzanatoliy.github.io/cssbattle-notebook/10_block/)
+
+[Battle 11: Overflow](https://kuzanatoliy.github.io/cssbattle-notebook/11_overflow/)
+
+[Battle 12: Blend](https://kuzanatoliy.github.io/cssbattle-notebook/12_blend/)
+
+[Battle 13: Clip](https://kuzanatoliy.github.io/cssbattle-notebook/13_clip/)
+
+[Battle 14: Zindex](https://kuzanatoliy.github.io/cssbattle-notebook/14_zindex/)
+
+[Battle 15: Filter](https://kuzanatoliy.github.io/cssbattle-notebook/15_filter/)
+
+[Battle 24: Offset](https://kuzanatoliy.github.io/cssbattle-notebook/24_offset/)
+
+[Battle 25: Flex](https://kuzanatoliy.github.io/cssbattle-notebook/25_flex/)
