@@ -635,31 +635,37 @@ module.exports = [
   {
     id: 16,
     name: "Aspect",
-    date: "2023-07-13",
+    date: "2023-07-26",
     plays: [
       {
         id: 89,
         name: "Summit",
         solution: require("./089-summit"),
-        date: "2023-07-13",
+        date: "2023-07-26",
       },
       {
         id: 90,
         name: "Eclipse",
         solution: require("./090-eclipse"),
-        date: "2023-07-13",
+        date: "2023-07-26",
       },
       {
         id: 91,
         name: "Reflection",
         solution: require("./091-reflection"),
-        date: "2023-07-13",
+        date: "2023-07-26",
       },
       {
         id: 92,
         name: "Squeeze",
         solution: require("./092-squeeze"),
-        date: "2023-07-13",
+        date: "2023-07-26",
+      },
+      {
+        id: 93,
+        name: "Great Wall",
+        solution: require("./093-great-wall"),
+        date: "2023-07-26",
       },
     ],
   },
