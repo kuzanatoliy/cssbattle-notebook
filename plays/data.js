@@ -674,6 +674,12 @@ module.exports = [
         date: "2023-07-30",
       },
       {
+        id: 95,
+        name: "Pokeball",
+        solution: require("./095-pokeball"),
+        date: "2023-07-30",
+      },
+      {
         id: 96,
         name: "Mandala",
         solution: require("./096-mandala"),
