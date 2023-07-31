@@ -3,7 +3,7 @@ module.exports = `
 <style>
   * {
     background: #191919;
-    color: #191919;;
+    color: #191919;
   }
   body {
     margin: 75px 150px;
