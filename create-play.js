@@ -55,7 +55,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       }
       
       button:active, button:focus-visible {
-        outline: solid 2px var(--color-dark);
+        outline: solid 2px var(--lt-color-darkest);
       }
 
       button:hover {
@@ -79,12 +79,12 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       a {
         font-weight: 600;
         text-decoration: none;
-        color: var(--color-light);
+        color: var(--lt-color-normal);
       }
 
       a:hover, a:focus-visible {
         outline: none;
-        color: var(--color-dark);
+        color: var(--lt-color-darkest);
       }
 
       a:focus-visible {

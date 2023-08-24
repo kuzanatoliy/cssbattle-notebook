@@ -22,12 +22,13 @@ module.exports = ({
     <style>
 
 :root {
-  --color-dark: #02315E;
-  --color-normal: #00457E;
-  --color-light: #2F70AF;
-  --color-second: #B9848C;
-  --color-third: #806491;
+  --lt-color-darkest: #02315E;
+  --lt-color-dark: #00457E;
+  --lt-color-normal: #2F70AF;
+  --lt-color-light: #B9848C;
+  --lt-color-lightest: #806491;
   --color-white: #fff;
+  --color-black: #000;
 
   --size-quarter: 0.125rem;
   --size-half: 0.25rem;
@@ -78,13 +79,13 @@ header {
   color: var(--color-white);
   position: sticky;
   top: 0;
-  background: var(--color-dark);
+  background: var(--lt-color-darkest);
   box-shadow: 0 var(--size-double) var(--size-double) var(--color-white);
 }
 
 footer {
   font-weight: bold;
-  color: var(--color-dark);
+  color: var(--lt-color-darkest);
   text-align: center;
   background: linear-gradient(transparent, var(--color-white) 25%);
 }
@@ -135,5 +136,3 @@ ${injectBody ? injectBody() : ""}
   </body>
 </html>
 `;
-
-// #1E1F26 #283655 #4D648D D0E1F9
