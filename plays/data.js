@@ -808,6 +808,12 @@ module.exports = [
         solution: require("./159-portal"),
         date: "2023-08-25",
       },
+      {
+        id: 160,
+        name: "Donut",
+        solution: require("./160-donut"),
+        date: "2023-08-25",
+      },
     ],
   },
 ];
