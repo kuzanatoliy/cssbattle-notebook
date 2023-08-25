@@ -22,13 +22,18 @@ module.exports = ({
     <style>
 
 :root {
+  color-scheme: light dark;
+
   --lt-color-darkest: #02315E;
   --lt-color-dark: #00457E;
   --lt-color-normal: #2F70AF;
   --lt-color-light: #B9848C;
   --lt-color-lightest: #806491;
+  --dt-color-darkest: #151515;
+  --dt-color-dark: #303030;
   --color-white: #fff;
   --color-black: #000;
+  --color-red: #ed2945;
 
   --size-quarter: 0.125rem;
   --size-half: 0.25rem;
@@ -43,6 +48,30 @@ module.exports = ({
   --breakpoint-mobile-l: 425px;
   --breakpoint-mobile-m: 375px;
   --breakpoint-mobile-s: 320px;
+
+  --page-background-color: var(--color-white);
+  --header-background-color: var(--lt-color-darkest);
+  --header-text-color: var(--color-white);
+  --footer-text-color: var(--lt-color-darkest);
+  --control-text-color: var(--lt-color-darkest);
+  --control-border-color: var(--lt-color-normal);
+  --control-active-border-color: var(--lt-color-darkest);
+  --link-text-color: var(--lt-color-normal);
+  --link-active-text-color: var(--lt-color-darkest);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--dt-color-dark);
+    --header-background-color: var(--dt-color-darkest);
+    --header-text-color: var(--color-red);
+    --footer-text-color: var(--color-white);
+    --control-text-color: var(--color-white);
+    --control-border-color: var(--color-white);
+    --control-active-border-color: var(--color-red);
+    --link-text-color: var(--color-white);
+    --link-active-text-color: var(--color-red);
+  }
 }
 
 body {
@@ -51,7 +80,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 16px;
-  background-color: var(--color-white);
+  background-color: var(--page-background-color);
 }
 
 header, main, footer {
@@ -76,18 +105,18 @@ header {
   display: flex;
   gap: var(--size-double);
   align-items: center;
-  color: var(--color-white);
+  color: var(--header-text-color);
   position: sticky;
   top: 0;
-  background: var(--lt-color-darkest);
-  box-shadow: 0 var(--size-double) var(--size-double) var(--color-white);
+  background: var(--header-background-color);
+  box-shadow: 0 var(--size-double) var(--size-double) var(--page-background-color);
 }
 
 footer {
   font-weight: bold;
-  color: var(--lt-color-darkest);
+  color: var(--footer-text-color);
   text-align: center;
-  background: linear-gradient(transparent, var(--color-white) 25%);
+  background: linear-gradient(transparent, var(--page-background-color) 25%);
 }
 
 header > h1 {
