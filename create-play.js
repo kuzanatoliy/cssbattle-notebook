@@ -46,6 +46,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       }
       
       button {
+        cursor: pointer;
         background: none;
         border: none;
         padding: 0.5rem;
@@ -55,7 +56,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       }
       
       button:active, button:focus-visible {
-        outline: solid 2px var(--color-dark);
+        outline: solid 2px var(--control-active-border-color);
       }
 
       button:hover {
@@ -65,6 +66,12 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       button img {
         width: 20px;
         height: 20px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        button img {
+          filter: invert(1);
+        }
       }
       
       pre {
@@ -79,12 +86,12 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       a {
         font-weight: 600;
         text-decoration: none;
-        color: var(--color-light);
+        color: var(--link-text-color);
       }
 
       a:hover, a:focus-visible {
         outline: none;
-        color: var(--color-dark);
+        color: var(--color-red);
       }
 
       a:focus-visible {

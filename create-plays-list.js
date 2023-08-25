@@ -34,17 +34,17 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
       a {
         display: block;
         padding: var(--size-double);
-        border: solid 1px var(--color-light);
+        border: solid 1px var(--control-border-color);
         border-radius: var(--size-three-quarters);
         text-decoration: none;
-        color: var(--color-dark);
+        color: var(--control-text-color);
         height: 100%;
         box-sizing: border-box;
       }
 
       a:active, a:focus-visible {
         border: none;
-        outline: solid 2px var(--color-dark);
+        outline: solid 2px var(--control-active-border-color);
       }
 
       a:hover {
