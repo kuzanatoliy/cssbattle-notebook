@@ -802,6 +802,12 @@ module.exports = [
     name: "Initial",
     date: "2023-08-25",
     plays: [
+      {
+        id: 159,
+        name: "Portal",
+        solution: require("./159-portal"),
+        date: "2023-08-25",
+      },
     ],
   },
 ];
