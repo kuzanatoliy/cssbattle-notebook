@@ -820,6 +820,12 @@ module.exports = [
         solution: require("./161-converge"),
         date: "2023-09-02",
       },
+      {
+        id: 162,
+        name: "Chevron",
+        solution: require("./162-chevron"),
+        date: "2023-09-02",
+      },
     ],
   },
 ];
