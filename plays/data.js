@@ -826,6 +826,12 @@ module.exports = [
         solution: require("./162-chevron"),
         date: "2023-09-02",
       },
+      {
+        id: 163,
+        name: "Missing Piece",
+        solution: require("./163-missing-piece"),
+        date: "2023-09-02",
+      },
     ],
   },
 ];
