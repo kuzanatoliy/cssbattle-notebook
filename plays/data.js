@@ -797,4 +797,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 26,
+    name: "Initial",
+    date: "2023-09-18",
+    plays: [
+      {
+        id: 159,
+        name: "Portal",
+        solution: require("./159-portal"),
+        date: "2023-09-18",
+      },
+      {
+        id: 160,
+        name: "Donut",
+        solution: require("./160-donut"),
+        date: "2023-09-18",
+      },
+      {
+        id: 161,
+        name: "Converge",
+        solution: require("./161-converge"),
+        date: "2023-09-18",
+      },
+      {
+        id: 162,
+        name: "Chevron",
+        solution: require("./162-chevron"),
+        date: "2023-09-18",
+      },
+      {
+        id: 163,
+        name: "Missing Piece",
+        solution: require("./163-missing-piece"),
+        date: "2023-09-18",
+      },
+      {
+        id: 164,
+        name: "Rangoli",
+        solution: require("./164-rangoli"),
+        date: "2023-09-18",
+      },
+      {
+        id: 165,
+        name: "Pyramid",
+        solution: require("./165-pyramid"),
+        date: "2023-09-18",
+      },
+      {
+        id: 166,
+        name: "Flow",
+        solution: require("./166-flow"),
+        date: "2023-09-18",
+      },
+    ],
+  },
 ];
