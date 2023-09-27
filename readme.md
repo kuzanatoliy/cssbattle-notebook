@@ -35,3 +35,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 24: Offset](https://kuzanatoliy.github.io/cssbattle-notebook/24_offset/)
 
 [Battle 25: Flex](https://kuzanatoliy.github.io/cssbattle-notebook/25_flex/)
+
+[Battle 26: Initial](https://kuzanatoliy.github.io/cssbattle-notebook/26_initial/)
