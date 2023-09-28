@@ -875,6 +875,12 @@ module.exports = [
         solution: require("./169-abstract-plate"),
         date: "2023-09-28",
       },
+      {
+        id: 170,
+        name: "Party Hat",
+        solution: require("./170-party-hat"),
+        date: "2023-09-28",
+      },
     ],
   },
 ];
