@@ -857,7 +857,12 @@ module.exports = [
     name: "Relative",
     date: "2023-09-28",
     plays: [
-      
+      {
+        id: 167,
+        name: "React India",
+        solution: require("./167-react-india"),
+        date: "2023-09-18",
+      },
     ],
   },
 ];
