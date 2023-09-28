@@ -869,6 +869,12 @@ module.exports = [
         solution: require("./168-carpet"),
         date: "2023-09-28",
       },
+      {
+        id: 169,
+        name: "Abstract Plate",
+        solution: require("./169-abstract-plate"),
+        date: "2023-09-28",
+      },
     ],
   },
 ];
