@@ -852,4 +852,35 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 27,
+    name: "Relative",
+    date: "2023-09-28",
+    plays: [
+      {
+        id: 167,
+        name: "React India",
+        solution: require("./167-react-india"),
+        date: "2023-09-28",
+      },
+      {
+        id: 168,
+        name: "Carpet",
+        solution: require("./168-carpet"),
+        date: "2023-09-28",
+      },
+      {
+        id: 169,
+        name: "Abstract Plate",
+        solution: require("./169-abstract-plate"),
+        date: "2023-09-28",
+      },
+      {
+        id: 170,
+        name: "Party Hat",
+        solution: require("./170-party-hat"),
+        date: "2023-09-28",
+      },
+    ],
+  },
 ];
