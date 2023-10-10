@@ -1,27 +1,25 @@
 module.exports = `
-<div><p><p></div><div><p><p></div>
+<p><p a><p>
 <style>
   body {
-    margin: 44px 0 0 110px;
-    background: #998235;
-  }
-  div {
-    float: left;
-    margin-right: 20px;
-  }
-  div + div {
-    transform: rotate(180deg) rotateY(180deg);
+   	margin: 40px 40px;
+    display: flex;
+    background: #6592CF;
   }
   p {
+    margin: 0;
     width: 80px;
-    height: 100px;
-    background: #1A4341;
-    border-radius: 0 50px;
+    height: 40px;
+    border-radius: 100px 100px 0 0;
+    border: solid 20px #060F55;
+    border-bottom: 0;
   }
   p + p {
-    height: 60px;
-    background: #F3AC3C;
-    margin-top: 20px;
+    margin-left: -20px;
+  }
+  [a] {
+    align-self: flex-end;
+    transform: rotateX(180deg);
   }
 </style>
 `;
