@@ -25,7 +25,7 @@ module.exports = `
   div > p {
     background: none;
     transform: rotate(30deg);
-    margin: -10 0 0 55px;
+    margin: -10px 0 0 55px;
     width: 80px;
     height: 40px;
     border-left: 0px;
