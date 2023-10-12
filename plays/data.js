@@ -14,7 +14,7 @@ module.exports = [
         id: 2,
         name: "Carrom",
         solution: require("./002-carrom"),
-        date: "2023-01-23",
+        date: "2023-10-12",
       },
       {
         id: 3,
@@ -179,7 +179,7 @@ module.exports = [
         id: 26,
         name: "Smiley",
         solution: require("./026-smiley"),
-        date: "2023-01-23",
+        date: "2023-10-12",
       },
       {
         id: 27,
@@ -445,7 +445,7 @@ module.exports = [
         id: 61,
         name: "ImproveMX",
         solution: require("./061-improvemx"),
-        date: "2023-04-06",
+        date: "2023-10-12",
       },
       {
         id: 62,
@@ -873,7 +873,7 @@ module.exports = [
         id: 169,
         name: "Abstract Plate",
         solution: require("./169-abstract-plate"),
-        date: "2023-09-28",
+        date: "2023-10-12",
       },
       {
         id: 170,
