@@ -1,21 +1,21 @@
 module.exports = `
-<p><p><p><p>
+<p><p>
 <style>
   * {
-    background: #0D1335;
+    background: radial-gradient(circle, #4FA07B 55px, 0, #0D1335 65px, 0, #4FA07B 85px, 0, #0D1335 95px, 0, #4FA07B 115px, 0, #0D1335 125px, 0, #4FA07B);
   }
   body {
-    margin: -190px -160px 0 -140px;
+    background: #FBFAE2;
+    margin: 32px 45px;
+    clip-path: polygon(0 0, 0 100%, 50% 59%, 100% 100%, 100% 0, 50% 41%);
   }
   p {
-    color: #DC6638;
-    height: 40px;
-    width: 40px;
-    outline: double 60px;
-    outline-offset: 20px;
-    border: double 60px;
-    float: left;
-    margin: 90px;
+    position: fixed;
+    inset: 0;
+    clip-path: polygon(55px 34px, 55px 234px, 190px 150px, 166px 134px, 190px 118px);
+  }
+  p + p {
+    scale: -1;
   }
 </style>
 `;
