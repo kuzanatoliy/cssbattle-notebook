@@ -690,8 +690,15 @@ module.exports = [
   {
     id: 17,
     name: "Christmas",
-    date: "2023-08-04",
-    plays: [],
+    date: "2023-10-14",
+    plays: [
+      {
+        id: 97,
+        name: "Snowman",
+        solution: require("./097-snowman"),
+        date: "2023-10-14",
+      },
+    ],
   },
   {
     id: 24,
