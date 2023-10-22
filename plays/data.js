@@ -698,6 +698,12 @@ module.exports = [
         solution: require("./097-snowman"),
         date: "2023-10-14",
       },
+      {
+        id: 98,
+        name: "Candle",
+        solution: require("./098-candle"),
+        date: "2023-10-14",
+      },
     ],
   },
   {
