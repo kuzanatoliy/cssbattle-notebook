@@ -894,6 +894,12 @@ module.exports = [
         solution: require("./173-hockey-mask"),
         date: "2023-10-22",
       },
+      {
+        id: 174,
+        name: "Witch's Hat",
+        solution: require("./174-witch's-hat"),
+        date: "2023-10-22",
+      },
     ],
   },
 ];
