@@ -889,6 +889,12 @@ module.exports = [
     date: "2023-10-22",
     plays: [
       {
+        id: 171,
+        name: "Pumpkin",
+        solution: require("./171-pumpkin"),
+        date: "2023-10-22",
+      },
+      {
         id: 173,
         name: "Hockey Mask",
         solution: require("./173-hockey-mask"),
