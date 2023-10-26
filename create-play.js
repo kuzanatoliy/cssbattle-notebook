@@ -115,4 +115,11 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       });
     `,
     parentUrl: `/${ROOT_PATH}/${parentUrl}`,
+    metaTags: `
+      <meta property="og:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
+      <meta name="twitter:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
+      <meta property="vk:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
+      <meta property="og:image:width" content="400">
+      <meta property="og:image:height" content="300">
+    `,
   });

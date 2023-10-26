@@ -8,6 +8,7 @@ module.exports = ({
   injectScripts,
   injectBody,
   parentUrl,
+  metaTags,
 }) => `
 <!DOCTYPE html>
 <html>
@@ -19,6 +20,7 @@ module.exports = ({
     <meta name="author" content="Anatoli Kuzmiankou">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     ${canonicalPath ? `<link rel="canonical" href="${canonicalPath}"/>` : ""}
+    ${metaTags ? metaTags : ""}
     <style>
 
 :root {
