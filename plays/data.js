@@ -886,31 +886,37 @@ module.exports = [
   {
     id: 28,
     name: "Revert",
-    date: "2023-10-22",
+    date: "2023-10-29",
     plays: [
       {
         id: 171,
         name: "Pumpkin",
         solution: require("./171-pumpkin"),
-        date: "2023-10-22",
+        date: "2023-10-29",
       },
       {
         id: 172,
         name: "Crossbones",
         solution: require("./172-crossbones"),
-        date: "2023-10-22",
+        date: "2023-10-29",
       },
       {
         id: 173,
         name: "Hockey Mask",
         solution: require("./173-hockey-mask"),
-        date: "2023-10-22",
+        date: "2023-10-29",
       },
       {
         id: 174,
         name: "Witch's Hat",
         solution: require("./174-witch's-hat"),
-        date: "2023-10-22",
+        date: "2023-10-29",
+      },
+      {
+        id: 175,
+        name: "Evil cat",
+        solution: require("./175-evil-cat"),
+        date: "2023-10-29",
       },
     ],
   },
