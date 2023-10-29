@@ -918,6 +918,12 @@ module.exports = [
         solution: require("./175-evil-cat"),
         date: "2023-10-29",
       },
+      {
+        id: 176,
+        name: "Castlevania",
+        solution: require("./176-castlevania"),
+        date: "2023-10-29",
+      },
     ],
   },
 ];
