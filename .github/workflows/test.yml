@@ -16,7 +16,8 @@ jobs:
           for branch in $branchList
           do
             name=`echo $branch | cut -d "/" -f 2`
-            echo $branch
-            echo $name
-            echo $branch | cut -d "/" -f 2
+            if [ $name != master -a $name != develop -a $name != gh-pages ]
+            then
+              echo $name
+            fi
           done
