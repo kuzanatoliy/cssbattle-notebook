@@ -11,4 +11,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: clean
-        run: git branch -a
+        run: |
+          for branch in git branch -a
+          do
+            echo "Mendax Current number: $branch"
+          done
