@@ -12,5 +12,11 @@ jobs:
           fetch-depth: 0
       - name: clean
         run: |
-          project_branches=`git branch -a`
-          echo $project_branches
+          branchList=`git branch --remotes`
+          for branch in $branchList
+          do
+            name=`echo $branch | cut -d "/" -f 2`
+            echo $branch
+            echo $name
+            echo $branch | cut -d "/" -f 2
+          done
