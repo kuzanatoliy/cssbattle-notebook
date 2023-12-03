@@ -942,6 +942,13 @@ module.exports = [
     id: 29,
     name: "Font",
     date: "2023-12-03",
-    plays: [],
+    plays: [
+      {
+        id: 179,
+        name: "Tanzania",
+        solution: require("./179-tanzania"),
+        date: "2023-12-03",
+      },
+    ],
   },
 ];
