@@ -7,7 +7,7 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: clean
@@ -18,7 +18,7 @@ jobs:
           for branch in $branchList
           do
             name=`echo $branch | cut -d "/" -f 2`
-            if [ $name != master -a $name != develop -a $name != gh-pages -a $name != battle-29-font -a $name != daily-targets6 ]
+            if [ $name != master -a $name != develop -a $name != gh-pages ]
             then
               git push origin -d $name
             fi
