@@ -1,3 +1,5 @@
+const { HOST_NAME, ROOT_PATH } = require("./constatns");
+
 module.exports = ({
   title,
   description,
@@ -13,6 +15,7 @@ module.exports = ({
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.ico">
     <title>${title}</title>
     <meta charset="UTF-8">
     <meta name="description" content="${description}">
