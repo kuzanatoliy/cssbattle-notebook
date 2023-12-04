@@ -1,5 +1,5 @@
-name: deploy
-on: push
+name: cleanning
+on: workflow_dispatch
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -12,12 +12,14 @@ jobs:
           fetch-depth: 0
       - name: clean
         run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
           branchList=`git branch --remotes`
           for branch in $branchList
           do
             name=`echo $branch | cut -d "/" -f 2`
-            if [ $name != master -a $name != develop -a $name != gh-pages ]
+            if [ $name != master -a $name != develop -a $name != gh-pages -a $name != battle-29-font -a $name != daily-targets6 ]
             then
-              echo $name
+              git push origin -d $name
             fi
           done
