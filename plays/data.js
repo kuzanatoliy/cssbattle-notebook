@@ -690,25 +690,31 @@ module.exports = [
   {
     id: 17,
     name: "Christmas",
-    date: "2023-10-22",
+    date: "2023-12-04",
     plays: [
       {
         id: 97,
         name: "Snowman",
         solution: require("./097-snowman"),
-        date: "2023-10-22",
+        date: "2023-12-04",
       },
       {
         id: 98,
         name: "Candle",
         solution: require("./098-candle"),
-        date: "2023-10-22",
+        date: "2023-12-04",
       },
       {
         id: 99,
         name: "Gift Box",
         solution: require("./099-gift-box"),
-        date: "2023-10-22",
+        date: "2023-12-04",
+      },
+      {
+        id: 100,
+        name: "CSSBattle",
+        solution: require("./100-cssbattle"),
+        date: "2023-12-04",
       },
     ],
   },
