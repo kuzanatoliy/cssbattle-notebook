@@ -1,4 +1,4 @@
-name: cleanning
+name: cleaning
 on: workflow_dispatch
 jobs:
   pipeline:
