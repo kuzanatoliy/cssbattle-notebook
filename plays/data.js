@@ -979,6 +979,12 @@ module.exports = [
         solution: require("./184-india"),
         date: "2023-12-18",
       },
+      {
+        id: 186,
+        name: "Guernsey",
+        solution: require("./186-guernsey"),
+        date: "2023-12-18",
+      },
     ],
   },
 ];
