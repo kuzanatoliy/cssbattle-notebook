@@ -980,6 +980,12 @@ module.exports = [
         date: "2023-12-18",
       },
       {
+        id: 185,
+        name: "South korea",
+        solution: require("./185-south-korea"),
+        date: "2023-12-18",
+      },
+      {
         id: 186,
         name: "Guernsey",
         solution: require("./186-guernsey"),
