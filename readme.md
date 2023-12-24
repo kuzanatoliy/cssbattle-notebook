@@ -41,3 +41,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 27: Relative](https://kuzanatoliy.github.io/cssbattle-notebook/27_relative/)
 
 [Battle 28: Revert](https://kuzanatoliy.github.io/cssbattle-notebook/28_revert/)
+
+[Battle 29: Font](https://kuzanatoliy.github.io/cssbattle-notebook/29_font/)

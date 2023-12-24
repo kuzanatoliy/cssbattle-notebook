@@ -969,4 +969,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 29,
+    name: "Font",
+    date: "2023-12-18",
+    plays: [
+      {
+        id: 179,
+        name: "Tanzania",
+        solution: require("./179-tanzania"),
+        date: "2023-12-18",
+      },
+      {
+        id: 180,
+        name: "Kuwait",
+        solution: require("./180-kuwait"),
+        date: "2023-12-18",
+      },
+      {
+        id: 181,
+        name: "Iceland",
+        solution: require("./181-iceland"),
+        date: "2023-12-18",
+      },
+      {
+        id: 182,
+        name: "Bahrain",
+        solution: require("./182-bahrain"),
+        date: "2023-12-18",
+      },
+      {
+        id: 183,
+        name: "Brazil",
+        solution: require("./183-brazil"),
+        date: "2023-12-18",
+      },
+      {
+        id: 184,
+        name: "India",
+        solution: require("./184-india"),
+        date: "2023-12-18",
+      },
+      {
+        id: 185,
+        name: "South korea",
+        solution: require("./185-south-korea"),
+        date: "2023-12-18",
+      },
+      {
+        id: 186,
+        name: "Guernsey",
+        solution: require("./186-guernsey"),
+        date: "2023-12-18",
+      },
+    ],
+  },
 ];
