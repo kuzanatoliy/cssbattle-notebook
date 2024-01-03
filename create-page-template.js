@@ -166,7 +166,7 @@ ${injectBody ? injectBody() : ""}
 
     </main>
     ${injectScripts ? `<script>${injectScripts()}</script>` : ""}
-    <footer class={styles.footerContainer}>© Kuzanatoliorg 2023</footer>
+    <footer class={styles.footerContainer}>© Kuzanatoliorg</footer>
   </body>
 </html>
 `;
