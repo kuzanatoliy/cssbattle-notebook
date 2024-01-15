@@ -82,7 +82,7 @@ module.exports = ({
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   font-size: 16px;
   background-color: var(--page-background-color);
