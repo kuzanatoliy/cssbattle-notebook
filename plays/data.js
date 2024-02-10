@@ -735,6 +735,12 @@ module.exports = [
         solution: require("./102-one-piece"),
         date: "2024-02-10",
       },
+      {
+        id: 103,
+        name: "Super Saiyan",
+        solution: require("./103-super-saiyan"),
+        date: "2024-02-10",
+      },
     ],
   },
   {
