@@ -1028,6 +1028,13 @@ module.exports = [
     id: 30,
     name: "Gradient",
     date: "2024-02-10",
-    plays: [],
+    plays: [
+      {
+        id: 187,
+        name: "Striped Triangle",
+        solution: require("./187-striped-triangle"),
+        date: "2024-02-10",
+      },
+    ],
   },
 ];
