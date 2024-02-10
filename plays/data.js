@@ -1035,6 +1035,12 @@ module.exports = [
         solution: require("./187-striped-triangle"),
         date: "2024-02-10",
       },
+      {
+        id: 188,
+        name: "Icecream Sticks",
+        solution: require("./188-icecream-sticks"),
+        date: "2024-02-10",
+      },
     ],
   },
 ];
