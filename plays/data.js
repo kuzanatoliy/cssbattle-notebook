@@ -1027,19 +1027,25 @@ module.exports = [
   {
     id: 30,
     name: "Gradient",
-    date: "2024-02-10",
+    date: "2024-02-17",
     plays: [
       {
         id: 187,
         name: "Striped Triangle",
         solution: require("./187-striped-triangle"),
-        date: "2024-02-10",
+        date: "2024-02-17",
       },
       {
         id: 188,
         name: "Icecream Sticks",
         solution: require("./188-icecream-sticks"),
-        date: "2024-02-10",
+        date: "2024-02-17",
+      },
+      {
+        id: 190,
+        name: "Power chip",
+        solution: require("./190-power-chip"),
+        date: "2024-02-17",
       },
     ],
   },
