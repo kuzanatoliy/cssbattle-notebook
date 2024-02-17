@@ -1042,6 +1042,12 @@ module.exports = [
         date: "2024-02-17",
       },
       {
+        id: 189,
+        name: "Triangle Hook",
+        solution: require("./189-triangle-hook"),
+        date: "2024-02-17",
+      },
+      {
         id: 190,
         name: "Power chip",
         solution: require("./190-power-chip"),
