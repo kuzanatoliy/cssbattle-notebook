@@ -721,25 +721,31 @@ module.exports = [
   {
     id: 18,
     name: "Float",
-    date: "2024-02-10",
+    date: "2024-02-18",
     plays: [
       {
         id: 101,
         name: "Sharingan",
         solution: require("./101-sharingan"),
-        date: "2024-02-10",
+        date: "2024-02-18",
       },
       {
         id: 102,
         name: "One Piece",
         solution: require("./102-one-piece"),
-        date: "2024-02-10",
+        date: "2024-02-18",
       },
       {
         id: 103,
         name: "Super Saiyan",
         solution: require("./103-super-saiyan"),
-        date: "2024-02-10",
+        date: "2024-02-18",
+      },
+      {
+        id: 104,
+        name: "Amegakure",
+        solution: require("./104-amegakure"),
+        date: "2024-02-18",
       },
     ],
   },
