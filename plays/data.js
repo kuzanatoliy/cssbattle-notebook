@@ -1053,6 +1053,12 @@ module.exports = [
         solution: require("./190-power-chip"),
         date: "2024-02-17",
       },
+      {
+        id: 192,
+        name: "Abstract Firefly",
+        solution: require("./192-abstract-firefly"),
+        date: "2024-02-17",
+      },
     ],
   },
 ];
