@@ -1024,4 +1024,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 30,
+    name: "Gradient",
+    date: "2024-03-05",
+    plays: [
+      {
+        id: 187,
+        name: "Striped Triangle",
+        solution: require("./187-striped-triangle"),
+        date: "2024-03-05",
+      },
+      {
+        id: 188,
+        name: "Icecream Sticks",
+        solution: require("./188-icecream-sticks"),
+        date: "2024-03-05",
+      },
+      {
+        id: 189,
+        name: "Triangle Hook",
+        solution: require("./189-triangle-hook"),
+        date: "2024-03-05",
+      },
+      {
+        id: 190,
+        name: "Power chip",
+        solution: require("./190-power-chip"),
+        date: "2024-03-05",
+      },
+      {
+        id: 191,
+        name: "Modern Fence",
+        solution: require("./191-modern-fence"),
+        date: "2024-03-05",
+      },
+      {
+        id: 192,
+        name: "Abstract Firefly",
+        solution: require("./192-abstract-firefly"),
+        date: "2024-03-05",
+      },
+      {
+        id: 193,
+        name: "Galver",
+        solution: require("./193-galver"),
+        date: "2024-03-05",
+      },
+      {
+        id: 194,
+        name: "Fountain",
+        solution: require("./194-fountain"),
+        date: "2024-03-05",
+      },
+    ],
+  },
 ];
