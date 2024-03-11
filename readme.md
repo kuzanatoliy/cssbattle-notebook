@@ -43,3 +43,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 28: Revert](https://kuzanatoliy.github.io/cssbattle-notebook/28_revert/)
 
 [Battle 29: Font](https://kuzanatoliy.github.io/cssbattle-notebook/29_font/)
+
+[Battle 30: Gradient](https://kuzanatoliy.github.io/cssbattle-notebook/30_gradient/)
