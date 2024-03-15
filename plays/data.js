@@ -759,6 +759,12 @@ module.exports = [
         solution: require("./106-ryuk's-apple"),
         date: "2024-03-13",
       },
+      {
+        id: 107,
+        name: "Sealing Wand",
+        solution: require("./107-sealing-wand"),
+        date: "2024-03-13",
+      },
     ],
   },
   {
