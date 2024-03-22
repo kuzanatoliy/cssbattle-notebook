@@ -774,6 +774,25 @@ module.exports = [
     ],
   },
   {
+    id: 23,
+    name: "Contain",
+    date: "2023-10-26",
+    plays: [
+      {
+        id: 143,
+        name: "Third Eye",
+        solution: require("./141-third-eye"),
+        date: "2023-10-26",
+      },
+      {
+        id: 144,
+        name: "Curtains",
+        solution: require("./142-curtains"),
+        date: "2023-10-26",
+      },
+    ],
+  },
+  {
     id: 24,
     name: "Offset",
     date: "2023-04-22",
