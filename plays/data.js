@@ -765,6 +765,12 @@ module.exports = [
         solution: require("./107-sealing-wand"),
         date: "2024-03-13",
       },
+      {
+        id: 108,
+        name: "Clow Card",
+        solution: require("./108-clow-card"),
+        date: "2024-03-13",
+      },
     ],
   },
   {
