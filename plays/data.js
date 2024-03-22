@@ -719,6 +719,61 @@ module.exports = [
     ],
   },
   {
+    id: 18,
+    name: "Float",
+    date: "2024-03-13",
+    plays: [
+      {
+        id: 101,
+        name: "Sharingan",
+        solution: require("./101-sharingan"),
+        date: "2024-03-13",
+      },
+      {
+        id: 102,
+        name: "One Piece",
+        solution: require("./102-one-piece"),
+        date: "2024-03-13",
+      },
+      {
+        id: 103,
+        name: "Super Saiyan",
+        solution: require("./103-super-saiyan"),
+        date: "2024-03-13",
+      },
+      {
+        id: 104,
+        name: "Amegakure",
+        solution: require("./104-amegakure"),
+        date: "2024-03-13",
+      },
+      {
+        id: 105,
+        name: "Ryuk",
+        solution: require("./105-ryuk"),
+        date: "2024-03-13",
+      },
+      {
+        id: 106,
+        name: "Ryuk's Apple",
+        solution: require("./106-ryuk's-apple"),
+        date: "2024-03-13",
+      },
+      {
+        id: 107,
+        name: "Sealing Wand",
+        solution: require("./107-sealing-wand"),
+        date: "2024-03-13",
+      },
+      {
+        id: 108,
+        name: "Clow Card",
+        solution: require("./108-clow-card"),
+        date: "2024-03-13",
+      },
+    ],
+  },
+  {
     id: 24,
     name: "Offset",
     date: "2023-04-22",
