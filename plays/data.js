@@ -796,6 +796,12 @@ module.exports = [
         solution: require("./111-rain-drops"),
         date: "2024-03-23",
       },
+      {
+        id: 112,
+        name: "Chevron",
+        solution: require("./112-chevron"),
+        date: "2024-03-23",
+      },
     ],
   },
   {
