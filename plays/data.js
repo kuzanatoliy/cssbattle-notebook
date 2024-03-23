@@ -802,6 +802,12 @@ module.exports = [
         solution: require("./112-chevron"),
         date: "2024-03-23",
       },
+      {
+        id: 113,
+        name: "Black Light",
+        solution: require("./113-black-light"),
+        date: "2024-03-23",
+      },
     ],
   },
   {
