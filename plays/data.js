@@ -784,6 +784,12 @@ module.exports = [
         solution: require("./109-curtain"),
         date: "2024-03-23",
       },
+      {
+        id: 110,
+        name: "Sunrays",
+        solution: require("./110-sunrays"),
+        date: "2024-03-23",
+      },
     ],
   },
   {
