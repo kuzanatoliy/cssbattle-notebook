@@ -774,6 +774,19 @@ module.exports = [
     ],
   },
   {
+    id: 19,
+    name: "Spacing",
+    date: "2024-03-23",
+    plays: [
+      {
+        id: 109,
+        name: "Curtain",
+        solution: require("./109-curtain"),
+        date: "2024-03-23",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
