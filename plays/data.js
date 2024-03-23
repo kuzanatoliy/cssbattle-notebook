@@ -790,6 +790,12 @@ module.exports = [
         solution: require("./110-sunrays"),
         date: "2024-03-23",
       },
+      {
+        id: 111,
+        name: "Rain Drops",
+        solution: require("./111-rain-drops"),
+        date: "2024-03-23",
+      },
     ],
   },
   {
