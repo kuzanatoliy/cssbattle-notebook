@@ -774,6 +774,61 @@ module.exports = [
     ],
   },
   {
+    id: 19,
+    name: "Spacing",
+    date: "2024-03-24",
+    plays: [
+      {
+        id: 109,
+        name: "Curtain",
+        solution: require("./109-curtain"),
+        date: "2024-03-24",
+      },
+      {
+        id: 110,
+        name: "Sunrays",
+        solution: require("./110-sunrays"),
+        date: "2024-03-24",
+      },
+      {
+        id: 111,
+        name: "Rain Drops",
+        solution: require("./111-rain-drops"),
+        date: "2024-03-24",
+      },
+      {
+        id: 112,
+        name: "Chevron",
+        solution: require("./112-chevron"),
+        date: "2024-03-24",
+      },
+      {
+        id: 113,
+        name: "Black Light",
+        solution: require("./113-black-light"),
+        date: "2024-03-24",
+      },
+      {
+        id: 114,
+        name: "Negative Box",
+        solution: require("./114-negative-box"),
+        date: "2024-03-24",
+      },
+      {
+        id: 115,
+        name: "Droplet",
+        solution: require("./115-droplet"),
+        date: "2024-03-24",
+      },
+      {
+        id: 116,
+        name: "Headphones",
+        solution: require("./116-headphones"),
+        date: "2024-03-24",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
