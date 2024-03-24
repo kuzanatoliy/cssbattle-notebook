@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="https://kuzanatoliy.github.io/cssbattle-notebook/favicon.ico">
+    <title>CSS battle: solutions</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Solution of CSS battle">
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming">
+    <meta name="author" content="Anatoli Kuzmiankou">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://kuzanatoliy.github.io/cssbattle-notebook/index.html"/>
+    
+    <style>
+
+:root {
+  color-scheme: light dark;
+
+  --lt-color-darkest: #02315E;
+  --lt-color-dark: #00457E;
+  --lt-color-normal: #2F70AF;
+  --lt-color-light: #B9848C;
+  --lt-color-lightest: #806491;
+  --dt-color-darkest: #151515;
+  --dt-color-dark: #303030;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red: #ed2945;
+
+  --size-quarter: 0.125rem;
+  --size-half: 0.25rem;
+  --size-three-quarters: 0.375rem;
+  --size-single: 0.5rem;
+  --size-double: 1rem;
+  --size-triple: 1.5rem;
+  --size-quadruple: 2rem;
+
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile-l: 425px;
+  --breakpoint-mobile-m: 375px;
+  --breakpoint-mobile-s: 320px;
+
+  --page-background-color: var(--color-white);
+  --header-background-color: var(--lt-color-darkest);
+  --header-text-color: var(--color-white);
+  --footer-text-color: var(--lt-color-darkest);
+  --control-text-color: var(--lt-color-darkest);
+  --control-border-color: var(--lt-color-normal);
+  --control-active-border-color: var(--lt-color-darkest);
+  --link-text-color: var(--lt-color-normal);
+  --link-active-text-color: var(--lt-color-darkest);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--dt-color-dark);
+    --header-background-color: var(--dt-color-darkest);
+    --header-text-color: var(--color-red);
+    --footer-text-color: var(--color-white);
+    --control-text-color: var(--color-white);
+    --control-border-color: var(--color-white);
+    --control-active-border-color: var(--color-red);
+    --link-text-color: var(--color-white);
+    --link-active-text-color: var(--color-red);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0;
+  font-size: 16px;
+  background-color: var(--page-background-color);
+}
+
+header, main, footer {
+  margin: 0;
+  padding: var(--size-double)
+    calc((100% - var(--breakpoint-laptop)) / 2 + var(--size-double));
+}
+
+@media (max-width: 1056px) {
+  header, main, footer {
+    padding: var(--size-double);
+  }
+}
+
+main {
+  margin-top: var(--size-double);
+  flex: 1;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  gap: var(--size-double);
+  align-items: center;
+  color: var(--header-text-color);
+  position: sticky;
+  top: 0;
+  background: var(--header-background-color);
+  box-shadow: 0 var(--size-double) var(--size-double) var(--page-background-color);
+}
+
+footer {
+  font-weight: bold;
+  color: var(--footer-text-color);
+  text-align: center;
+  background: linear-gradient(transparent, var(--page-background-color) 25%);
+}
+
+header > h1 {
+  margin: 0;
+}
+
+header a {
+  border: none;
+  padding: var(--size-quarter);
+  border-radius: var(--size-half);
+}
+
+header a:active, header a:focus-visible {
+  outline: solid 2px var(--color-white);
+}
+
+header a:hover {
+  backdrop-filter: brightness(0.8);
+}
+
+header img {
+  height: var(--size-triple);
+  width: var(--size-triple);
+}
+
+
+      ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-gap: var(--size-triple);
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        display: block;
+        padding: var(--size-double);
+        border: solid 1px var(--control-border-color);
+        border-radius: var(--size-three-quarters);
+        text-decoration: none;
+        color: var(--control-text-color);
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      a:active, a:focus-visible {
+        border: none;
+        outline: solid 2px var(--control-active-border-color);
+      }
+
+      a:hover {
+        backdrop-filter: brightness(0.95);
+      }
+
+      a > h2 {
+        margin: 0;
+      }
+
+      a > div {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: var(--size-double);
+      }
+
+      a > div > img {
+        width: calc(100% / 3);
+      }
+    
+    
+    </style>
+  </head>
+  <body>
+    <header>
+      
+      <h1>CSS battle solutions</h1>
+    </header>
+    <main>
+
+<ul><li><a href=/cssbattle-notebook/1_pilot_battle><h2>1 - Pilot Battle</h2><div><img
+                  alt="#1 - Simply Square preview"
+                  src="https://cssbattle.dev/targets/1.png"
+                  srcset="https://cssbattle.dev/targets/1@2x.png 2x"
+                /><img
+                  alt="#2 - Carrom preview"
+                  src="https://cssbattle.dev/targets/2.png"
+                  srcset="https://cssbattle.dev/targets/2@2x.png 2x"
+                /><img
+                  alt="#3 - Push Button preview"
+                  src="https://cssbattle.dev/targets/3.png"
+                  srcset="https://cssbattle.dev/targets/3@2x.png 2x"
+                /><img
+                  alt="#4 - Ups n Downs preview"
+                  src="https://cssbattle.dev/targets/4.png"
+                  srcset="https://cssbattle.dev/targets/4@2x.png 2x"
+                /><img
+                  alt="#5 - Acid Rain preview"
+                  src="https://cssbattle.dev/targets/5.png"
+                  srcset="https://cssbattle.dev/targets/5@2x.png 2x"
+                /><img
+                  alt="#6 - Missing Slice preview"
+                  src="https://cssbattle.dev/targets/6.png"
+                  srcset="https://cssbattle.dev/targets/6@2x.png 2x"
+                /><img
+                  alt="#7 - Leafy Trail preview"
+                  src="https://cssbattle.dev/targets/7.png"
+                  srcset="https://cssbattle.dev/targets/7@2x.png 2x"
+                /><img
+                  alt="#8 - Forking Crazy preview"
+                  src="https://cssbattle.dev/targets/8.png"
+                  srcset="https://cssbattle.dev/targets/8@2x.png 2x"
+                /><img
+                  alt="#9 - Tesseract preview"
+                  src="https://cssbattle.dev/targets/9.png"
+                  srcset="https://cssbattle.dev/targets/9@2x.png 2x"
+                /><img
+                  alt="#10 - Cloaked Spirits preview"
+                  src="https://cssbattle.dev/targets/10.png"
+                  srcset="https://cssbattle.dev/targets/10@2x.png 2x"
+                /><img
+                  alt="#11 - Eye of sauron preview"
+                  src="https://cssbattle.dev/targets/11.png"
+                  srcset="https://cssbattle.dev/targets/11@2x.png 2x"
+                /><img
+                  alt="#12 - Wiggly Moustache preview"
+                  src="https://cssbattle.dev/targets/12.png"
+                  srcset="https://cssbattle.dev/targets/12@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/2_visibility><h2>2 - Visibility</h2><div><img
+                  alt="#13 - Totally Triangle preview"
+                  src="https://cssbattle.dev/targets/13.png"
+                  srcset="https://cssbattle.dev/targets/13@2x.png 2x"
+                /><img
+                  alt="#14 - Web Maker Logo preview"
+                  src="https://cssbattle.dev/targets/14.png"
+                  srcset="https://cssbattle.dev/targets/14@2x.png 2x"
+                /><img
+                  alt="#15 - Overlap preview"
+                  src="https://cssbattle.dev/targets/15.png"
+                  srcset="https://cssbattle.dev/targets/15@2x.png 2x"
+                /><img
+                  alt="#16 - Eye of the Tiger preview"
+                  src="https://cssbattle.dev/targets/16.png"
+                  srcset="https://cssbattle.dev/targets/16@2x.png 2x"
+                /><img
+                  alt="#17 - Fidget Spinner preview"
+                  src="https://cssbattle.dev/targets/17.png"
+                  srcset="https://cssbattle.dev/targets/17@2x.png 2x"
+                /><img
+                  alt="#18 - Matrix preview"
+                  src="https://cssbattle.dev/targets/18.png"
+                  srcset="https://cssbattle.dev/targets/18@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/3_cube><h2>3 - Cube</h2><div><img
+                  alt="#19 - Cube preview"
+                  src="https://cssbattle.dev/targets/19.png"
+                  srcset="https://cssbattle.dev/targets/19@2x.png 2x"
+                /><img
+                  alt="#20 - Ticket preview"
+                  src="https://cssbattle.dev/targets/20.png"
+                  srcset="https://cssbattle.dev/targets/20@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/4_display><h2>4 - Display</h2><div><img
+                  alt="#21 - SitePoint Logo preview"
+                  src="https://cssbattle.dev/targets/21.png"
+                  srcset="https://cssbattle.dev/targets/21@2x.png 2x"
+                /><img
+                  alt="#22 - Cloud preview"
+                  src="https://cssbattle.dev/targets/22.png"
+                  srcset="https://cssbattle.dev/targets/22@2x.png 2x"
+                /><img
+                  alt="#23 - Boxception preview"
+                  src="https://cssbattle.dev/targets/23.png"
+                  srcset="https://cssbattle.dev/targets/23@2x.png 2x"
+                /><img
+                  alt="#24 - Switches preview"
+                  src="https://cssbattle.dev/targets/24.png"
+                  srcset="https://cssbattle.dev/targets/24@2x.png 2x"
+                /><img
+                  alt="#25 - Blossom preview"
+                  src="https://cssbattle.dev/targets/25.png"
+                  srcset="https://cssbattle.dev/targets/25@2x.png 2x"
+                /><img
+                  alt="#26 - Smiley preview"
+                  src="https://cssbattle.dev/targets/26.png"
+                  srcset="https://cssbattle.dev/targets/26@2x.png 2x"
+                /><img
+                  alt="#27 - Lock up preview"
+                  src="https://cssbattle.dev/targets/27.png"
+                  srcset="https://cssbattle.dev/targets/27@2x.png 2x"
+                /><img
+                  alt="#28 - Cups and Balls preview"
+                  src="https://cssbattle.dev/targets/28.png"
+                  srcset="https://cssbattle.dev/targets/28@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/5_inline><h2>5 - Inline</h2><div><img
+                  alt="#29 - Suffocate preview"
+                  src="https://cssbattle.dev/targets/29.png"
+                  srcset="https://cssbattle.dev/targets/29@2x.png 2x"
+                /><img
+                  alt="#30 - Horizon preview"
+                  src="https://cssbattle.dev/targets/30.png"
+                  srcset="https://cssbattle.dev/targets/30@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/6_conic><h2>6 - Conic</h2><div><img
+                  alt="#31 - Equals preview"
+                  src="https://cssbattle.dev/targets/31.png"
+                  srcset="https://cssbattle.dev/targets/31@2x.png 2x"
+                /><img
+                  alt="#32 - Band-aid preview"
+                  src="https://cssbattle.dev/targets/32.png"
+                  srcset="https://cssbattle.dev/targets/32@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/7_backface><h2>7 - Backface</h2><div><img
+                  alt="#33 - Birdie preview"
+                  src="https://cssbattle.dev/targets/33.png"
+                  srcset="https://cssbattle.dev/targets/33@2x.png 2x"
+                /><img
+                  alt="#34 - Chrismas Tree preview"
+                  src="https://cssbattle.dev/targets/34.png"
+                  srcset="https://cssbattle.dev/targets/34@2x.png 2x"
+                /><img
+                  alt="#35 - Ice Cream preview"
+                  src="https://cssbattle.dev/targets/35.png"
+                  srcset="https://cssbattle.dev/targets/35@2x.png 2x"
+                /><img
+                  alt="#36 - Interleaved preview"
+                  src="https://cssbattle.dev/targets/36.png"
+                  srcset="https://cssbattle.dev/targets/36@2x.png 2x"
+                /><img
+                  alt="#37 - Tunnel preview"
+                  src="https://cssbattle.dev/targets/37.png"
+                  srcset="https://cssbattle.dev/targets/37@2x.png 2x"
+                /><img
+                  alt="#38 - Not Simply Square preview"
+                  src="https://cssbattle.dev/targets/38.png"
+                  srcset="https://cssbattle.dev/targets/38@2x.png 2x"
+                /><img
+                  alt="#39 - Sunset preview"
+                  src="https://cssbattle.dev/targets/39.png"
+                  srcset="https://cssbattle.dev/targets/39@2x.png 2x"
+                /><img
+                  alt="#40 - Letter B preview"
+                  src="https://cssbattle.dev/targets/40.png"
+                  srcset="https://cssbattle.dev/targets/40@2x.png 2x"
+                /><img
+                  alt="#41 - Fox Head preview"
+                  src="https://cssbattle.dev/targets/41.png"
+                  srcset="https://cssbattle.dev/targets/41@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/8_transition><h2>8 - Transition</h2><div><img
+                  alt="#42 - Baby preview"
+                  src="https://cssbattle.dev/targets/42.png"
+                  srcset="https://cssbattle.dev/targets/42@2x.png 2x"
+                /><img
+                  alt="#43 - Wrench preview"
+                  src="https://cssbattle.dev/targets/43.png"
+                  srcset="https://cssbattle.dev/targets/43@2x.png 2x"
+                /><img
+                  alt="#44 - Stripes preview"
+                  src="https://cssbattle.dev/targets/44.png"
+                  srcset="https://cssbattle.dev/targets/44@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/9_margin><h2>9 - Margin</h2><div><img
+                  alt="#45 - Magical Tree preview"
+                  src="https://cssbattle.dev/targets/45.png"
+                  srcset="https://cssbattle.dev/targets/45@2x.png 2x"
+                /><img
+                  alt="#46 - Mountains preview"
+                  src="https://cssbattle.dev/targets/46.png"
+                  srcset="https://cssbattle.dev/targets/46@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/10_block><h2>10 - Block</h2><div><img
+                  alt="#47 - Corona Virus preview"
+                  src="https://cssbattle.dev/targets/47.png"
+                  srcset="https://cssbattle.dev/targets/47@2x.png 2x"
+                /><img
+                  alt="#48 - Wash Your Hands preview"
+                  src="https://cssbattle.dev/targets/48.png"
+                  srcset="https://cssbattle.dev/targets/48@2x.png 2x"
+                /><img
+                  alt="#49 - Stay at Home preview"
+                  src="https://cssbattle.dev/targets/49.png"
+                  srcset="https://cssbattle.dev/targets/49@2x.png 2x"
+                /><img
+                  alt="#50 - Use Hand Sanitizer preview"
+                  src="https://cssbattle.dev/targets/50.png"
+                  srcset="https://cssbattle.dev/targets/50@2x.png 2x"
+                /><img
+                  alt="#51 - Wear a Mask preview"
+                  src="https://cssbattle.dev/targets/51.png"
+                  srcset="https://cssbattle.dev/targets/51@2x.png 2x"
+                /><img
+                  alt="#52 - Break the Chain preview"
+                  src="https://cssbattle.dev/targets/52.png"
+                  srcset="https://cssbattle.dev/targets/52@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/11_overflow><h2>11 - Overflow</h2><div><img
+                  alt="#53 - Pastel Logo preview"
+                  src="https://cssbattle.dev/targets/53.png"
+                  srcset="https://cssbattle.dev/targets/53@2x.png 2x"
+                /><img
+                  alt="#54 - Black Lives Matter preview"
+                  src="https://cssbattle.dev/targets/54.png"
+                  srcset="https://cssbattle.dev/targets/54@2x.png 2x"
+                /><img
+                  alt="#55 - Windmill preview"
+                  src="https://cssbattle.dev/targets/55.png"
+                  srcset="https://cssbattle.dev/targets/55@2x.png 2x"
+                /><img
+                  alt="#56 - Skull preview"
+                  src="https://cssbattle.dev/targets/56.png"
+                  srcset="https://cssbattle.dev/targets/56@2x.png 2x"
+                /><img
+                  alt="#57 - Pillars preview"
+                  src="https://cssbattle.dev/targets/57.png"
+                  srcset="https://cssbattle.dev/targets/57@2x.png 2x"
+                /><img
+                  alt="#58 - Rose preview"
+                  src="https://cssbattle.dev/targets/58.png"
+                  srcset="https://cssbattle.dev/targets/58@2x.png 2x"
+                /><img
+                  alt="#59 - Earth preview"
+                  src="https://cssbattle.dev/targets/59.png"
+                  srcset="https://cssbattle.dev/targets/59@2x.png 2x"
+                /><img
+                  alt="#60 - Evil Triangles preview"
+                  src="https://cssbattle.dev/targets/60.png"
+                  srcset="https://cssbattle.dev/targets/60@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/12_blend><h2>12 - Blend</h2><div><img
+                  alt="#61 - ImproveMX preview"
+                  src="https://cssbattle.dev/targets/61.png"
+                  srcset="https://cssbattle.dev/targets/61@2x.png 2x"
+                /><img
+                  alt="#62 - Sunset preview"
+                  src="https://cssbattle.dev/targets/62.png"
+                  srcset="https://cssbattle.dev/targets/62@2x.png 2x"
+                /><img
+                  alt="#63 - Command Key preview"
+                  src="https://cssbattle.dev/targets/63.png"
+                  srcset="https://cssbattle.dev/targets/63@2x.png 2x"
+                /><img
+                  alt="#64 - Door knob preview"
+                  src="https://cssbattle.dev/targets/64.png"
+                  srcset="https://cssbattle.dev/targets/64@2x.png 2x"
+                /><img
+                  alt="#65 - Max Volume preview"
+                  src="https://cssbattle.dev/targets/65.png"
+                  srcset="https://cssbattle.dev/targets/65@2x.png 2x"
+                /><img
+                  alt="#66 - Batmicky preview"
+                  src="https://cssbattle.dev/targets/66.png"
+                  srcset="https://cssbattle.dev/targets/66@2x.png 2x"
+                /><img
+                  alt="#67 - Video reel preview"
+                  src="https://cssbattle.dev/targets/67.png"
+                  srcset="https://cssbattle.dev/targets/67@2x.png 2x"
+                /><img
+                  alt="#68 - Bell preview"
+                  src="https://cssbattle.dev/targets/68.png"
+                  srcset="https://cssbattle.dev/targets/68@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/13_clip><h2>13 - Clip</h2><div><img
+                  alt="#69 - PushOwl preview"
+                  src="https://cssbattle.dev/targets/69.png"
+                  srcset="https://cssbattle.dev/targets/69@2x.png 2x"
+                /><img
+                  alt="#70 - Froggy preview"
+                  src="https://cssbattle.dev/targets/70.png"
+                  srcset="https://cssbattle.dev/targets/70@2x.png 2x"
+                /><img
+                  alt="#71 - Elephant preview"
+                  src="https://cssbattle.dev/targets/71.png"
+                  srcset="https://cssbattle.dev/targets/71@2x.png 2x"
+                /><img
+                  alt="#72 - Sheep preview"
+                  src="https://cssbattle.dev/targets/72.png"
+                  srcset="https://cssbattle.dev/targets/72@2x.png 2x"
+                /><img
+                  alt="#73 - Happy Tiger preview"
+                  src="https://cssbattle.dev/targets/73.png"
+                  srcset="https://cssbattle.dev/targets/73@2x.png 2x"
+                /><img
+                  alt="#74 - Danger Noodle preview"
+                  src="https://cssbattle.dev/targets/74.png"
+                  srcset="https://cssbattle.dev/targets/74@2x.png 2x"
+                /><img
+                  alt="#75 - Hippo preview"
+                  src="https://cssbattle.dev/targets/75.png"
+                  srcset="https://cssbattle.dev/targets/75@2x.png 2x"
+                /><img
+                  alt="#76 - Beeee preview"
+                  src="https://cssbattle.dev/targets/76.png"
+                  srcset="https://cssbattle.dev/targets/76@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/14_zindex><h2>14 - ZIndex</h2><div><img
+                  alt="#77 - Notes preview"
+                  src="https://cssbattle.dev/targets/77.png"
+                  srcset="https://cssbattle.dev/targets/77@2x.png 2x"
+                /><img
+                  alt="#78 - Ukulele preview"
+                  src="https://cssbattle.dev/targets/78.png"
+                  srcset="https://cssbattle.dev/targets/78@2x.png 2x"
+                /><img
+                  alt="#79 - Tambourine preview"
+                  src="https://cssbattle.dev/targets/79.png"
+                  srcset="https://cssbattle.dev/targets/79@2x.png 2x"
+                /><img
+                  alt="#80 - Piano preview"
+                  src="https://cssbattle.dev/targets/80.png"
+                  srcset="https://cssbattle.dev/targets/80@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/15_filter><h2>15 - Filter</h2><div><img
+                  alt="#81 - Odoo preview"
+                  src="https://cssbattle.dev/targets/81.png"
+                  srcset="https://cssbattle.dev/targets/81@2x.png 2x"
+                /><img
+                  alt="#82 - Diamond Cut preview"
+                  src="https://cssbattle.dev/targets/82.png"
+                  srcset="https://cssbattle.dev/targets/82@2x.png 2x"
+                /><img
+                  alt="#83 - Supernova preview"
+                  src="https://cssbattle.dev/targets/83.png"
+                  srcset="https://cssbattle.dev/targets/83@2x.png 2x"
+                /><img
+                  alt="#84 - Junction preview"
+                  src="https://cssbattle.dev/targets/84.png"
+                  srcset="https://cssbattle.dev/targets/84@2x.png 2x"
+                /><img
+                  alt="#85 - Pythagoras preview"
+                  src="https://cssbattle.dev/targets/85.png"
+                  srcset="https://cssbattle.dev/targets/85@2x.png 2x"
+                /><img
+                  alt="#86 - Stairway preview"
+                  src="https://cssbattle.dev/targets/86.png"
+                  srcset="https://cssbattle.dev/targets/86@2x.png 2x"
+                /><img
+                  alt="#87 - Building Blocks preview"
+                  src="https://cssbattle.dev/targets/87.png"
+                  srcset="https://cssbattle.dev/targets/87@2x.png 2x"
+                /><img
+                  alt="#88 - Tight Corner preview"
+                  src="https://cssbattle.dev/targets/88.png"
+                  srcset="https://cssbattle.dev/targets/88@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/16_aspect><h2>16 - Aspect</h2><div><img
+                  alt="#89 - Summit preview"
+                  src="https://cssbattle.dev/targets/89.png"
+                  srcset="https://cssbattle.dev/targets/89@2x.png 2x"
+                /><img
+                  alt="#90 - Eclipse preview"
+                  src="https://cssbattle.dev/targets/90.png"
+                  srcset="https://cssbattle.dev/targets/90@2x.png 2x"
+                /><img
+                  alt="#91 - Reflection preview"
+                  src="https://cssbattle.dev/targets/91.png"
+                  srcset="https://cssbattle.dev/targets/91@2x.png 2x"
+                /><img
+                  alt="#92 - Squeeze preview"
+                  src="https://cssbattle.dev/targets/92.png"
+                  srcset="https://cssbattle.dev/targets/92@2x.png 2x"
+                /><img
+                  alt="#93 - Great Wall preview"
+                  src="https://cssbattle.dev/targets/93.png"
+                  srcset="https://cssbattle.dev/targets/93@2x.png 2x"
+                /><img
+                  alt="#94 - Ripples preview"
+                  src="https://cssbattle.dev/targets/94.png"
+                  srcset="https://cssbattle.dev/targets/94@2x.png 2x"
+                /><img
+                  alt="#95 - Pokeball preview"
+                  src="https://cssbattle.dev/targets/95.png"
+                  srcset="https://cssbattle.dev/targets/95@2x.png 2x"
+                /><img
+                  alt="#96 - Mandala preview"
+                  src="https://cssbattle.dev/targets/96.png"
+                  srcset="https://cssbattle.dev/targets/96@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/17_christmas><h2>17 - Christmas</h2><div><img
+                  alt="#97 - Snowman preview"
+                  src="https://cssbattle.dev/targets/97.png"
+                  srcset="https://cssbattle.dev/targets/97@2x.png 2x"
+                /><img
+                  alt="#98 - Candle preview"
+                  src="https://cssbattle.dev/targets/98.png"
+                  srcset="https://cssbattle.dev/targets/98@2x.png 2x"
+                /><img
+                  alt="#99 - Gift Box preview"
+                  src="https://cssbattle.dev/targets/99.png"
+                  srcset="https://cssbattle.dev/targets/99@2x.png 2x"
+                /><img
+                  alt="#100 - CSSBattle preview"
+                  src="https://cssbattle.dev/targets/100.png"
+                  srcset="https://cssbattle.dev/targets/100@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/18_float><h2>18 - Float</h2><div><img
+                  alt="#101 - Sharingan preview"
+                  src="https://cssbattle.dev/targets/101.png"
+                  srcset="https://cssbattle.dev/targets/101@2x.png 2x"
+                /><img
+                  alt="#102 - One Piece preview"
+                  src="https://cssbattle.dev/targets/102.png"
+                  srcset="https://cssbattle.dev/targets/102@2x.png 2x"
+                /><img
+                  alt="#103 - Super Saiyan preview"
+                  src="https://cssbattle.dev/targets/103.png"
+                  srcset="https://cssbattle.dev/targets/103@2x.png 2x"
+                /><img
+                  alt="#104 - Amegakure preview"
+                  src="https://cssbattle.dev/targets/104.png"
+                  srcset="https://cssbattle.dev/targets/104@2x.png 2x"
+                /><img
+                  alt="#105 - Ryuk preview"
+                  src="https://cssbattle.dev/targets/105.png"
+                  srcset="https://cssbattle.dev/targets/105@2x.png 2x"
+                /><img
+                  alt="#106 - Ryuk's Apple preview"
+                  src="https://cssbattle.dev/targets/106.png"
+                  srcset="https://cssbattle.dev/targets/106@2x.png 2x"
+                /><img
+                  alt="#107 - Sealing Wand preview"
+                  src="https://cssbattle.dev/targets/107.png"
+                  srcset="https://cssbattle.dev/targets/107@2x.png 2x"
+                /><img
+                  alt="#108 - Clow Card preview"
+                  src="https://cssbattle.dev/targets/108.png"
+                  srcset="https://cssbattle.dev/targets/108@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/19_spacing><h2>19 - Spacing</h2><div><img
+                  alt="#109 - Curtain preview"
+                  src="https://cssbattle.dev/targets/109.png"
+                  srcset="https://cssbattle.dev/targets/109@2x.png 2x"
+                /><img
+                  alt="#110 - Sunrays preview"
+                  src="https://cssbattle.dev/targets/110.png"
+                  srcset="https://cssbattle.dev/targets/110@2x.png 2x"
+                /><img
+                  alt="#111 - Rain Drops preview"
+                  src="https://cssbattle.dev/targets/111.png"
+                  srcset="https://cssbattle.dev/targets/111@2x.png 2x"
+                /><img
+                  alt="#112 - Chevron preview"
+                  src="https://cssbattle.dev/targets/112.png"
+                  srcset="https://cssbattle.dev/targets/112@2x.png 2x"
+                /><img
+                  alt="#113 - Black Light preview"
+                  src="https://cssbattle.dev/targets/113.png"
+                  srcset="https://cssbattle.dev/targets/113@2x.png 2x"
+                /><img
+                  alt="#114 - Negative Box preview"
+                  src="https://cssbattle.dev/targets/114.png"
+                  srcset="https://cssbattle.dev/targets/114@2x.png 2x"
+                /><img
+                  alt="#115 - Droplet preview"
+                  src="https://cssbattle.dev/targets/115.png"
+                  srcset="https://cssbattle.dev/targets/115@2x.png 2x"
+                /><img
+                  alt="#116 - Headphones preview"
+                  src="https://cssbattle.dev/targets/116.png"
+                  srcset="https://cssbattle.dev/targets/116@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/23_contain><h2>23 - Contain</h2><div><img
+                  alt="#143 - Third Eye preview"
+                  src="https://cssbattle.dev/targets/143.png"
+                  srcset="https://cssbattle.dev/targets/143@2x.png 2x"
+                /><img
+                  alt="#144 - Curtains preview"
+                  src="https://cssbattle.dev/targets/144.png"
+                  srcset="https://cssbattle.dev/targets/144@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/24_offset><h2>24 - Offset</h2><div><img
+                  alt="#143 - Simply Circle preview"
+                  src="https://cssbattle.dev/targets/143.png"
+                  srcset="https://cssbattle.dev/targets/143@2x.png 2x"
+                /><img
+                  alt="#144 - Long Heart preview"
+                  src="https://cssbattle.dev/targets/144.png"
+                  srcset="https://cssbattle.dev/targets/144@2x.png 2x"
+                /><img
+                  alt="#145 - Spotlight preview"
+                  src="https://cssbattle.dev/targets/145.png"
+                  srcset="https://cssbattle.dev/targets/145@2x.png 2x"
+                /><img
+                  alt="#146 - Streaks preview"
+                  src="https://cssbattle.dev/targets/146.png"
+                  srcset="https://cssbattle.dev/targets/146@2x.png 2x"
+                /><img
+                  alt="#147 - Splash preview"
+                  src="https://cssbattle.dev/targets/147.png"
+                  srcset="https://cssbattle.dev/targets/147@2x.png 2x"
+                /><img
+                  alt="#148 - Eight preview"
+                  src="https://cssbattle.dev/targets/148.png"
+                  srcset="https://cssbattle.dev/targets/148@2x.png 2x"
+                /><img
+                  alt="#149 - Earthworm preview"
+                  src="https://cssbattle.dev/targets/149.png"
+                  srcset="https://cssbattle.dev/targets/149@2x.png 2x"
+                /><img
+                  alt="#150 - Finger Heart preview"
+                  src="https://cssbattle.dev/targets/150.png"
+                  srcset="https://cssbattle.dev/targets/150@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/25_flex><h2>25 - Flex</h2><div><img
+                  alt="#151 - Pawn preview"
+                  src="https://cssbattle.dev/targets/151.png"
+                  srcset="https://cssbattle.dev/targets/151@2x.png 2x"
+                /><img
+                  alt="#152 - Rook preview"
+                  src="https://cssbattle.dev/targets/152.png"
+                  srcset="https://cssbattle.dev/targets/152@2x.png 2x"
+                /><img
+                  alt="#153 - Checkers preview"
+                  src="https://cssbattle.dev/targets/153.png"
+                  srcset="https://cssbattle.dev/targets/153@2x.png 2x"
+                /><img
+                  alt="#154 - Poker Chip preview"
+                  src="https://cssbattle.dev/targets/154.png"
+                  srcset="https://cssbattle.dev/targets/154@2x.png 2x"
+                /><img
+                  alt="#155 - Snake and symbol preview"
+                  src="https://cssbattle.dev/targets/155.png"
+                  srcset="https://cssbattle.dev/targets/155@2x.png 2x"
+                /><img
+                  alt="#156 - Chinese checkers preview"
+                  src="https://cssbattle.dev/targets/156.png"
+                  srcset="https://cssbattle.dev/targets/156@2x.png 2x"
+                /><img
+                  alt="#157 - Monopoly preview"
+                  src="https://cssbattle.dev/targets/157.png"
+                  srcset="https://cssbattle.dev/targets/157@2x.png 2x"
+                /><img
+                  alt="#158 - Clubs preview"
+                  src="https://cssbattle.dev/targets/158.png"
+                  srcset="https://cssbattle.dev/targets/158@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/26_initial><h2>26 - Initial</h2><div><img
+                  alt="#159 - Portal preview"
+                  src="https://cssbattle.dev/targets/159.png"
+                  srcset="https://cssbattle.dev/targets/159@2x.png 2x"
+                /><img
+                  alt="#160 - Donut preview"
+                  src="https://cssbattle.dev/targets/160.png"
+                  srcset="https://cssbattle.dev/targets/160@2x.png 2x"
+                /><img
+                  alt="#161 - Converge preview"
+                  src="https://cssbattle.dev/targets/161.png"
+                  srcset="https://cssbattle.dev/targets/161@2x.png 2x"
+                /><img
+                  alt="#162 - Chevron preview"
+                  src="https://cssbattle.dev/targets/162.png"
+                  srcset="https://cssbattle.dev/targets/162@2x.png 2x"
+                /><img
+                  alt="#163 - Missing Piece preview"
+                  src="https://cssbattle.dev/targets/163.png"
+                  srcset="https://cssbattle.dev/targets/163@2x.png 2x"
+                /><img
+                  alt="#164 - Rangoli preview"
+                  src="https://cssbattle.dev/targets/164.png"
+                  srcset="https://cssbattle.dev/targets/164@2x.png 2x"
+                /><img
+                  alt="#165 - Pyramid preview"
+                  src="https://cssbattle.dev/targets/165.png"
+                  srcset="https://cssbattle.dev/targets/165@2x.png 2x"
+                /><img
+                  alt="#166 - Flow preview"
+                  src="https://cssbattle.dev/targets/166.png"
+                  srcset="https://cssbattle.dev/targets/166@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/27_relative><h2>27 - Relative</h2><div><img
+                  alt="#167 - React India preview"
+                  src="https://cssbattle.dev/targets/167.png"
+                  srcset="https://cssbattle.dev/targets/167@2x.png 2x"
+                /><img
+                  alt="#168 - Carpet preview"
+                  src="https://cssbattle.dev/targets/168.png"
+                  srcset="https://cssbattle.dev/targets/168@2x.png 2x"
+                /><img
+                  alt="#169 - Abstract Plate preview"
+                  src="https://cssbattle.dev/targets/169.png"
+                  srcset="https://cssbattle.dev/targets/169@2x.png 2x"
+                /><img
+                  alt="#170 - Party Hat preview"
+                  src="https://cssbattle.dev/targets/170.png"
+                  srcset="https://cssbattle.dev/targets/170@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/28_revert><h2>28 - Revert</h2><div><img
+                  alt="#171 - Pumpkin preview"
+                  src="https://cssbattle.dev/targets/171.png"
+                  srcset="https://cssbattle.dev/targets/171@2x.png 2x"
+                /><img
+                  alt="#172 - Crossbones preview"
+                  src="https://cssbattle.dev/targets/172.png"
+                  srcset="https://cssbattle.dev/targets/172@2x.png 2x"
+                /><img
+                  alt="#173 - Hockey Mask preview"
+                  src="https://cssbattle.dev/targets/173.png"
+                  srcset="https://cssbattle.dev/targets/173@2x.png 2x"
+                /><img
+                  alt="#174 - Witch's Hat preview"
+                  src="https://cssbattle.dev/targets/174.png"
+                  srcset="https://cssbattle.dev/targets/174@2x.png 2x"
+                /><img
+                  alt="#175 - Evil cat preview"
+                  src="https://cssbattle.dev/targets/175.png"
+                  srcset="https://cssbattle.dev/targets/175@2x.png 2x"
+                /><img
+                  alt="#176 - Castlevania preview"
+                  src="https://cssbattle.dev/targets/176.png"
+                  srcset="https://cssbattle.dev/targets/176@2x.png 2x"
+                /><img
+                  alt="#177 - Frankenstein preview"
+                  src="https://cssbattle.dev/targets/177.png"
+                  srcset="https://cssbattle.dev/targets/177@2x.png 2x"
+                /><img
+                  alt="#178 - Candy preview"
+                  src="https://cssbattle.dev/targets/178.png"
+                  srcset="https://cssbattle.dev/targets/178@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/29_font><h2>29 - Font</h2><div><img
+                  alt="#179 - Tanzania preview"
+                  src="https://cssbattle.dev/targets/179.png"
+                  srcset="https://cssbattle.dev/targets/179@2x.png 2x"
+                /><img
+                  alt="#180 - Kuwait preview"
+                  src="https://cssbattle.dev/targets/180.png"
+                  srcset="https://cssbattle.dev/targets/180@2x.png 2x"
+                /><img
+                  alt="#181 - Iceland preview"
+                  src="https://cssbattle.dev/targets/181.png"
+                  srcset="https://cssbattle.dev/targets/181@2x.png 2x"
+                /><img
+                  alt="#182 - Bahrain preview"
+                  src="https://cssbattle.dev/targets/182.png"
+                  srcset="https://cssbattle.dev/targets/182@2x.png 2x"
+                /><img
+                  alt="#183 - Brazil preview"
+                  src="https://cssbattle.dev/targets/183.png"
+                  srcset="https://cssbattle.dev/targets/183@2x.png 2x"
+                /><img
+                  alt="#184 - India preview"
+                  src="https://cssbattle.dev/targets/184.png"
+                  srcset="https://cssbattle.dev/targets/184@2x.png 2x"
+                /><img
+                  alt="#185 - South korea preview"
+                  src="https://cssbattle.dev/targets/185.png"
+                  srcset="https://cssbattle.dev/targets/185@2x.png 2x"
+                /><img
+                  alt="#186 - Guernsey preview"
+                  src="https://cssbattle.dev/targets/186.png"
+                  srcset="https://cssbattle.dev/targets/186@2x.png 2x"
+                /></div></a></li><li><a href=/cssbattle-notebook/30_gradient><h2>30 - Gradient</h2><div><img
+                  alt="#187 - Striped Triangle preview"
+                  src="https://cssbattle.dev/targets/187.png"
+                  srcset="https://cssbattle.dev/targets/187@2x.png 2x"
+                /><img
+                  alt="#188 - Icecream Sticks preview"
+                  src="https://cssbattle.dev/targets/188.png"
+                  srcset="https://cssbattle.dev/targets/188@2x.png 2x"
+                /><img
+                  alt="#189 - Triangle Hook preview"
+                  src="https://cssbattle.dev/targets/189.png"
+                  srcset="https://cssbattle.dev/targets/189@2x.png 2x"
+                /><img
+                  alt="#190 - Power chip preview"
+                  src="https://cssbattle.dev/targets/190.png"
+                  srcset="https://cssbattle.dev/targets/190@2x.png 2x"
+                /><img
+                  alt="#191 - Modern Fence preview"
+                  src="https://cssbattle.dev/targets/191.png"
+                  srcset="https://cssbattle.dev/targets/191@2x.png 2x"
+                /><img
+                  alt="#192 - Abstract Firefly preview"
+                  src="https://cssbattle.dev/targets/192.png"
+                  srcset="https://cssbattle.dev/targets/192@2x.png 2x"
+                /><img
+                  alt="#193 - Galver preview"
+                  src="https://cssbattle.dev/targets/193.png"
+                  srcset="https://cssbattle.dev/targets/193@2x.png 2x"
+                /><img
+                  alt="#194 - Fountain preview"
+                  src="https://cssbattle.dev/targets/194.png"
+                  srcset="https://cssbattle.dev/targets/194@2x.png 2x"
+                /></div></a></li><ul>
+
+    </main>
+    
+    <footer class={styles.footerContainer}>© Kuzanatoliorg</footer>
+  </body>
+</html>
