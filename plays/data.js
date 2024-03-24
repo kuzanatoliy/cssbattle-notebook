@@ -820,6 +820,12 @@ module.exports = [
         solution: require("./115-droplet"),
         date: "2024-03-24",
       },
+      {
+        id: 116,
+        name: "Headphones",
+        solution: require("./116-headphones"),
+        date: "2024-03-24",
+      },
     ],
   },
   {
