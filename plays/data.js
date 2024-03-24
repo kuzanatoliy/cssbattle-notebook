@@ -814,6 +814,12 @@ module.exports = [
         solution: require("./114-negative-box"),
         date: "2024-03-24",
       },
+      {
+        id: 115,
+        name: "Droplet",
+        solution: require("./115-droplet"),
+        date: "2024-03-24",
+      },
     ],
   },
   {
