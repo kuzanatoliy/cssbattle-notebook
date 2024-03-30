@@ -829,6 +829,19 @@ module.exports = [
     ],
   },
   {
+    id: 20,
+    name: "Tetris",
+    date: "2024-03-30",
+    plays: [
+      {
+        id: 122,
+        name: "Tetris",
+        solution: require("./122-tetris"),
+        date: "2024-03-24",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
