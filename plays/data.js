@@ -846,6 +846,12 @@ module.exports = [
         date: "2024-03-31",
       },
       {
+        id: 119,
+        name: "Pacman",
+        solution: require("./119-pacman"),
+        date: "2024-03-31",
+      },
+      {
         id: 122,
         name: "Tetris",
         solution: require("./122-tetris"),
