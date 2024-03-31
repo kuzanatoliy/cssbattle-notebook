@@ -32,6 +32,16 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 
 [Battle 15: Filter](https://kuzanatoliy.github.io/cssbattle-notebook/15_filter/)
 
+[Battle 16: Aspect](https://kuzanatoliy.github.io/cssbattle-notebook/16_aspect/)
+
+[Battle 17: Christmas](https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/)
+
+[Battle 18: Float](https://kuzanatoliy.github.io/cssbattle-notebook/18_float/)
+
+[Battle 19: Spacing](https://kuzanatoliy.github.io/cssbattle-notebook/19_spacing/)
+
+[Battle 20: Hover](https://kuzanatoliy.github.io/cssbattle-notebook/20_hover/)
+
 [Battle 24: Offset](https://kuzanatoliy.github.io/cssbattle-notebook/24_offset/)
 
 [Battle 25: Flex](https://kuzanatoliy.github.io/cssbattle-notebook/25_flex/)

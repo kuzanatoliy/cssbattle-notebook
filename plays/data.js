@@ -829,6 +829,61 @@ module.exports = [
     ],
   },
   {
+    id: 20,
+    name: "Tetris",
+    date: "2024-03-31",
+    plays: [
+      {
+        id: 117,
+        name: "Arineo",
+        solution: require("./117-arineo"),
+        date: "2024-03-31",
+      },
+      {
+        id: 118,
+        name: "Donkey Kong",
+        solution: require("./118-donkey-kong"),
+        date: "2024-03-31",
+      },
+      {
+        id: 119,
+        name: "Pacman",
+        solution: require("./119-pacman"),
+        date: "2024-03-31",
+      },
+      {
+        id: 120,
+        name: "Tank",
+        solution: require("./120-tank"),
+        date: "2024-03-31",
+      },
+      {
+        id: 121,
+        name: "Duck Hunt",
+        solution: require("./121-duck-hunt"),
+        date: "2024-03-31",
+      },
+      {
+        id: 122,
+        name: "Tetris",
+        solution: require("./122-tetris"),
+        date: "2024-03-31",
+      },
+      {
+        id: 123,
+        name: "Snake",
+        solution: require("./123-snake"),
+        date: "2024-03-31",
+      },
+      {
+        id: 124,
+        name: "Space Invaders",
+        solution: require("./124-space-invaders"),
+        date: "2024-03-31",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
