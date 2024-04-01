@@ -884,6 +884,19 @@ module.exports = [
     ],
   },
   {
+    id: 21,
+    name: "Rotate",
+    date: "2024-04-01",
+    plays: [
+      {
+        id: 129,
+        name: "Letter B",
+        solution: require("./129-letter-b"),
+        date: "2024-04-01",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
