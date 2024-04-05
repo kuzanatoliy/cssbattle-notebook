@@ -886,25 +886,31 @@ module.exports = [
   {
     id: 21,
     name: "Rotate",
-    date: "2024-04-03",
+    date: "2024-04-05",
     plays: [
       {
         id: 125,
         name: "Root Learn",
         solution: require("./125-root-learn"),
-        date: "2024-04-03",
+        date: "2024-04-05",
       },
       {
         id: 129,
         name: "Letter B",
         solution: require("./129-letter-b"),
-        date: "2024-04-03",
+        date: "2024-04-05",
       },
       {
         id: 130,
         name: "Letter O",
         solution: require("./130-letter-o"),
-        date: "2024-04-03",
+        date: "2024-04-05",
+      },
+      {
+        id: 131,
+        name: "Letter W",
+        solution: require("./131-letter-w"),
+        date: "2024-04-05",
       },
     ],
   },
