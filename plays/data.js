@@ -884,6 +884,61 @@ module.exports = [
     ],
   },
   {
+    id: 21,
+    name: "Rotate",
+    date: "2024-04-06",
+    plays: [
+      {
+        id: 125,
+        name: "Root Learn",
+        solution: require("./125-root-learn"),
+        date: "2024-04-06",
+      },
+      {
+        id: 126,
+        name: "Letter A",
+        solution: require("./126-letter-a"),
+        date: "2024-04-06",
+      },
+      {
+        id: 127,
+        name: "Letter I",
+        solution: require("./127-letter-i"),
+        date: "2024-04-06",
+      },
+      {
+        id: 128,
+        name: "Letter N",
+        solution: require("./128-letter-n"),
+        date: "2024-04-06",
+      },
+      {
+        id: 129,
+        name: "Letter B",
+        solution: require("./129-letter-b"),
+        date: "2024-04-06",
+      },
+      {
+        id: 130,
+        name: "Letter O",
+        solution: require("./130-letter-o"),
+        date: "2024-04-06",
+      },
+      {
+        id: 131,
+        name: "Letter W",
+        solution: require("./131-letter-w"),
+        date: "2024-04-06",
+      },
+      {
+        id: 132,
+        name: "Letter S",
+        solution: require("./132-letter-s"),
+        date: "2024-04-06",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",

@@ -42,6 +42,8 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 
 [Battle 20: Hover](https://kuzanatoliy.github.io/cssbattle-notebook/20_hover/)
 
+[Battle 21: Rotate](https://kuzanatoliy.github.io/cssbattle-notebook/21_rotate/)
+
 [Battle 24: Offset](https://kuzanatoliy.github.io/cssbattle-notebook/24_offset/)
 
 [Battle 25: Flex](https://kuzanatoliy.github.io/cssbattle-notebook/25_flex/)
