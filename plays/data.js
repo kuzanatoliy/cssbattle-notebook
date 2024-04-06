@@ -930,6 +930,12 @@ module.exports = [
         solution: require("./131-letter-w"),
         date: "2024-04-06",
       },
+      {
+        id: 132,
+        name: "Letter S",
+        solution: require("./132-letter-s"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
