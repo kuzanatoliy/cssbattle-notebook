@@ -949,6 +949,12 @@ module.exports = [
         solution: require("./133-spiral"),
         date: "2024-04-06",
       },
+      {
+        id: 134,
+        name: "Wig",
+        solution: require("./134-wig"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
