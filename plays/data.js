@@ -967,6 +967,12 @@ module.exports = [
         solution: require("./136-alien-eye"),
         date: "2024-04-06",
       },
+      {
+        id: 137,
+        name: "Elbow",
+        solution: require("./137-elbow"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
