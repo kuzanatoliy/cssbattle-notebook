@@ -907,6 +907,12 @@ module.exports = [
         date: "2024-04-06",
       },
       {
+        id: 128,
+        name: "Letter N",
+        solution: require("./128-letter-n"),
+        date: "2024-04-06",
+      },
+      {
         id: 129,
         name: "Letter B",
         solution: require("./129-letter-b"),
