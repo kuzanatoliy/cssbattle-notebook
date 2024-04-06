@@ -985,6 +985,12 @@ module.exports = [
         solution: require("./139-lamp"),
         date: "2024-04-06",
       },
+      {
+        id: 140,
+        name: "Eclipse",
+        solution: require("./140-eclipse"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
