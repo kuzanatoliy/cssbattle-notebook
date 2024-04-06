@@ -973,6 +973,12 @@ module.exports = [
         solution: require("./137-elbow"),
         date: "2024-04-06",
       },
+      {
+        id: 138,
+        name: "Lotus",
+        solution: require("./138-lotus"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
