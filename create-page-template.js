@@ -13,7 +13,7 @@ module.exports = ({
   metaTags,
 }) => `
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.ico">
     <title>${title}</title>
