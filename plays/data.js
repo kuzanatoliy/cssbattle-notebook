@@ -979,6 +979,12 @@ module.exports = [
         solution: require("./138-lotus"),
         date: "2024-04-06",
       },
+      {
+        id: 139,
+        name: "Lamp",
+        solution: require("./139-lamp"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
