@@ -44,6 +44,10 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 
 [Battle 21: Rotate](https://kuzanatoliy.github.io/cssbattle-notebook/21_rotate/)
 
+[Battle 22: Grid](https://kuzanatoliy.github.io/cssbattle-notebook/22_grid/)
+
+[Battle 23: Contain](https://kuzanatoliy.github.io/cssbattle-notebook/23_contain/)
+
 [Battle 24: Offset](https://kuzanatoliy.github.io/cssbattle-notebook/24_offset/)
 
 [Battle 25: Flex](https://kuzanatoliy.github.io/cssbattle-notebook/25_flex/)

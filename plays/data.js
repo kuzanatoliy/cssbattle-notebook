@@ -939,6 +939,61 @@ module.exports = [
     ],
   },
   {
+    id: 22,
+    name: "Rotate",
+    date: "2024-04-06",
+    plays: [
+      {
+        id: 133,
+        name: "Spiral",
+        solution: require("./133-spiral"),
+        date: "2024-04-06",
+      },
+      {
+        id: 134,
+        name: "Wig",
+        solution: require("./134-wig"),
+        date: "2024-04-06",
+      },
+      {
+        id: 135,
+        name: "Spikes",
+        solution: require("./135-spikes"),
+        date: "2024-04-06",
+      },
+      {
+        id: 136,
+        name: "Alien Eye",
+        solution: require("./136-alien-eye"),
+        date: "2024-04-06",
+      },
+      {
+        id: 137,
+        name: "Elbow",
+        solution: require("./137-elbow"),
+        date: "2024-04-06",
+      },
+      {
+        id: 138,
+        name: "Lotus",
+        solution: require("./138-lotus"),
+        date: "2024-04-06",
+      },
+      {
+        id: 139,
+        name: "Lamp",
+        solution: require("./139-lamp"),
+        date: "2024-04-06",
+      },
+      {
+        id: 140,
+        name: "Eclipse",
+        solution: require("./140-eclipse"),
+        date: "2024-04-06",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
