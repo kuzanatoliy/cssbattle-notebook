@@ -961,6 +961,12 @@ module.exports = [
         solution: require("./135-spikes"),
         date: "2024-04-06",
       },
+      {
+        id: 136,
+        name: "Alien Eye",
+        solution: require("./136-alien-eye"),
+        date: "2024-04-06",
+      },
     ],
   },
   {
