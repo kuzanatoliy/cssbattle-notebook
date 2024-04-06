@@ -939,6 +939,19 @@ module.exports = [
     ],
   },
   {
+    id: 22,
+    name: "Rotate",
+    date: "2024-04-06",
+    plays: [
+      {
+        id: 133,
+        name: "Spiral",
+        solution: require("./133-spiral"),
+        date: "2024-04-06",
+      },
+    ],
+  },
+  {
     id: 23,
     name: "Contain",
     date: "2023-10-26",
