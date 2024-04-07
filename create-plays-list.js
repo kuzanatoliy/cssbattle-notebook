@@ -14,7 +14,7 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
           (item) =>
             `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${item.name}</h2><div>
                   <img
-                  alt="Preview"
+                  alt="Preview of the ${item.name} play"
                   src="${CSSBATTLE_HOST_NAME}/targets/${item.id}.png"
                   srcset="${CSSBATTLE_HOST_NAME}/targets/${item.id}@2x.png 2x"
                 />
