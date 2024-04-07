@@ -155,7 +155,7 @@ ${injectStyles ? injectStyles() : ""}
     <header>
       ${
         parentUrl
-          ? `<a href="${parentUrl}"><img src='../assets/back.svg' title="Back" alt="Back"/></a>`
+          ? `<a href="${parentUrl}"><img src='../assets/back.svg' alt="Back"/></a>`
           : ""
       }
       <h1>${headerText}</h1>
