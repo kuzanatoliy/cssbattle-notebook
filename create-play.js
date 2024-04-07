@@ -11,11 +11,11 @@ module.exports = ({ name, id, solution, parentUrl }) =>
       <section>
         <img alt="Preview of the ${name} play" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
         <div class="game">
-          <button class="copy-game" aria-label="Copy game code">
-            <img src='../assets/copy.svg' title="Copy game code"/>
+          <button class="copy-game">
+            <img src='../assets/copy.svg' title="Copy game code" alt="Copy game code"/>
           </button>
-          <button class="download-game" aria-label="Download game code">
-            <img src='../assets/download.svg' title="Download game code"/>
+          <button class="download-game">
+            <img src='../assets/download.svg' title="Download game code" alt="Download game code"/>
           </button>
           <pre>
 ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
