@@ -19,7 +19,7 @@ module.exports = ({ list, canonicalPath }) =>
               .map(
                 (play) =>
                   `<img
-                  alt="#${play.id} - ${play.name} preview"
+                  alt="Preview of the ${play.name} play"
                   src="${CSSBATTLE_HOST_NAME}/targets/${play.id}.png"
                   srcset="${CSSBATTLE_HOST_NAME}/targets/${play.id}@2x.png 2x"
                 />`

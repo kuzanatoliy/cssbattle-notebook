@@ -9,7 +9,7 @@ module.exports = ({ name, id, solution, parentUrl }) =>
     headerText: `${id} - ${name}`,
     injectBody: () => `
       <section>
-        <img alt="Preview" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
+        <img alt="Preview of the ${name} play" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
         <div class="game">
           <button class="copy-game" aria-label="Copy game code">
             <img src='../assets/copy.svg' title="Copy game code"/>
