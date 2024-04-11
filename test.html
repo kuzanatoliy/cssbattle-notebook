@@ -5,9 +5,15 @@
       class BattlePreview extends HTMLElement {
         #shadow;
         #style;
+        #content;
+
+        static get observedAttributes() {
+          return ["src"];
+        }
 
         constructor() {
           super();
+          //observedAttributes();
           this.#shadow = this.attachShadow({ mode: "open" });
 
           this.#style = document.createElement("style");
@@ -36,28 +42,53 @@
               background: #EAEAEA;
               animation: 3s infinite alternate skeleton;
             }
+
+            .not-found {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
           `;
-          console.log(this.attributes);
 
           this.#shadow.appendChild(this.#style);
-        }
-
-        connectedCallback() {
-          if (this.attributes.src) {
-            console.log("called");
-            fetch(this.getAttribute("src"))
-              .then(() => console.log("called"))
-              .catch(() => console.log("called"));
-          }
-
-          //this.#loadingSkeleton = document.createElement("div");
-          //this.#loadingSkeleton.setAttribute("class", "loading-skeleton");
-
-          console.log(this.attributes);
+          this.#shadow.innerHTML;
         }
 
         attributeChangedCallback(name, oldValue, newValue) {
-          console.log(name, oldValue, newValue);
+          if (name === "src" && newValue !== oldValue) {
+            this.#content && this.#shadow.removeChild(this.#content);
+            this.#content = document.createElement("div");
+            this.#content.setAttribute("class", "loading-skeleton");
+            this.#shadow.appendChild(this.#content);
+            fetch(newValue)
+              .then((res) => {
+                if (res.status === 200) {
+                  return res.blob();
+                } else {
+                  throw "Not found";
+                }
+              })
+              .then((blob) => {
+                this.#content && this.#shadow.removeChild(this.#content);
+                this.#content = document.createElement("img");
+                this.#content.setAttribute("src", URL.createObjectURL(blob));
+                this.#shadow.appendChild(this.#content);
+              })
+              .catch(() => {
+                this.#content && this.#shadow.removeChild(this.#content);
+                this.#content = document.createElement("div");
+                this.#content.textContent = "Not found";
+                this.#content.setAttribute("class", "not-found");
+                this.#shadow.appendChild(this.#content);
+              });
+          }
         }
       }
 
@@ -71,6 +102,6 @@
     </style>
   </head>
   <body>
-    <battle-preview src="https://cssbattle.dev/targets/1.png" />
+    <battle-preview src="https://cssbattle.dev/targets/-0.png" />
   </body>
 </html>
