@@ -13,7 +13,7 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         .map(
           (item) =>
             `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${item.name}</h2><div>
-                  <img
+                <battle-preview
                   alt="Preview of the ${item.name} play"
                   src="${CSSBATTLE_HOST_NAME}/targets/${item.id}.png"
                   srcset="${CSSBATTLE_HOST_NAME}/targets/${item.id}@2x.png 2x"
@@ -61,8 +61,10 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         margin-top: var(--size-double);
       }
 
-      a > div > img {
+      a > div > battle-preview {
         width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
       }
     `,
     parentUrl: `/${ROOT_PATH}`,
