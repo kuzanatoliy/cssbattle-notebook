@@ -9,7 +9,7 @@ module.exports = ({ name, id, solution, parentUrl }) =>
     headerText: `${id} - ${name}`,
     injectBody: () => `
       <section>
-        <img alt="Preview of the ${name} play" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png" srcset="${CSSBATTLE_HOST_NAME}/targets/${id}@2x.png 2x">
+        <battle-preview alt="Preview of the ${name} play" src="${CSSBATTLE_HOST_NAME}/targets/${id}.png"></battle-preview>
         <div class="game">
           <button class="copy-game">
             <img src='../assets/copy.svg' alt="Copy game code"/>
@@ -31,13 +31,15 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         display: flex;
         flex-wrap: wrap;
         gap: var(--size-triple);
+        align-items: flex-start;
       }
 
-      img {
+      battle-preview {
         border: none;
         width: 400px;
         max-width: 100%;
-        max-height: 300px;
+        height: auto;
+        aspect-ratio: 4 / 3;
       }
       
       .game {

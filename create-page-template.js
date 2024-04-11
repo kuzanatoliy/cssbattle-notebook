@@ -86,6 +86,7 @@ body {
   margin: 0;
   font-size: 16px;
   background-color: var(--page-background-color);
+  overflow-y: scroll;
 }
 
 header, main, footer {
@@ -150,6 +151,111 @@ header img {
 ${injectStyles ? injectStyles() : ""}
     
     </style>
+    <script>
+
+    class BattlePreview extends HTMLElement {
+      #shadow;
+      #style;
+      #content;
+      #alt;
+
+      static get observedAttributes() {
+        return ["src", "alt"];
+      }
+
+      constructor() {
+        super();
+        this.#shadow = this.attachShadow({mode: "closed"});
+
+        this.#style = document.createElement("style");
+        this.#style.textContent = \`
+          :host {
+            display: block;
+            font-size: 0;
+          }
+
+          @keyframes skeleton {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.4;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          .loading-skeleton {
+            height: 100%;
+            width: 100%;
+            background: #EAEAEA;
+            animation: 3s infinite alternate skeleton;
+          }
+
+          .not-found {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        \`;
+
+        this.#shadow.appendChild(this.#style);
+        this.#shadow.innerHTML;
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "alt") {
+          this.#alt = newValue;
+          if (this.#content && this.#content.tagName.toLowerCase() === 'img') {
+            this.#content.setAttribute("alt", this.#alt);
+          }
+        }
+
+        if (name === "src" && newValue !== oldValue) {
+          this.#content && this.#shadow.removeChild(this.#content);
+          this.#content = document.createElement("div");
+          this.#content.setAttribute("class", "loading-skeleton");
+          this.#shadow.appendChild(this.#content);
+          fetch(newValue)
+            .then((res) => {
+              if (res.status === 200) {
+                return res.blob();
+              } else {
+                throw "Not found";
+              }
+            })
+            .then((blob) => {
+              this.#content && this.#shadow.removeChild(this.#content);
+              this.#content = document.createElement("img");
+              this.#content.setAttribute("src", URL.createObjectURL(blob));
+              this.#content.setAttribute("alt", this.#alt);
+              this.#shadow.appendChild(this.#content);
+            })
+            .catch(() => {
+              this.#content && this.#shadow.removeChild(this.#content);
+              this.#content = document.createElement("div");
+              this.#content.textContent = "Not found";
+              this.#content.setAttribute("class", "not-found");
+              this.#shadow.appendChild(this.#content);
+            });
+        }
+      }
+    }
+
+    customElements.define("battle-preview", BattlePreview);
+
+    </script>
   </head>
   <body>
     <header>
