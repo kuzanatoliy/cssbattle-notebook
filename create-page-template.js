@@ -156,14 +156,14 @@ ${injectStyles ? injectStyles() : ""}
       #shadow;
       #style;
       #content;
+      #alt;
 
       static get observedAttributes() {
-        return ["src"];
+        return ["src", "alt"];
       }
 
       constructor() {
         super();
-        //observedAttributes();
         this.#shadow = this.attachShadow({ mode: "open" });
 
         this.#style = document.createElement("style");
@@ -212,6 +212,13 @@ ${injectStyles ? injectStyles() : ""}
       }
 
       attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "alt") {
+          this.#alt = newValue;
+          if (this.#content && this.#content.tagName.toLowerCase() === 'img') {
+            this.#content.setAttribute("alt", this.#alt);
+          }
+        }
+
         if (name === "src" && newValue !== oldValue) {
           this.#content && this.#shadow.removeChild(this.#content);
           this.#content = document.createElement("div");
@@ -229,6 +236,7 @@ ${injectStyles ? injectStyles() : ""}
               this.#content && this.#shadow.removeChild(this.#content);
               this.#content = document.createElement("img");
               this.#content.setAttribute("src", URL.createObjectURL(blob));
+              this.#content.setAttribute("alt", this.#alt);
               this.#shadow.appendChild(this.#content);
             })
             .catch(() => {

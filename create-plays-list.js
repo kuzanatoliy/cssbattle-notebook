@@ -16,7 +16,6 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
                 <battle-preview
                   alt="Preview of the ${item.name} play"
                   src="${CSSBATTLE_HOST_NAME}/targets/${item.id}.png"
-                  srcset="${CSSBATTLE_HOST_NAME}/targets/${item.id}@2x.png 2x"
                 />
               </div></a></li>`
         )
