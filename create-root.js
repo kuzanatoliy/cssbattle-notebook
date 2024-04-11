@@ -18,11 +18,10 @@ module.exports = ({ list, canonicalPath }) =>
             }</h2><div>${item.playsList
               .map(
                 (play) =>
-                  `<img
-                  alt="Preview of the ${play.name} play"
-                  src="${CSSBATTLE_HOST_NAME}/targets/${play.id}.png"
-                  srcset="${CSSBATTLE_HOST_NAME}/targets/${play.id}@2x.png 2x"
-                />`
+                  `<battle-preview
+                    alt="Preview of the ${play.name} play"
+                    src="${CSSBATTLE_HOST_NAME}/targets/${play.id}.png"
+                  ></battle-preview>`
               )
               .join("")}</div></a></li>`
         )
@@ -67,8 +66,10 @@ module.exports = ({ list, canonicalPath }) =>
         margin-top: var(--size-double);
       }
 
-      a > div > img {
+      a > div > battle-preview {
         width: calc(100% / 3);
+        height: auto;
+        aspect-ratio: 4 / 3;
       }
     `,
   });

@@ -86,6 +86,7 @@ body {
   margin: 0;
   font-size: 16px;
   background-color: var(--page-background-color);
+  overflow-y: scroll;
 }
 
 header, main, footer {
@@ -164,12 +165,13 @@ ${injectStyles ? injectStyles() : ""}
 
       constructor() {
         super();
-        this.#shadow = this.attachShadow({ mode: "open" });
+        this.#shadow = this.attachShadow({mode: "closed"});
 
         this.#style = document.createElement("style");
         this.#style.textContent = \`
           :host {
             display: block;
+            font-size: 0;
           }
 
           @keyframes skeleton {
@@ -199,6 +201,7 @@ ${injectStyles ? injectStyles() : ""}
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 16px;
           }
 
           img {
