@@ -1384,6 +1384,12 @@ module.exports = [
         solution: require("./195-lookaway"),
         date: "2024-04-13",
       },
+      {
+        id: 196,
+        name: "Tree",
+        solution: require("./196-tree"),
+        date: "2024-04-13",
+      },
     ],
   },
 ];
