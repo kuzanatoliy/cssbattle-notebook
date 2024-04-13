@@ -999,13 +999,13 @@ module.exports = [
     date: "2023-10-26",
     plays: [
       {
-        id: 143,
+        id: 141,
         name: "Third Eye",
         solution: require("./141-third-eye"),
         date: "2023-10-26",
       },
       {
-        id: 144,
+        id: 142,
         name: "Curtains",
         solution: require("./142-curtains"),
         date: "2023-10-26",
