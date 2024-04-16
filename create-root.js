@@ -25,7 +25,7 @@ module.exports = ({ list, canonicalPath }) =>
               )
               .join("")}</div></a></li>`
         )
-        .join("")}<ul>`,
+        .join("")}</ul>`,
     injectStyles: () => `
       ul {
         list-style-type: none;
