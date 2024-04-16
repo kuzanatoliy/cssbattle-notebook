@@ -19,7 +19,7 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
                 ></battle-preview>
               </div></a></li>`
         )
-        .join("")}<ul>`,
+        .join("")}</ul>`,
     injectStyles: () => `
       ul {
         list-style-type: none;
