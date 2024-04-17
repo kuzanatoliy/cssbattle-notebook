@@ -56,9 +56,8 @@ module.exports = ({
   --breakpoint-mobile-m: 375px;
   --breakpoint-mobile-s: 320px;
 
-  --theme-color: var(--lt-color-darkest);
-
   --page-background-color: var(--color-white);
+  --header-background-color: var(--lt-color-darkest);
   --header-text-color: var(--color-white);
   --footer-text-color: var(--lt-color-darkest);
   --control-text-color: var(--lt-color-darkest);
