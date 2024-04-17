@@ -22,13 +22,14 @@ module.exports = ({
     <meta name="keywords" content="${keyworkds}">
     <meta name="author" content="Anatoli Kuzmiankou">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="var(--theme-color)"/>
     ${canonicalPath ? `<link rel="canonical" href="${canonicalPath}"/>` : ""}
     ${metaTags ? metaTags : ""}
     <style>
 
 :root {
   color-scheme: light dark;
-
+  
   --lt-color-darkest: #02315E;
   --lt-color-dark: #00457E;
   --lt-color-normal: #2F70AF;
@@ -54,6 +55,8 @@ module.exports = ({
   --breakpoint-mobile-m: 375px;
   --breakpoint-mobile-s: 320px;
 
+  --theme-color: var(--lt-color-darkest);
+
   --page-background-color: var(--color-white);
   --header-background-color: var(--lt-color-darkest);
   --header-text-color: var(--color-white);
@@ -67,6 +70,8 @@ module.exports = ({
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --theme-color: var(--dt-color-darkest);
+
     --page-background-color: var(--dt-color-dark);
     --header-background-color: var(--dt-color-darkest);
     --header-text-color: var(--color-red);
