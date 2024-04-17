@@ -1396,6 +1396,12 @@ module.exports = [
         solution: require("./197-crystal"),
         date: "2024-04-17",
       },
+      {
+        id: 198,
+        name: "Walls",
+        solution: require("./198-walls"),
+        date: "2024-04-17",
+      },
     ],
   },
 ];
