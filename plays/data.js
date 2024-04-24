@@ -1376,31 +1376,37 @@ module.exports = [
   {
     id: 31,
     name: "Opacity",
-    date: "2024-04-17",
+    date: "2024-04-24",
     plays: [
       {
         id: 195,
         name: "LookAway",
         solution: require("./195-lookaway"),
-        date: "2024-04-17",
+        date: "2024-04-24",
       },
       {
         id: 196,
         name: "Tree",
         solution: require("./196-tree"),
-        date: "2024-04-17",
+        date: "2024-04-24",
       },
       {
         id: 197,
         name: "Crystal",
         solution: require("./197-crystal"),
-        date: "2024-04-17",
+        date: "2024-04-24",
       },
       {
         id: 198,
         name: "Walls",
         solution: require("./198-walls"),
-        date: "2024-04-17",
+        date: "2024-04-24",
+      },
+      {
+        id: 200,
+        name: "Lantern",
+        solution: require("./200-lantern"),
+        date: "2024-04-24",
       },
     ],
   },
