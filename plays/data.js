@@ -1403,6 +1403,12 @@ module.exports = [
         date: "2024-04-24",
       },
       {
+        id: 199,
+        name: "Antenna",
+        solution: require("./199-antenna"),
+        date: "2024-04-24",
+      },
+      {
         id: 200,
         name: "Lantern",
         solution: require("./200-lantern"),
