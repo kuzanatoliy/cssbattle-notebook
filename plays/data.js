@@ -1420,6 +1420,12 @@ module.exports = [
         solution: require("./201-triple-zero"),
         date: "2024-05-01",
       },
+      {
+        id: 202,
+        name: "Steering Wheel",
+        solution: require("./202-steering-wheel"),
+        date: "2024-05-01",
+      },
     ],
   },
 ];
