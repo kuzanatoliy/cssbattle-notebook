@@ -62,4 +62,4 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 
 [Battle 30: Gradient](https://kuzanatoliy.github.io/cssbattle-notebook/30_gradient/)
 
-[Battle 30: Opacity](https://kuzanatoliy.github.io/cssbattle-notebook/31_opacity/)
+[Battle 31: Opacity](https://kuzanatoliy.github.io/cssbattle-notebook/31_opacity/)
