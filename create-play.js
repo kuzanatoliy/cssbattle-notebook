@@ -93,7 +93,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
 
       a:hover, a:focus-visible {
         outline: none;
-        color: var(--color-red);
+        color: var(--link-active-text-color);
       }
 
       a:focus-visible {
