@@ -23,7 +23,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         </div>
       </section>
       <aside>
-        <a href="${CSSBATTLE_HOST_NAME}/play/${id}">Move to play &#8594;</a>
+        <a href="${CSSBATTLE_HOST_NAME}/play/${id}" aria-description="Opens an external website">Move to play &#8594;</a>
       </aside>
     `,
     injectStyles: () => `
