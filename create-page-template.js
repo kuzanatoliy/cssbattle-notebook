@@ -15,7 +15,7 @@ module.exports = ({
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.ico">
+    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.svg">
     <title>${title}</title>
     <meta charset="UTF-8">
     <meta name="description" content="${description}">
