@@ -7,7 +7,7 @@
       "sizes": "any"
     }
   ],
-  "start_url": "/cssbattle-notebook",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#02315E",
   "background_color": "#fff"
