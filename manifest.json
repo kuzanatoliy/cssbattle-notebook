@@ -1,0 +1,14 @@
+{
+  "short_name": "CSS battle: solutions",
+  "name": "CSS battle: solutions",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#02315E",
+  "background_color": "#fff"
+}
