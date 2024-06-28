@@ -22,7 +22,6 @@ module.exports = ({
     <meta name="description" content="${description}" />
     <meta name="keywords" content="${keyworkds}" />
     <meta name="author" content="Anatoli Kuzmiankou" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02315E" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151515" />
