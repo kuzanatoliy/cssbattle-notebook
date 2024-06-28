@@ -16,13 +16,13 @@ module.exports = ({
 <html lang="en">
   <head>
     <link rel="manifest" href="${HOST_NAME}/${ROOT_PATH}/manifest.json" />
-    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.svg">
+    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.svg" />
     <title>${title}</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="${description}">
-    <meta name="keywords" content="${keyworkds}">
-    <meta name="author" content="Anatoli Kuzmiankou">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8" />
+    <meta name="description" content="${description}" />
+    <meta name="keywords" content="${keyworkds}" />
+    <meta name="author" content="Anatoli Kuzmiankou" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02315E" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151515" />
     ${canonicalPath ? `<link rel="canonical" href="${canonicalPath}"/>` : ""}
