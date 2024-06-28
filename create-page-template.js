@@ -15,6 +15,7 @@ module.exports = ({
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="manifest" href="${HOST_NAME}/${ROOT_PATH}/manifest.json" />
     <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.svg">
     <title>${title}</title>
     <meta charset="UTF-8">
