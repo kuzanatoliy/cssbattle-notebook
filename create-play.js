@@ -23,7 +23,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         </div>
       </section>
       <aside>
-        <a href="${CSSBATTLE_HOST_NAME}/play/${id}" aria-description="Opens an external website">Move to play &#8594;</a>
+        <a class='link' href="${CSSBATTLE_HOST_NAME}/play/${id}" aria-description="Opens an external website">Move to play &#8594;</a>
       </aside>
     `,
     injectStyles: () => `
@@ -83,21 +83,6 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       
       aside {
         padding: var(--size-double) 0;
-      }
-
-      a {
-        font-weight: 600;
-        text-decoration: none;
-        color: var(--link-text-color);
-      }
-
-      a:hover, a:focus-visible {
-        outline: none;
-        color: var(--link-active-text-color);
-      }
-
-      a:focus-visible {
-        text-decoration: underline;
       }
     `,
     injectScripts: () => `
