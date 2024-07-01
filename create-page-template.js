@@ -60,7 +60,7 @@ module.exports = ({
   --page-background-color: var(--color-white);
   --header-background-color: var(--lt-color-darkest);
   --header-text-color: var(--color-white);
-  --footer-text-color: var(--lt-color-darkest);
+  --footer-text-color: var(--lt-color-normal);
   --control-text-color: var(--lt-color-darkest);
   --control-border-color: var(--lt-color-normal);
   --control-active-border-color: var(--lt-color-darkest);
@@ -149,6 +149,59 @@ header a:hover {
 header img {
   height: var(--size-triple);
   width: var(--size-triple);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--size-double) var(--size-quadruple);
+
+  * {
+    display: flex;
+    gap: var(--size-double);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    gap: var(--size-half);
+  }
+}
+
+.contact-icon {
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
+  background: var(--link-text-color);
+  height: var(--size-double);
+}
+
+.github {
+  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/github-mark.svg');
+}
+
+.linkedin {
+  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/linkedin-svgrepo-com.svg');
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--link-text-color);
+}
+
+.link:hover, a:focus-visible {
+  outline: none;
+  color: var(--link-active-text-color);
+}
+
+.link:focus-visible {
+  text-decoration: underline;
 }
 
 ${injectStyles ? injectStyles() : ""}
@@ -275,7 +328,15 @@ ${injectBody ? injectBody() : ""}
 
     </main>
     ${injectScripts ? `<script>${injectScripts()}</script>` : ""}
-    <footer>© Kuzanatoliorg</footer>
+    <footer>
+      <div>Contacts:
+        <ul>
+          <li><i class='contact-icon github' /></i><a class='link' href='https://github.com/kuzanatoliy'>GitHub</a></li>
+          <li><i class='contact-icon linkedin'></i><a class='link' href='https://www.linkedin.com/in/anatoli-kuzmiankou-9a3b74b4'>LinkedIn</li></a>
+        </ul>
+      </div>
+      <div>© Kuzanatoliorg</div>
+    </footer>
   </body>
 </html>
 `;
