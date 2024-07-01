@@ -153,6 +153,7 @@ header img {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--size-double) var(--size-quadruple);
 
@@ -166,15 +167,26 @@ footer {
     margin: 0;
     padding: 0;
   }
+  
+  li {
+    gap: var(--size-half);
+  }
 }
 
-.contat-icon {
+.contact-icon {
   mask-size: 100%;
   mask-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
+  background: var(--link-text-color);
+  height: var(--size-double);
 }
 
 .github {
-  mask-image: url('file:///C:/Users/Anatoli_Kuzmiankou/Projects/cssbattle-notebook/dist/assets/github-mark.svg');
+  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/github-mark.svg');
+}
+
+.linkedin {
+  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/linkedin-svgrepo-com.svg');
 }
 
 .link {
@@ -319,8 +331,8 @@ ${injectBody ? injectBody() : ""}
     <footer>
       <div>Contacts:
         <ul>
-          <li><img src="../assets/github-mark.svg"><i class='contact-icon github' /></i><a class='link' href='https://github.com/kuzanatoliy'>GitHub</a></li>
-          <li class='contact-icon linkedin'><a class='link' href='https://www.linkedin.com/in/anatoli-kuzmiankou-9a3b74b4'>LinkedIn</li></a>
+          <li><i class='contact-icon github' /></i><a class='link' href='https://github.com/kuzanatoliy'>GitHub</a></li>
+          <li><i class='contact-icon linkedin'></i><a class='link' href='https://www.linkedin.com/in/anatoli-kuzmiankou-9a3b74b4'>LinkedIn</li></a>
         </ul>
       </div>
       <div>© Kuzanatoliorg</div>
