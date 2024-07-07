@@ -2,19 +2,19 @@ const createPageTemplate = require("./create-page-template");
 const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
 const { existsSync } = require("fs");
 
-module.exports = ({ name, id, solution, parentUrl }) =>
-  createPageTemplate({
+module.exports = ({ name, id, solution, parentUrl }) => {
+  const imagePath = existsSync(`./assets/previews/${id}.webp`)
+    ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${id}.webp`
+    : `${imagePath}`;
+
+  return createPageTemplate({
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
     keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
     headerText: `${id} - ${name}`,
     injectBody: () => `
       <section>
-        <battle-preview alt="Preview of the ${name} play" src="${
-      existsSync(`./assets/previews/${id}.png`)
-        ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${id}.png`
-        : `${CSSBATTLE_HOST_NAME}/targets/${id}.png`
-    }"></battle-preview>
+        <battle-preview alt="Preview of the ${name} play" src="${imagePath}"></battle-preview>
         <div class="game">
           <button class="copy-game">
             <img src='../assets/copy.svg' alt="Copy game code"/>
@@ -108,10 +108,11 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
     `,
     parentUrl: `/${ROOT_PATH}/${parentUrl}`,
     metaTags: `
-      <meta property="og:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
-      <meta name="twitter:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
-      <meta property="vk:image" content="${CSSBATTLE_HOST_NAME}/targets/${id}.png">
+      <meta property="og:image" content="${imagePath}">
+      <meta name="twitter:image" content="${imagePath}">
+      <meta property="vk:image" content="${imagePath}">
       <meta property="og:image:width" content="400">
       <meta property="og:image:height" content="300">
     `,
   });
+};
