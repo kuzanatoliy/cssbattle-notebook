@@ -1,5 +1,6 @@
 const createPageTemplate = require("./create-page-template");
 const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { existsSync } = require("fs");
 
 module.exports = ({ name, id, playsList, canonicalPath }) =>
   createPageTemplate({
@@ -12,10 +13,16 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
       `<ul>${playsList
         .map(
           (item) =>
-            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${item.name}</h2><div>
+            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${
+              item.name
+            }</h2><div>
                 <battle-preview
                   alt="Preview of the ${item.name} play"
-                  src="${CSSBATTLE_HOST_NAME}/targets/${item.id}.png"
+                  src="${
+                    existsSync(`./assets/previews/${play.id}.png`)
+                      ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${play.id}.png`
+                      : `${CSSBATTLE_HOST_NAME}/targets/${play.id}.png`
+                  }"
                 ></battle-preview>
               </div></a></li>`
         )
