@@ -1,5 +1,5 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
 const { existsSync } = require("fs");
 
 module.exports = ({ name, id, solution, parentUrl }) =>
@@ -11,9 +11,9 @@ module.exports = ({ name, id, solution, parentUrl }) =>
     injectBody: () => `
       <section>
         <battle-preview alt="Preview of the ${name} play" src="${
-      existsSync(`./assets/previews/${play.id}.png`)
-        ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${play.id}.png`
-        : `${CSSBATTLE_HOST_NAME}/targets/${play.id}.png`
+      existsSync(`./assets/previews/${id}.png`)
+        ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${id}.png`
+        : `${CSSBATTLE_HOST_NAME}/targets/${id}.png`
     }"></battle-preview>
         <div class="game">
           <button class="copy-game">

@@ -19,9 +19,9 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
                 <battle-preview
                   alt="Preview of the ${item.name} play"
                   src="${
-                    existsSync(`./assets/previews/${play.id}.png`)
-                      ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${play.id}.png`
-                      : `${CSSBATTLE_HOST_NAME}/targets/${play.id}.png`
+                    existsSync(`./assets/previews/${item.id}.png`)
+                      ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${item.id}.png`
+                      : `${CSSBATTLE_HOST_NAME}/targets/${item.id}.png`
                   }"
                 ></battle-preview>
               </div></a></li>`
