@@ -1,5 +1,6 @@
 const createPageTemplate = require("./create-page-template");
 const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { existsSync } = require("fs");
 
 module.exports = ({ list, canonicalPath }) =>
   createPageTemplate({
@@ -20,7 +21,11 @@ module.exports = ({ list, canonicalPath }) =>
                 (play) =>
                   `<battle-preview
                     alt="Preview of the ${play.name} play"
-                    src="${CSSBATTLE_HOST_NAME}/targets/${play.id}.png"
+                    src="${
+                      existsSync(`./assets/previews/${play.id}.png`)
+                        ? `${HOST_NAME}/assets/previews/${play.id}.png`
+                        : `${CSSBATTLE_HOST_NAME}/targets/${play.id}.png`
+                    }"
                   ></battle-preview>`
               )
               .join("")}</div></a></li>`
