@@ -1428,4 +1428,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 32,
+    name: "Animation",
+    date: "2024-08-11",
+    plays: [
+      {
+        id: 203,
+        name: "Wolverine",
+        solution: require("./203-wolverine"),
+        date: "2024-08-11",
+      },
+    ],
+  },
 ];
