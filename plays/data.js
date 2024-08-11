@@ -1439,6 +1439,12 @@ module.exports = [
         solution: require("./203-wolverine"),
         date: "2024-08-11",
       },
+      {
+        id: 204,
+        name: "Deadpool",
+        solution: require("./204-deadpool"),
+        date: "2024-08-11",
+      },
     ],
   },
 ];
