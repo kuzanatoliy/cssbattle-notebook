@@ -1431,19 +1431,25 @@ module.exports = [
   {
     id: 32,
     name: "Animation",
-    date: "2024-08-11",
+    date: "2024-08-18",
     plays: [
       {
         id: 203,
         name: "Wolverine",
         solution: require("./203-wolverine"),
-        date: "2024-08-11",
+        date: "2024-08-18",
       },
       {
         id: 204,
         name: "Deadpool",
         solution: require("./204-deadpool"),
-        date: "2024-08-11",
+        date: "2024-08-18",
+      },
+      {
+        id: 205,
+        name: "Magneto's helmet",
+        solution: require("./205-magnetos-helmet"),
+        date: "2024-08-18",
       },
     ],
   },
