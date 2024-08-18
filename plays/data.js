@@ -1451,6 +1451,12 @@ module.exports = [
         solution: require("./205-magnetos-helmet"),
         date: "2024-08-18",
       },
+      {
+        id: 206,
+        name: "Punisher",
+        solution: require("./206-punisher"),
+        date: "2024-08-18",
+      },
     ],
   },
 ];
