@@ -214,6 +214,8 @@ ${injectStyles ? injectStyles() : ""}
       #style;
       #content;
       #alt;
+      #src;
+      #observer;
 
       static get observedAttributes() {
         return ["src", "alt"];
@@ -222,6 +224,40 @@ ${injectStyles ? injectStyles() : ""}
       constructor() {
         super();
         this.#shadow = this.attachShadow({mode: "closed"});
+
+        this.#observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.#observer.unobserve(this.#content);
+              fetch(this.#src)
+                .then((res) => {
+                  if (res.status === 200) {
+                    return res.blob();
+                  } else {
+                    throw "Not found";
+                  }
+                })
+                .then((blob) => {
+                  this.#content && this.#shadow.removeChild(this.#content);
+                  this.#content = document.createElement("img");
+                  this.#content.setAttribute("src", URL.createObjectURL(blob));
+                  this.#content.setAttribute("alt", this.#alt);
+                  this.#shadow.appendChild(this.#content);
+                })
+                .catch(() => {
+                  this.#content && this.#shadow.removeChild(this.#content);
+                  this.#content = document.createElement("div");
+                  this.#content.textContent = "Not found";
+                  this.#content.setAttribute("class", "not-found");
+                  this.#shadow.appendChild(this.#content);
+                });
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: "20px",
+          threshold: 0,
+        });
 
         this.#style = document.createElement("style");
         this.#style.textContent = \`
@@ -283,28 +319,8 @@ ${injectStyles ? injectStyles() : ""}
           this.#content = document.createElement("div");
           this.#content.setAttribute("class", "loading-skeleton");
           this.#shadow.appendChild(this.#content);
-          fetch(newValue)
-            .then((res) => {
-              if (res.status === 200) {
-                return res.blob();
-              } else {
-                throw "Not found";
-              }
-            })
-            .then((blob) => {
-              this.#content && this.#shadow.removeChild(this.#content);
-              this.#content = document.createElement("img");
-              this.#content.setAttribute("src", URL.createObjectURL(blob));
-              this.#content.setAttribute("alt", this.#alt);
-              this.#shadow.appendChild(this.#content);
-            })
-            .catch(() => {
-              this.#content && this.#shadow.removeChild(this.#content);
-              this.#content = document.createElement("div");
-              this.#content.textContent = "Not found";
-              this.#content.setAttribute("class", "not-found");
-              this.#shadow.appendChild(this.#content);
-            });
+          this.#observer.observe(this.#content);
+          this.#src = newValue;
         }
       }
     }
