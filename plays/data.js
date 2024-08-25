@@ -1463,6 +1463,12 @@ module.exports = [
         solution: require("./207-green-lantern-logo"),
         date: "2024-08-25",
       },
+      {
+        id: 207,
+        name: "Hulk fist",
+        solution: require("./208-hulk-fist"),
+        date: "2024-08-25",
+      },
     ],
   },
 ];
