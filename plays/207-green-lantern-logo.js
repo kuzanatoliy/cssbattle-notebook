@@ -7,7 +7,10 @@ module.exports = `
     body, dl {
       border: solid 25px;
       border-radius: 9in;
-      aspect-ratio: 1/1;
+    }
+    dl {
+      height: 90px;
+      margin: 0;
     }
     body {
       margin: 10px 60px;
