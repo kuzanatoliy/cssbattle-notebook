@@ -1431,31 +1431,37 @@ module.exports = [
   {
     id: 32,
     name: "Animation",
-    date: "2024-08-18",
+    date: "2024-08-25",
     plays: [
       {
         id: 203,
         name: "Wolverine",
         solution: require("./203-wolverine"),
-        date: "2024-08-18",
+        date: "2024-08-25",
       },
       {
         id: 204,
         name: "Deadpool",
         solution: require("./204-deadpool"),
-        date: "2024-08-18",
+        date: "2024-08-25",
       },
       {
         id: 205,
         name: "Magneto's helmet",
         solution: require("./205-magnetos-helmet"),
-        date: "2024-08-18",
+        date: "2024-08-25",
       },
       {
         id: 206,
         name: "Punisher",
         solution: require("./206-punisher"),
-        date: "2024-08-18",
+        date: "2024-08-25",
+      },
+      {
+        id: 207,
+        name: "Green Lantern logo",
+        solution: require("./207-green-lantern-logo"),
+        date: "2024-08-25",
       },
     ],
   },
