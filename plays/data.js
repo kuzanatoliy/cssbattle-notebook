@@ -1470,6 +1470,12 @@ module.exports = [
         date: "2024-09-01",
       },
       {
+        id: 209,
+        name: "Iron man",
+        solution: require("./209-iron-man"),
+        date: "2024-09-01",
+      },
+      {
         id: 210,
         name: "Black window logo",
         solution: require("./210-black-window-logo"),
