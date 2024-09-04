@@ -6,6 +6,10 @@ module.exports = ({ list, root }) =>
   ${
     root
       ? `
+    
+    <sitemap>
+      <loc>${HOST_NAME}/${ROOT_PATH}/</loc>
+    </sitemap>
     <sitemap>
       <loc>${HOST_NAME}/${ROOT_PATH}/${root.mapPath}</loc>
     </sitemap>
