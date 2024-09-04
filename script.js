@@ -76,10 +76,7 @@ const runDeploy = async () => {
 
   cp("assets", "dist/assets", { recursive: true });
 
-  writeFile(
-    `dist/index.html`,
-    createRoot({ list, canonicalPath: "index.html" })
-  );
+  writeFile(`dist/index.html`, createRoot({ list, canonicalPath: "" }));
 
   writeFile(
     `dist/root.xml`,
