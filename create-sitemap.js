@@ -9,6 +9,18 @@ module.exports = ({ list, root }) =>
     root
       ? `
     <url>
+      <loc>${HOST_NAME}/${ROOT_PATH}/</loc>
+      <lastmod>${date.getUTCFullYear()}-${date
+          .getUTCMonth()
+          .toString()
+          .padStart(2, "0")}-${date
+          .getUTCDate()
+          .toString()
+          .padStart(2, "0")}</lastmod>
+      <changefreq>monthly</changefreq> 
+      <priority>1</priority>
+    </url>
+    <url>
       <loc>${HOST_NAME}/${ROOT_PATH}/${root.mapPath}</loc>
       <lastmod>${date.getUTCFullYear()}-${date
           .getUTCMonth()

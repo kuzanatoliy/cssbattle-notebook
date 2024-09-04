@@ -51,7 +51,7 @@ const runDeploy = async () => {
           id,
           name,
           playsList,
-          canonicalPath: `${folderName}/index.html`,
+          canonicalPath: `${folderName}/`,
         })
       );
 
