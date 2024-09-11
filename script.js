@@ -59,7 +59,7 @@ const runDeploy = async () => {
         `dist/${folderName}/sitemap.xml`,
         createSitemap({
           list: playsList,
-          root: { mapPath: `${folderName}/index.html` },
+          root: { mapPath: `${folderName}` },
         })
       );
 
@@ -80,7 +80,7 @@ const runDeploy = async () => {
 
   writeFile(
     `dist/root.xml`,
-    createSitemap({ list: [], root: { mapPath: `index.html` } })
+    createSitemap({ list: [], root: { mapPath: "" } })
   );
 
   writeFile(
