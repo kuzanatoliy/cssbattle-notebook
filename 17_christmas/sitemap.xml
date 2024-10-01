@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/</loc>
+      <lastmod>2024-10-01</lastmod>
+      <changefreq>monthly</changefreq> 
+      <priority>1</priority>
+    </url>
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/index.html</loc>
+      <lastmod>2024-10-01</lastmod>
+      <changefreq>monthly</changefreq> 
+      <priority>1</priority>
+    </url>
+  
+  
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/97_snowman.html</loc>
+      <lastmod>2023-12-04</lastmod>
+      <changefreq>never</changefreq> 
+      <priority>1</priority>
+    </url>
+  
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/98_candle.html</loc>
+      <lastmod>2023-12-04</lastmod>
+      <changefreq>never</changefreq> 
+      <priority>1</priority>
+    </url>
+  
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/99_gift_box.html</loc>
+      <lastmod>2023-12-04</lastmod>
+      <changefreq>never</changefreq> 
+      <priority>1</priority>
+    </url>
+  
+    <url>
+      <loc>https://kuzanatoliy.github.io/cssbattle-notebook/17_christmas/100_cssbattle.html</loc>
+      <lastmod>2023-12-04</lastmod>
+      <changefreq>never</changefreq> 
+      <priority>1</priority>
+    </url>
+  
+</urlset>
