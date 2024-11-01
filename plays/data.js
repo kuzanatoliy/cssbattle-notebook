@@ -1483,4 +1483,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 33,
+    name: "Outline",
+    date: "2024-11-02",
+    plays: [
+      {
+        id: 212,
+        name: "Fibonacci peacock",
+        solution: require("./212-fibonacci-peacock"),
+        date: "2024-11-02",
+      },
+    ],
+  },
 ];
