@@ -1495,6 +1495,12 @@ module.exports = [
         date: "2024-11-11",
       },
       {
+        id: 213,
+        name: "Boat",
+        solution: require("./214-boat"),
+        date: "2024-11-11",
+      },
+      {
         id: 214,
         name: "Newspaper",
         solution: require("./214-newspaper"),
