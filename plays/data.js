@@ -1486,13 +1486,19 @@ module.exports = [
   {
     id: 33,
     name: "Outline",
-    date: "2024-11-02",
+    date: "2024-11-11",
     plays: [
       {
         id: 212,
         name: "Fibonacci peacock",
         solution: require("./212-fibonacci-peacock"),
-        date: "2024-11-02",
+        date: "2024-11-11",
+      },
+      {
+        id: 214,
+        name: "Newspaper",
+        solution: require("./214-newspaper"),
+        date: "2024-11-11",
       },
     ],
   },
