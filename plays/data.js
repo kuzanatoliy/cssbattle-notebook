@@ -1489,6 +1489,12 @@ module.exports = [
     date: "2024-11-11",
     plays: [
       {
+        id: 211,
+        name: "CSS weekly",
+        solution: require("./211-css-weekly"),
+        date: "2024-11-11",
+      },
+      {
         id: 212,
         name: "Fibonacci peacock",
         solution: require("./212-fibonacci-peacock"),
