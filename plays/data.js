@@ -1513,6 +1513,12 @@ module.exports = [
         date: "2024-11-18",
       },
       {
+        id: 215,
+        name: "Staggered checks",
+        solution: require("./215-staggered-checks"),
+        date: "2024-11-18",
+      },
+      {
         id: 216,
         name: "Pies",
         solution: require("./216-pies"),
