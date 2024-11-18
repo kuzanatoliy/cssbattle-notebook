@@ -1486,31 +1486,37 @@ module.exports = [
   {
     id: 33,
     name: "Outline",
-    date: "2024-11-11",
+    date: "2024-11-18",
     plays: [
       {
         id: 211,
         name: "CSS weekly",
         solution: require("./211-css-weekly"),
-        date: "2024-11-11",
+        date: "2024-11-18",
       },
       {
         id: 212,
         name: "Fibonacci peacock",
         solution: require("./212-fibonacci-peacock"),
-        date: "2024-11-11",
+        date: "2024-11-18",
       },
       {
         id: 213,
         name: "Boat",
         solution: require("./214-boat"),
-        date: "2024-11-11",
+        date: "2024-11-18",
       },
       {
         id: 214,
         name: "Newspaper",
         solution: require("./214-newspaper"),
-        date: "2024-11-11",
+        date: "2024-11-18",
+      },
+      {
+        id: 216,
+        name: "Pies",
+        solution: require("./216-pies"),
+        date: "2024-11-18",
       },
     ],
   },
