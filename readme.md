@@ -65,3 +65,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 31: Opacity](https://kuzanatoliy.github.io/cssbattle-notebook/31_opacity/)
 
 [Battle 32: Animation](https://kuzanatoliy.github.io/cssbattle-notebook/32_animation/)
+
+[Battle 33: Outline](https://kuzanatoliy.github.io/cssbattle-notebook/33_outline/)
