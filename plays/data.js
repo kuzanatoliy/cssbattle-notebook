@@ -1525,9 +1525,15 @@ module.exports = [
         date: "2024-11-18",
       },
       {
-        id: 216,
+        id: 217,
         name: "Maze",
         solution: require("./217-maze"),
+        date: "2024-11-18",
+      },
+      {
+        id: 218,
+        name: "3D",
+        solution: require("./218-3d"),
         date: "2024-11-18",
       },
     ],
