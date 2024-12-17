@@ -22,10 +22,10 @@ jobs:
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          echo ${{vars.HOST_NAME}}
-          echo ${{vars.ROOT_PATH}}
+          echo HOST_NAME=${{vars.HOST_NAME}} >> .env
+          echo ROOT_PATH=${{vars.ROOT_PATH}} >> .env
       - name: build
-        run: node script.js
+        run: --env-file=.env node script.js
 #      - name: seo
 #        run: |
 #          cp robots.txt dist/robots.txt
