@@ -25,7 +25,7 @@ jobs:
           echo HOST_NAME=${{vars.HOST_NAME}} >> .env
           echo ROOT_PATH=${{vars.ROOT_PATH}} >> .env
       - name: build
-        run: --env-file=.env node script.js
+        run: node --env-file=.env script.js
 #      - name: seo
 #        run: |
 #          cp robots.txt dist/robots.txt
