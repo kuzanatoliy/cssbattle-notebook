@@ -1,10 +1,9 @@
 name: deploy
-on:
-  push:
+on: push
+#  push:
 #    branches:
 #      - master
 jobs:
-  environment: github
   pipeline:
     runs-on: ubuntu-latest
     strategy:
