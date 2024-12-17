@@ -22,8 +22,8 @@ jobs:
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          echo ${{env.HOST_NAME}}
-          echo ${{env.ROOT_PATH}}
+          echo ${{vars.HOST_NAME}}
+          echo ${{vars.ROOT_PATH}}
       - name: build
         run: node script.js
 #      - name: seo
