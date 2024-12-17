@@ -1,8 +1,8 @@
 name: deploy
-on: push
-#  push:
-#    branches:
-#      - master
+on:
+  push:
+    branches:
+      - master
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -16,8 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      #      - name: env
-      #        run: ech
       - name: config
         run: |
           git config --global user.email "njkznu@gmail.com"
@@ -26,16 +24,16 @@ jobs:
           echo ROOT_PATH=${{vars.ROOT_PATH}} >> .env
       - name: build
         run: node --env-file=.env script.js
-#      - name: seo
-#        run: |
-#          cp robots.txt dist/robots.txt
-#          cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
-#          cp yandex_f56e6bf2af5f6379.html dist/yandex_f56e6bf2af5f6379.html
-#          cp favicon.svg dist/favicon.svg
-#          cp manifest.json dist/manifest.json
-#      - name: deploy
-#        run: |
-#          git add -f dist
-#          git commit -am "deploy to ng-pages"
-#          git push origin `git subtree split --prefix dist`:refs/heads/gh-pages --force
-#          git reset --hard HEAD~1
+      - name: seo
+        run: |
+          cp robots.txt dist/robots.txt
+          cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
+          cp yandex_f56e6bf2af5f6379.html dist/yandex_f56e6bf2af5f6379.html
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
+      - name: deploy
+        run: |
+          git add -f dist
+          git commit -am "deploy to ng-pages"
+          git push origin `git subtree split --prefix dist`:refs/heads/gh-pages --force
+          git reset --hard HEAD~1
