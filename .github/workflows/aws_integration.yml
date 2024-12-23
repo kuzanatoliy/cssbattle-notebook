@@ -16,9 +16,10 @@ jobs:
         with:
           fetch-depth: 0
       - name: check that bucket exists
+        id: bucket-check
         run: echo "S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket test)" >> $GITHUB_ENV
       - name: access dined
-        if: contains(env.S3_CHECK_RESULT, 'Forbidden')
+        if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
         run: |
           echo "Access to ${{ vars.AWS_BUCKET_NAME }} is dined"
           exit 1
