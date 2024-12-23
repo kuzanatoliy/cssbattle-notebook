@@ -20,7 +20,7 @@ jobs:
         run: echo "S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket test)" >> $GITHUB_ENV
       - name: temporary
         run: |
-          echo ${{steps.bucket-check.env.S3_CHECK_RESULT}}
+          echo ${{steps.bucket-check.output}}
           echo ${{env.S3_CHECK_RESULT}}
       - name: access dined
         if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
