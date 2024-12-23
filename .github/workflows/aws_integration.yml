@@ -18,16 +18,16 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         run: |
-          `aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }}` >> $TEST
+          echo "$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})" >> $TEST
           echo ${{steps.bucket-check.outputs.TEST}}
-          `aws s3api head-bucket --output text --bucket test` >> $IS_NOT_EXISTED
-          `aws s3api head-bucket --output text --bucket css_battle` >> $IS_NOT_PERMISSIONS
       - name: temporary
         run: |
           echo ${{steps.bucket-check.outputs.TEST}}
           echo ${{steps.bucket-check.outputs.IS_NOT_EXISTED}}
           echo ${{steps.bucket-check.outputs.IS_NOT_PERMISSIONS}}
 
+# `aws s3api head-bucket --output text --bucket test` >> $IS_NOT_EXISTED
+# `aws s3api head-bucket --output text --bucket css_battle` >> $IS_NOT_PERMISSIONS
 # echo S3_CHECK_RESULT >> $TEST
 # echo $S3_CHECK_RESULT1 | grep -c 'Forbidden' >> $IS_NOT_PERMISSIONS
 # echo $S3_CHECK_RESULT2 | grep -c 'Not Found' >> $IS_NOT_EXISTED
