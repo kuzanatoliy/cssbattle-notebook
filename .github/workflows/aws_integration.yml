@@ -18,8 +18,8 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         run: |
-          echo "$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})"
-          echo ${{steps.bucket-check.outputs.TEST}}
+          echo "S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})" >> $GITHUB_ENV
+          echo ${{env.S3_CHECK_RESULT}}
       - name: temporary
         run: |
           echo ${{steps.bucket-check.outputs.TEST}}
