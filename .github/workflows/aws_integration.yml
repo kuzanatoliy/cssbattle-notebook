@@ -18,7 +18,7 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         run: |
-          echo "$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})" >> $TEST
+          echo "$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})"
           echo ${{steps.bucket-check.outputs.TEST}}
       - name: temporary
         run: |
