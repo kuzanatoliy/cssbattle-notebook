@@ -18,13 +18,11 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         run: |
-          echo "S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})" >> $GITHUB_ENV
-          echo ${{env.S3_CHECK_RESULT}}
-      - name: temporary
-        run: |
-          echo ${{steps.bucket-check.outputs.TEST}}
-          echo ${{steps.bucket-check.outputs.IS_NOT_EXISTED}}
-          echo ${{steps.bucket-check.outputs.IS_NOT_PERMISSIONS}}
+          S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }})
+          echo "IS_NOT_PERMISSIONS=$S3_CHECK_RESULT | grep -c 'Forbidden'"
+          echo "IS_NOT_EXISTED=$S3_CHECK_RESULT | grep -c 'Not Found'"
+          echo ${{env.IS_NOT_PERMISSIONS}}
+          echo ${{env.IS_NOT_EXISTED}}
 
 # `aws s3api head-bucket --output text --bucket test` >> $IS_NOT_EXISTED
 # `aws s3api head-bucket --output text --bucket css_battle` >> $IS_NOT_PERMISSIONS
