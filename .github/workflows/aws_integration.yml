@@ -17,16 +17,23 @@ jobs:
           fetch-depth: 0
       - name: check that bucket exists
         id: bucket-check
-        run: echo "S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket test)" >> $GITHUB_ENV
+        run: |
+          if aws s3api head-bucket --output text --bucket battle-test
+          then
+            echo "S3_CHECK_RESULT=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "S3_CHECK_RESULT=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo $S3_CHECK_RESULT
       - name: temporary
         run: |
-          echo ${{steps.bucket-check.output}}
+          echo ${{steps.bucket-check.outputs.S3_CHECK_RESULT}}
           echo ${{env.S3_CHECK_RESULT}}
-      - name: access dined
-        if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
-        run: |
-          echo "Access to ${{ vars.AWS_BUCKET_NAME }} is dined"
-          exit 1
+      #- name: access dined
+      #  if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
+      #  run: |
+      #    echo "Access to ${{ vars.AWS_BUCKET_NAME }} is dined"
+      #    exit 1
 
 # `aws s3api head-bucket --output text --bucket test` >> $IS_NOT_EXISTED
 # `aws s3api head-bucket --output text --bucket css_battle` >> $IS_NOT_PERMISSIONS
