@@ -18,17 +18,11 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         run: |
-          if aws s3api head-bucket --output text --bucket battle-test
-          then
-            echo "S3_CHECK_RESULT=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "S3_CHECK_RESULT=false" >> "$GITHUB_OUTPUT"
-          fi
-          echo $S3_CHECK_RESULT
+          S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket battle-test 2>&1)
+          echo $S3_CHECK_RESULT >> "$GITHUB_OUTPUT"
       - name: temporary
         run: |
           echo ${{steps.bucket-check.outputs.S3_CHECK_RESULT}}
-          echo ${{env.S3_CHECK_RESULT}}
       #- name: access dined
       #  if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
       #  run: |
