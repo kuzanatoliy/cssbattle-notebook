@@ -10,13 +10,14 @@ jobs:
       AWS_DEFAULT_REGION: ${{ vars.AWS_REGION }}
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [22.x]
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: check that bucket exists
         id: bucket-check
+        continue-on-error: true
         run: |
           S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket battle-test 2>&1)
           echo $S3_CHECK_RESULT >> "$GITHUB_OUTPUT"
