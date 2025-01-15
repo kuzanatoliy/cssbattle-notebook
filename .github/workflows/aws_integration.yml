@@ -23,6 +23,7 @@ jobs:
           echo $S3_CHECK_RESULT >> "$GITHUB_OUTPUT"
       - name: temporary
         run: |
+          echo ${{steps.bucket-check.outcome}}
           echo ${{steps.bucket-check.outputs.S3_CHECK_RESULT}}
       #- name: access dined
       #  if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
