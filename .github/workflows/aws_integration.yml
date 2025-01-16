@@ -21,9 +21,12 @@ jobs:
         run: |
           set +e
           S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket test 2>&1)
-          echo $S3_CHECK_RESULT
+          ERROR_CODE=$?
           echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
-          echo $S3_CHECK_RESULT
+          set -e
+          exit $ERROR_CODE
+      # - name: check access
+      #  if: steps.bucket-check.outputs.S3_CHECK_RESULT == ''
       - name: temporary
         run: |
           echo ${{steps.bucket-check.outcome}}
