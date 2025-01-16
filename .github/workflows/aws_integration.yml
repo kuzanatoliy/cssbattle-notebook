@@ -20,7 +20,7 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket test 2>&1)
+          S3_CHECK_RESULT=$(aws s3api head-bucket --output ${{ vars.AWS_BUCKET_NAME }} --bucket test 2>&1)
           ERROR_CODE=$?
           echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
           set -e
@@ -33,3 +33,21 @@ jobs:
             echo "Access dined"
             exit 254
           fi
+      - name: check access
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          if echo "${{ steps.bucket-check.outputs.S3_CHECK_RESULT }}" | grep 'Forbidden';
+          then
+            echo "Access dined"
+            exit 254
+          fi
+      - name: create bucket
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          aws s3api create-bucket --bucket ${{ vars.AWS_BUCKET_NAME }} --acl public-read
+          aws s3 website s3://${{ vars.AWS_BUCKET_NAME }} --index-document index.html
+          echo '{"Version":"2012-10-17","Statement":[{"Sid": "PublicReadGetObject","Effect": "Allow","Principal": "*","Action": "s3:GetObject","Resource": "arn:aws:s3:::'${{ vars.AWS_BUCKET_NAME }}'/*"}]}' > policy_s3.json
+          aws s3api put-bucket-policy --bucket ${{ vars.AWS_BUCKET_NAME }} --policy file://policy_s3.json
+          echo "<html><center><h1>My Static Website on S3</h1></center></html>" > index.html
+          aws s3 cp index.html ${{ vars.AWS_BUCKET_NAME }}
+          curl `http://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com`
