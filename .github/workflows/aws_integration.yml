@@ -21,9 +21,8 @@ jobs:
         run: |
           set +e
           S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket battle-test 2>&1)
-          S3_CHECK_RESULT=$(echo $S3_CHECK_RESULT | tr '\n' ' ')
-          echo $S3_CHECK_RESULT >> $GITHUB_OUTPUT
           echo $?
+          echo S3_CHECK_RESULT=$S3_CHECK_RESULT >> $GITHUB_OUTPUT
           set -e
       - name: temporary
         run: |
