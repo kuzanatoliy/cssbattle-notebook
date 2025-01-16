@@ -44,7 +44,25 @@ jobs:
       - name: create bucket
         if: steps.bucket-check.outcome == 'failure'
         run: |
-          aws s3api create-bucket --bucket ${{ vars.AWS_BUCKET_NAME }} --acl public-read
+          aws s3api create-bucket --bucket ${{ vars.AWS_BUCKET_NAME }}
+          aws s3api put-public-access-block --bucket "${{ vars.AWS_BUCKET_NAME }}" --public-access-block-configuration "BlockPublicPolicy=false" # 2
+          aws s3api put-bucket-policy --bucket "${{ vars.AWS_BUCKET_NAME }}" --policy '{
+              "Version": "2012-10-17",
+              "Statement": [
+                  {
+                      "Sid": "PublicReadGetObject",
+                      "Effect": "Allow",
+                      "Principal": "*",
+                      "Action": [
+                          "s3:GetObject"
+                      ],
+                      "Resource": [
+                          "arn:aws:s3:::'"${{ vars.AWS_BUCKET_NAME }}"'/*"
+
+                      ]
+                  }
+              ]
+          }'
           aws s3 website s3://${{ vars.AWS_BUCKET_NAME }} --index-document index.html
           echo '{"Version":"2012-10-17","Statement":[{"Sid": "PublicReadGetObject","Effect": "Allow","Principal": "*","Action": "s3:GetObject","Resource": "arn:aws:s3:::'${{ vars.AWS_BUCKET_NAME }}'/*"}]}' > policy_s3.json
           aws s3api put-bucket-policy --bucket ${{ vars.AWS_BUCKET_NAME }} --policy file://policy_s3.json
