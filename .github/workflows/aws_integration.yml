@@ -20,10 +20,10 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket battle-test 2>&1)
-          echo $?
-          echo S3_CHECK_RESULT=$S3_CHECK_RESULT >> $GITHUB_OUTPUT
+          aws s3api head-bucket --output text --bucket battle-test 2>&1
+          echo S3_CHECK_RESULT=$? >> $GITHUB_OUTPUT
           set -e
+          exit $S3_CHECK_RESULT
       - name: temporary
         run: |
           echo ${{steps.bucket-check.outcome}}
