@@ -25,20 +25,11 @@ jobs:
           echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
           set -e
           exit $ERROR_CODE
-      # - name: check access
-      #  if: steps.bucket-check.outputs.S3_CHECK_RESULT == ''
-      - name: temporary
+      - name: check access
+        if: steps.bucket-check.outcome == 'failure'
         run: |
-          echo ${{steps.bucket-check.outcome}}
-          echo ${{steps.bucket-check.outputs.S3_CHECK_RESULT}}
-      #- name: access dined
-      #  if: contains(steps.bucket-check.env.S3_CHECK_RESULT, 'Forbidden')
-      #  run: |
-      #    echo "Access to ${{ vars.AWS_BUCKET_NAME }} is dined"
-      #    exit 1
-
-# `aws s3api head-bucket --output text --bucket test` >> $IS_NOT_EXISTED
-# `aws s3api head-bucket --output text --bucket css_battle` >> $IS_NOT_PERMISSIONS
-# echo S3_CHECK_RESULT >> $TEST
-# echo $S3_CHECK_RESULT1 | grep -c 'Forbidden' >> $IS_NOT_PERMISSIONS
-# echo $S3_CHECK_RESULT2 | grep -c 'Not Found' >> $IS_NOT_EXISTED
+          if echo "${{ steps.bucket-check.outputs.S3_CHECK_RESULT }}" | grep 'Forbidden';
+          then
+            echo "Access dined"
+            exit 254
+          fi
