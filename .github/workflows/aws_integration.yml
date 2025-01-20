@@ -64,12 +64,11 @@ jobs:
               ]
           }'
           aws s3 website s3://${{ vars.AWS_BUCKET_NAME }} --index-document index.html
-          echo '{"Version":"2012-10-17","Statement":[{"Sid": "PublicReadGetObject","Effect": "Allow","Principal": "*","Action": "s3:GetObject","Resource": "arn:aws:s3:::'${{ vars.AWS_BUCKET_NAME }}'/*"}]}' > policy_s3.json
-          aws s3api put-bucket-policy --bucket ${{ vars.AWS_BUCKET_NAME }} --policy file://policy_s3.json
           echo "<html><center><h1>My Static Website on S3</h1></center></html>" > index.html
           aws s3 cp index.html s3://${{ vars.AWS_BUCKET_NAME }}
+          curl `https://${{ vars.AWS_BUCKET_NAME }}.s3.${{ vars.AWS_REGION }}.amazonaws.com/index.html`
       - name: clean bucket
-        run: aws s3 rm s3://bucket-name --recursive
+        run: aws s3 rm s3://${{ vars.AWS_BUCKET_NAME }} --recursive
       - name: config
         run: |
           git config --global user.email "njkznu@gmail.com"
