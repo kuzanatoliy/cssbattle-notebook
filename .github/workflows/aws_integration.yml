@@ -69,7 +69,7 @@ jobs:
           echo "<html><center><h1>My Static Website on S3</h1></center></html>" > index.html
           aws s3 cp index.html s3://${{ vars.AWS_BUCKET_NAME }}
       - name: clean bucket
-        run: $ aws s3 rm s3://bucket-name --recursive
+        run: aws s3 rm s3://bucket-name --recursive
       - name: config
         run: |
           git config --global user.email "njkznu@gmail.com"
