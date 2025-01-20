@@ -7,20 +7,20 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
     title: `CSS battle: solutions (#${id} - ${name})`,
     description: `Solution of CSS battle #${id} - ${name}`,
     keyworkds: `html, css, cssbattle, coding, development, engineering, inclusive, community, programming, ${name}`,
-    canonicalPath: `${HOST_NAME}/${ROOT_PATH}/${canonicalPath}`,
+    canonicalPath: `${HOST_NAME}${ROOT_PATH}/${canonicalPath}`,
     headerText: `${id} - ${name}`,
     injectBody: () =>
       `<ul>${playsList
         .map(
           (item) =>
-            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${
+            `<li><a href=${ROOT_PATH}/${item.path}><h2>${item.id} - ${
               item.name
             }</h2><div>
                 <battle-preview
                   alt="Preview of the ${item.name} play"
                   src="${
                     existsSync(`./assets/previews/${item.id}.webp`)
-                      ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${item.id}.webp`
+                      ? `${HOST_NAME}${ROOT_PATH}/assets/previews/${item.id}.webp`
                       : `${CSSBATTLE_HOST_NAME}/targets/${item.id}.png`
                   }"
                 ></battle-preview>
@@ -75,5 +75,5 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         }
       }
     `,
-    parentUrl: `/${ROOT_PATH}`,
+    parentUrl: `${ROOT_PATH}`,
   });

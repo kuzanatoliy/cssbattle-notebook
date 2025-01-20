@@ -8,13 +8,13 @@ module.exports = ({ list, canonicalPath }) =>
     description: "Solution of CSS battle",
     keyworkds:
       "html, css, cssbattle, coding, development, engineering, inclusive, community, programming",
-    canonicalPath: `${HOST_NAME}/${ROOT_PATH}/${canonicalPath}`,
+    canonicalPath: `${HOST_NAME}${ROOT_PATH}/${canonicalPath}`,
     headerText: "CSS battle solutions",
     injectBody: () =>
       `<ul>${list
         .map(
           (item) =>
-            `<li><a href=/${ROOT_PATH}/${item.path}><h2>${item.id} - ${
+            `<li><a href=${ROOT_PATH}/${item.path}><h2>${item.id} - ${
               item.name
             }</h2><div>${item.playsList
               .map(
@@ -23,7 +23,7 @@ module.exports = ({ list, canonicalPath }) =>
                     alt="Preview of the ${play.name} play"
                     src="${
                       existsSync(`./assets/previews/${play.id}.webp`)
-                        ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${play.id}.webp`
+                        ? `${HOST_NAME}${ROOT_PATH}/assets/previews/${play.id}.webp`
                         : `${CSSBATTLE_HOST_NAME}/targets/${play.id}.png`
                     }"
                   ></battle-preview>`

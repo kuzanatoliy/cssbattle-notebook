@@ -9,7 +9,7 @@ module.exports = ({ list, root }) =>
     root
       ? `
     <url>
-      <loc>${HOST_NAME}/${ROOT_PATH}${
+      <loc>${HOST_NAME}${ROOT_PATH}${
           root.mapPath ? `/${root.mapPath}` : ""
         }/</loc>
       <lastmod>${date.getUTCFullYear()}-${(date.getUTCMonth() + 1)
@@ -22,7 +22,7 @@ module.exports = ({ list, root }) =>
       <priority>1</priority>
     </url>
     <url>
-      <loc>${HOST_NAME}/${ROOT_PATH}${
+      <loc>${HOST_NAME}${ROOT_PATH}${
           root.mapPath ? `/${root.mapPath}` : ""
         }/index.html</loc>
       <lastmod>${date.getUTCFullYear()}-${(date.getUTCMonth() + 1)
@@ -41,7 +41,7 @@ module.exports = ({ list, root }) =>
     .map(
       (item) => `
     <url>
-      <loc>${HOST_NAME}/${ROOT_PATH}/${item.mapPath}</loc>
+      <loc>${HOST_NAME}${ROOT_PATH}/${item.mapPath}</loc>
       <lastmod>${item.date}</lastmod>
       <changefreq>never</changefreq> 
       <priority>1</priority>
