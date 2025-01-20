@@ -68,6 +68,18 @@ jobs:
           aws s3api put-bucket-policy --bucket ${{ vars.AWS_BUCKET_NAME }} --policy file://policy_s3.json
           echo "<html><center><h1>My Static Website on S3</h1></center></html>" > index.html
           aws s3 cp index.html s3://${{ vars.AWS_BUCKET_NAME }}
-          # curl `http://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com`
       - name: clean bucket
         run: $ aws s3 rm s3://bucket-name --recursive
+      - name: config
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          echo HOST_NAME=http://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com >> .env
+      - name: build
+        run: node --env-file=.env script.js
+      - name: seo
+        run: |
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
+      - name: publish
+        run: aws s3 sync dist s3://${{ vars.AWS_BUCKET_NAME }}
