@@ -1,5 +1,5 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constants");
 const { existsSync } = require("fs");
 
 module.exports = ({ name, id, solution, parentUrl }) => {

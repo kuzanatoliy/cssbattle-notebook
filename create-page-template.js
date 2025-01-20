@@ -1,4 +1,4 @@
-const { HOST_NAME, ROOT_PATH } = require("./constatns");
+const { HOST_NAME, ROOT_PATH } = require("./constants");
 
 module.exports = ({
   title,
