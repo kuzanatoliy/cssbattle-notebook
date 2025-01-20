@@ -64,9 +64,6 @@ jobs:
               ]
           }'
           aws s3 website s3://${{ vars.AWS_BUCKET_NAME }} --index-document index.html
-          echo "<html><center><h1>My Static Website on S3</h1></center></html>" > index.html
-          aws s3 cp index.html s3://${{ vars.AWS_BUCKET_NAME }}
-          curl `https://${{ vars.AWS_BUCKET_NAME }}.s3.${{ vars.AWS_REGION }}.amazonaws.com/index.html`
       - name: clean bucket
         run: aws s3 rm s3://${{ vars.AWS_BUCKET_NAME }} --recursive
       - name: config
