@@ -62,7 +62,7 @@ jobs:
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          echo HOST_NAME=https://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com >> .env
+          echo HOST_NAME=http://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com >> .env
       - name: build
         run: node --env-file=.env script.js
       - name: seo
