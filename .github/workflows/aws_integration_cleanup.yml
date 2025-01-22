@@ -16,4 +16,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: remove bucket
-        run: aws s3api delete-bucket --bucket ${{ vars.AWS_BUCKET_NAME }} --region ${{ vars.AWS_REGION }}
+        run: |
+          aws s3 rm s3://${{ vars.AWS_BUCKET_NAME }} --recursive 
+          aws s3api delete-bucket --bucket ${{ vars.AWS_BUCKET_NAME }} --region ${{ vars.AWS_REGION }}
