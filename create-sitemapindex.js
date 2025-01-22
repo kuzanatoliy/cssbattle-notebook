@@ -1,4 +1,4 @@
-const { HOST_NAME, ROOT_PATH } = require("./constatns");
+const { HOST_NAME, ROOT_PATH } = require("./constants");
 
 module.exports = ({ list, root }) =>
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -7,7 +7,7 @@ module.exports = ({ list, root }) =>
     root
       ? `
     <sitemap>
-      <loc>${HOST_NAME}/${ROOT_PATH}/${root.mapPath}</loc>
+      <loc>${HOST_NAME}${ROOT_PATH}/${root.mapPath}</loc>
     </sitemap>
   `
       : {}
@@ -16,7 +16,7 @@ module.exports = ({ list, root }) =>
     .map(
       (item) => `
     <sitemap>
-      <loc>${HOST_NAME}/${ROOT_PATH}/${item.mapPath}</loc>
+      <loc>${HOST_NAME}${ROOT_PATH}/${item.mapPath}</loc>
     </sitemap>
   `
     )

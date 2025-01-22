@@ -1,4 +1,4 @@
-const { HOST_NAME, ROOT_PATH } = require("./constatns");
+const { HOST_NAME, ROOT_PATH } = require("./constants");
 
 module.exports = ({
   title,
@@ -15,8 +15,8 @@ module.exports = ({
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="manifest" href="${HOST_NAME}/${ROOT_PATH}/manifest.json" />
-    <link rel="icon" href="${HOST_NAME}/${ROOT_PATH}/favicon.svg" />
+    <link rel="manifest" href="${HOST_NAME}${ROOT_PATH}/manifest.json" />
+    <link rel="icon" href="${HOST_NAME}${ROOT_PATH}/favicon.svg" />
     <title>${title}</title>
     <meta charset="UTF-8" />
     <meta name="description" content="${description}" />
@@ -182,11 +182,11 @@ footer {
 }
 
 .github {
-  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/github-mark.svg');
+  mask-image: url('${HOST_NAME}${ROOT_PATH}/assets/github-mark.svg');
 }
 
 .linkedin {
-  mask-image: url('${HOST_NAME}/${ROOT_PATH}/assets/linkedin-svgrepo-com.svg');
+  mask-image: url('${HOST_NAME}${ROOT_PATH}/assets/linkedin-svgrepo-com.svg');
 }
 
 .link {

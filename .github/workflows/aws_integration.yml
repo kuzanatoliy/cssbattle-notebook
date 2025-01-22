@@ -1,0 +1,73 @@
+name: aws_integration
+on: workflow_dispatch
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    environment: aws_integration
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ vars.AWS_REGION }}
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: check that bucket exists
+        id: bucket-check
+        continue-on-error: true
+        run: |
+          set +e
+          S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }} 2>&1)
+          ERROR_CODE=$?
+          echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
+          set -e
+          exit $ERROR_CODE
+      - name: check access
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          if echo "${{ steps.bucket-check.outputs.S3_CHECK_RESULT }}" | grep 'Forbidden';
+          then
+            echo "Access dined"
+            exit 254
+          fi
+      - name: create bucket
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          aws s3api create-bucket --bucket ${{ vars.AWS_BUCKET_NAME }}
+          aws s3api put-public-access-block --bucket "${{ vars.AWS_BUCKET_NAME }}" --public-access-block-configuration "BlockPublicPolicy=false" # 2
+          aws s3api put-bucket-policy --bucket "${{ vars.AWS_BUCKET_NAME }}" --policy '{
+              "Version": "2012-10-17",
+              "Statement": [
+                  {
+                      "Sid": "PublicReadGetObject",
+                      "Effect": "Allow",
+                      "Principal": "*",
+                      "Action": [
+                          "s3:GetObject"
+                      ],
+                      "Resource": [
+                          "arn:aws:s3:::'"${{ vars.AWS_BUCKET_NAME }}"'/*"
+
+                      ]
+                  }
+              ]
+          }'
+          aws s3 website s3://${{ vars.AWS_BUCKET_NAME }} --index-document index.html
+      - name: clean bucket
+        run: aws s3 rm s3://${{ vars.AWS_BUCKET_NAME }} --recursive
+      - name: config
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          echo HOST_NAME=http://${{ vars.AWS_BUCKET_NAME }}.s3-website.${{ vars.AWS_REGION }}.amazonaws.com >> .env
+      - name: build
+        run: node --env-file=.env script.js
+      - name: seo
+        run: |
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
+      - name: publish
+        run: aws s3 sync dist s3://${{ vars.AWS_BUCKET_NAME }}

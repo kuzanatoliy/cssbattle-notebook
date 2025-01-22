@@ -1,10 +1,10 @@
 const createPageTemplate = require("./create-page-template");
-const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constatns");
+const { CSSBATTLE_HOST_NAME, HOST_NAME, ROOT_PATH } = require("./constants");
 const { existsSync } = require("fs");
 
 module.exports = ({ name, id, solution, parentUrl }) => {
   const imagePath = existsSync(`./assets/previews/${id}.webp`)
-    ? `${HOST_NAME}/${ROOT_PATH}/assets/previews/${id}.webp`
+    ? `${HOST_NAME}${ROOT_PATH}/assets/previews/${id}.webp`
     : `${imagePath}`;
 
   return createPageTemplate({
@@ -106,7 +106,7 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
         elem.click();
       });
     `,
-    parentUrl: `/${ROOT_PATH}/${parentUrl}`,
+    parentUrl: `${ROOT_PATH}/${parentUrl}`,
     metaTags: `
       <meta property="og:image" content="${imagePath}">
       <meta name="twitter:image" content="${imagePath}">
