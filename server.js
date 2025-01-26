@@ -1,5 +1,4 @@
 const http = require("node:http");
-const {} = require("node:fs/promises");
 const fs = require("node:fs");
 
 http
