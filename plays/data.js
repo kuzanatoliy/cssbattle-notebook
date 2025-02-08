@@ -1538,4 +1538,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 34,
+    name: "Border",
+    date: "2025-02-08",
+    plays: [
+      {
+        id: 211,
+        name: "CodePen",
+        solution: require("./219-codepen"),
+        date: "2025-02-08",
+      },
+    ],
+  },
 ];
