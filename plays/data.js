@@ -1555,6 +1555,12 @@ module.exports = [
         solution: require("./220-building"),
         date: "2025-02-08",
       },
+      {
+        id: 221,
+        name: "Entangled",
+        solution: require("./221-entangled"),
+        date: "2025-02-09",
+      },
     ],
   },
 ];
