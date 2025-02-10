@@ -1,0 +1,30 @@
+name: prod deploy
+on: push
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    environment: beget_integration
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install
+        run: yarn install
+      - name: quality gates
+        run: yarn run test
+      - name: build
+        run: yarn run build
+      - name: deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        with:
+          server: x29852yf.beget.tech
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./cssbattle-notebook
+          dangerous-clean-slate: true
