@@ -23,5 +23,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: ./cssbattle-notebook/
-          protocol: ftp
           dangerous-clean-slate: true
