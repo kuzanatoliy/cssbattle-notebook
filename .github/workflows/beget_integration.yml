@@ -20,7 +20,7 @@ jobs:
       - name: build
         run: yarn run build
       - name: deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: x29852yf.beget.tech
           username: ${{ secrets.FTP_USERNAME }}
