@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: cleanup
-        uses: StephanThierry/ftp-delete-action@v2.1
-        with:
-          host: ${{ vars.USER_ID }}.beget.tech
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          remoteFiles: "*"
-          remoteDirectories: "/${{ vars.ROOT_DIRECTORY }}/*"
+        shell: python
+        run: |
+          import ftplib
+          ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
+          ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
+          ftp.delete('jim.txt')
+          ftp.quit()
