@@ -13,8 +13,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - name: config
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          echo HOST_NAME=http://${{ vars.USER_ID }}.beget.tech >> .env
+          echo ROOT_PATH=${{ vars.ROOT_DIRECTORY }} >> .env
       - name: build
-        run: node script.js
+        run: node --env-file=.env script.js
       - name: deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -22,6 +28,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: ./cssbattle-notebook/
+          server-dir: ./${{ vars.ROOT_DIRECTORY }}/
           protocol: ftps
           dangerous-clean-slate: true
