@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: cleanup
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ vars.USER_ID }}.beget.tech
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          remoteDir: "${{ vars.ROOT_DIRECTORY }}"
-          options: "--delete"
+        shell: python
+        run: |
+          import ftplib
+          ftp = ftplib.FTP('${{ vars.USER_ID }}.beget.tech')
+          ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
+          ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
+          ftp.quit()
