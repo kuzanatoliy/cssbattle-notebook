@@ -19,5 +19,5 @@ jobs:
           import ftplib
           ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
-          ftp.delete('jim.txt')
+          ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
