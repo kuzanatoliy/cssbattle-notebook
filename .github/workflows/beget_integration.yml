@@ -1,5 +1,5 @@
 name: prod deploy
-on: push
+on: workflow_dispatch
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -18,13 +18,17 @@ jobs:
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
           echo HOST_NAME=http://${{ vars.USER_ID }}.beget.tech >> .env
-          echo ROOT_PATH=${{ vars.ROOT_DIRECTORY }} >> .env
+          echo ROOT_PATH=/${{ vars.ROOT_DIRECTORY }} >> .env
       - name: build
         run: node --env-file=.env script.js
+      - name: seo
+        run: |
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
       - name: deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: x29852yf.beget.tech
+          server: ${{ vars.USER_ID }}.beget.tech
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
