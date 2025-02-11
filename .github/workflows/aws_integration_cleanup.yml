@@ -1,4 +1,4 @@
-name: aws_integration
+name: aws_integration_cleanup
 on: workflow_dispatch
 jobs:
   pipeline:
