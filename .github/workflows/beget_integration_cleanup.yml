@@ -17,8 +17,17 @@ jobs:
         shell: python
         run: |
           import ftplib
+
+          def remove_ftp_dir(ftp, path):
+            for (name, properties) in ftp.mlsd(path=path):
+              if name in ['.', '..']:
+                continue
+              elif properties['type'] == 'file':
+                ftp.delete(f"{path}/{name}")
+              elif properties['type'] == 'dir':
+                remove_ftp_dir(ftp, f"{path}/{name}")
+            ftp.rmd(path)
+
           ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
-          ftp.delete('${{ vars.ROOT_DIRECTORY }}/index.html')
-          ftp.quit();
-        # ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
+          remove_ftp_dir(ftp, '${{ vars.ROOT_DIRECTORY }}')
