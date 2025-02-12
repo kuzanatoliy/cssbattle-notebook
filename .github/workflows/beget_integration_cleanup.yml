@@ -27,7 +27,7 @@ jobs:
                       server_hostname=self.host,
                       session=self.sock.session)
               return conn, size
-          ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
+          ftp = MyFTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
           ftp.prot_p()
           def deletedir(dirname):
