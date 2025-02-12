@@ -36,10 +36,10 @@ jobs:
             for file in ftp.nlst():
               try:
                 print(file)
-                ftp.delete(file)
+                # ftp.delete(file)
               except Exception:
                 deletedir(file)
               ftp.cwd("..")
-              ftp.rmd(dirname)
+              # ftp.rmd(dirname)
           deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
