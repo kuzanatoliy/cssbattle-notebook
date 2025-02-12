@@ -35,6 +35,7 @@ jobs:
             print(dirname)
             for file in ftp.nlst():
               try:
+                print(file)
                 ftp.delete(file)
               except Exception:
                 deletedir(file)
