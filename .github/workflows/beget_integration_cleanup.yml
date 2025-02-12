@@ -17,7 +17,7 @@ jobs:
         shell: python
         run: |
           import ftplib
-          ftp = ftplib.FTP('${{ vars.USER_ID }}.beget.tech')
+          ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
           ftp.pwd();
           ftp.quit();
