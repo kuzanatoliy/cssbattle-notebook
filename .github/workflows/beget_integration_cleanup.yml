@@ -31,8 +31,4 @@ jobs:
                 deletedir(file)
               ftp.cwd("..")
               ftp.rmd(dirname)
-          for ftpfile in ftp.nlst():
-            try:
-              ftp.delete(ftpfile)
-            except Exception:
-              deletedir(ftpfile)
+          deletedir('${{ vars.ROOT_DIRECTORY }}')
