@@ -41,5 +41,6 @@ jobs:
                 deletedir(file)
               ftp.cwd("..")
               # ftp.rmd(dirname)
+          ftp.delete('${{ vars.ROOT_DIRECTORY }}/10_block/index.html')
           deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
