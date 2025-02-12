@@ -21,6 +21,7 @@ jobs:
           import os
           ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
+          ftp.prot_p()
           def deletedir(dirname):
             ftp.cwd(dirname)
             print(dirname)
@@ -32,3 +33,4 @@ jobs:
               ftp.cwd("..")
               ftp.rmd(dirname)
           deletedir('${{ vars.ROOT_DIRECTORY }}')
+          ftp.quit()
