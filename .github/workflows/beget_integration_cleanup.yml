@@ -17,6 +17,8 @@ jobs:
         shell: python
         run: |
           import ftplib
+          import shutil
+          import os
           ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
           def deletedir(dirname):
