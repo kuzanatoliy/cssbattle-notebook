@@ -19,6 +19,6 @@ jobs:
           import ftplib
           ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
-          ftp.pwd();
+          ftp.delete(('${{ vars.ROOT_DIRECTORY }}/index.html');
           ftp.quit();
         # ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
