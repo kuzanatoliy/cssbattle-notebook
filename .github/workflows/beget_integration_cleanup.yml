@@ -19,5 +19,6 @@ jobs:
           import ftplib
           ftp = ftplib.FTP('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
-          ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
-          ftp.quit()
+          ftp.pwd();
+          ftp.quit();
+        # ftp.rmd('${{ vars.ROOT_DIRECTORY }}')
