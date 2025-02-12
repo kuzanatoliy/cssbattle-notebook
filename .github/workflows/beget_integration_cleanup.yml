@@ -21,14 +21,13 @@ jobs:
           import os
           class MyFTP_TLS(ftplib.FTP_TLS):
             def ntransfercmd(self, cmd, rest=None):
-              conn, size =ftplib.FTP.ntransfercmd(self,cmd, rest)
+              conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
               if self._prot_p:
                 conn = self.context.wrap_socket(conn,
-                                                server_hostname=self.host,
-                                                session=self.sock.session)     
-                conn.__class__ = ReusedSslSocket  # we should not close reused ssl socket when file transfers finish
-              return conn,size
-          ftp = MyFTP_TLS('${{ vars.USER_ID }}.beget.tech')
+                      server_hostname=self.host,
+                      session=self.sock.session)
+              return conn, size
+          ftp = ftplib.FTP_TLS('${{ vars.USER_ID }}.beget.tech')
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
           ftp.prot_p()
           def deletedir(dirname):
