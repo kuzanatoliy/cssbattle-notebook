@@ -39,5 +39,6 @@ jobs:
               except Exception:
                 deletedir(file)
               ftp.rmd(dirname)
-          deletedir('${{ vars.ROOT_DIRECTORY }}')
+          # deletedir('${{ vars.ROOT_DIRECTORY }}')
+          ftp.delete('cssbattle-notebook/10_block/47_corona_virus.html')
           ftp.quit()
