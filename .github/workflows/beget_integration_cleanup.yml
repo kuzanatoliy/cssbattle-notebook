@@ -31,16 +31,12 @@ jobs:
           ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
           ftp.prot_p()
           def deletedir(dirname):
-            ftp.cwd(dirname)
             print(dirname)
-            for file in ftp.nlst():
+            for file in ftp.nlst(dirname):
               try:
-                print(file)
-                # ftp.delete(file)
+                ftp.delete(dirname + '/' + file)
               except Exception:
-                deletedir(file)
-              ftp.cwd("..")
-              # ftp.rmd(dirname)
-          ftp.delete('${{ vars.ROOT_DIRECTORY }}/10_block/index.html')
+                deletedir(dirname + '/' + file)
+              ftp.rmd(dirname)
           deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
