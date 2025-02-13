@@ -38,7 +38,6 @@ jobs:
                 ftp.delete(file)
               except Exception:
                 deletedir(file)
-              ftp.rmd(dirname)
-          # deletedir('${{ vars.ROOT_DIRECTORY }}')
-          ftp.delete('cssbattle-notebook/10_block/48_wash_your_hands.html')
+            ftp.rmd(dirname)
+          deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
