@@ -40,5 +40,5 @@ jobs:
                 deletedir(file)
               ftp.rmd(dirname)
           # deletedir('${{ vars.ROOT_DIRECTORY }}')
-          ftp.delete('cssbattle-notebook/10_block/47_corona_virus.html')
+          ftp.delete('cssbattle-notebook/10_block/48_wash_your_hands.html')
           ftp.quit()
