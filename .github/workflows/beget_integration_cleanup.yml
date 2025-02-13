@@ -37,7 +37,7 @@ jobs:
               try:
                 ftp.delete(file)
               except Exception:
-                deletedir(dirname + '/' + file)
+                deletedir(file)
               ftp.rmd(dirname)
           deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
