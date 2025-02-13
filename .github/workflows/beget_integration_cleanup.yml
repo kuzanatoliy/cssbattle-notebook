@@ -34,10 +34,10 @@ jobs:
             print(dirname)
             for file in ftp.nlst(dirname):
               print(file)
-              try:
+              # try:
                 # ftp.delete(dirname + '/' + file)
-              except Exception:
+              # except Exception:
                 # deletedir(dirname + '/' + file)
-              ftp.rmd(dirname)
+              # ftp.rmd(dirname)
           deletedir('${{ vars.ROOT_DIRECTORY }}')
           ftp.quit()
