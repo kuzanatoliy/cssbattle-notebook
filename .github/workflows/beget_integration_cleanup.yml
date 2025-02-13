@@ -1,0 +1,43 @@
+name: beget_integration_cleanup
+on: workflow_dispatch
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    environment: beget_integration
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: cleanup
+        shell: python
+        run: |
+          import ftplib
+          import shutil
+          import os
+          class MyFTP_TLS(ftplib.FTP_TLS):
+            def ntransfercmd(self, cmd, rest=None):
+              conn, size = ftplib.FTP.ntransfercmd(self, cmd, rest)
+              if self._prot_p:
+                conn = self.context.wrap_socket(conn,
+                      server_hostname=self.host,
+                      session=self.sock.session)
+              return conn, size
+          ftp = MyFTP_TLS('${{ vars.USER_ID }}.beget.tech')
+          ftp.login('${{ secrets.FTP_USERNAME }}', '${{ secrets.FTP_PASSWORD }}')
+          ftp.prot_p()
+          def deletedir(dirname):
+            print(dirname)
+            for file in ftp.nlst(dirname):
+              print(file)
+              try:
+                ftp.delete(file)
+              except Exception:
+                deletedir(file)
+            ftp.rmd(dirname)
+          deletedir('${{ vars.ROOT_DIRECTORY }}')
+          ftp.quit()

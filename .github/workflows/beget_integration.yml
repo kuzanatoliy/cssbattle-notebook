@@ -1,4 +1,4 @@
-name: prod deploy
+name: beget_integration
 on: workflow_dispatch
 jobs:
   pipeline:
