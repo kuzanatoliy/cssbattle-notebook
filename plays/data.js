@@ -1562,15 +1562,21 @@ module.exports = [
         date: "2025-02-18",
       },
       {
-        id: 221,
+        id: 222,
         name: "Entangled",
         solution: require("./222-rocket"),
         date: "2025-02-18",
       },
       {
-        id: 221,
+        id: 223,
         name: "UFO",
         solution: require("./223-ufo"),
+        date: "2025-02-18",
+      },
+      {
+        id: 224,
+        name: "Levelled",
+        solution: require("./224-levelled"),
         date: "2025-02-18",
       },
     ],
