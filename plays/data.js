@@ -1580,6 +1580,12 @@ module.exports = [
         date: "2025-02-25",
       },
       {
+        id: 225,
+        name: "Spark",
+        solution: require("./225-spark"),
+        date: "2025-02-25",
+      },
+      {
         id: 226,
         name: "Bond",
         solution: require("./226-bond"),
