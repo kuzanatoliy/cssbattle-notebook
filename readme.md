@@ -67,3 +67,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 32: Animation](https://kuzanatoliy.github.io/cssbattle-notebook/32_animation/)
 
 [Battle 33: Outline](https://kuzanatoliy.github.io/cssbattle-notebook/33_outline/)
+
+[Battle 34: Border](https://kuzanatoliy.github.io/cssbattle-notebook/34_border/)
