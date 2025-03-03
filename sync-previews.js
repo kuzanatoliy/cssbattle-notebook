@@ -1,6 +1,6 @@
 const { readdir, writeFile } = require("fs/promises");
 const data = require("./plays/data");
-const { CSSBATTLE_HOST_NAME } = require("./constatns");
+const { CSSBATTLE_HOST_NAME } = require("./constants");
 
 const syncPreviews = async () => {
   const ids = data
