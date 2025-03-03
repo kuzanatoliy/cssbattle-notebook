@@ -1538,4 +1538,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 34,
+    name: "Border",
+    date: "2025-03-03",
+    plays: [
+      {
+        id: 219,
+        name: "CodePen",
+        solution: require("./219-codepen"),
+        date: "2025-03-03",
+      },
+      {
+        id: 220,
+        name: "Building",
+        solution: require("./220-building"),
+        date: "2025-03-03",
+      },
+      {
+        id: 221,
+        name: "Entangled",
+        solution: require("./221-entangled"),
+        date: "2025-03-03",
+      },
+      {
+        id: 222,
+        name: "Entangled",
+        solution: require("./222-rocket"),
+        date: "2025-03-03",
+      },
+      {
+        id: 223,
+        name: "UFO",
+        solution: require("./223-ufo"),
+        date: "2025-03-03",
+      },
+      {
+        id: 224,
+        name: "Levelled",
+        solution: require("./224-levelled"),
+        date: "2025-03-03",
+      },
+      {
+        id: 225,
+        name: "Spark",
+        solution: require("./225-spark"),
+        date: "2025-03-03",
+      },
+      {
+        id: 226,
+        name: "Bond",
+        solution: require("./226-bond"),
+        date: "2025-03-03",
+      },
+    ],
+  },
 ];
