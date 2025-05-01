@@ -1593,4 +1593,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 35,
+    name: "Color",
+    date: "2025-05-01",
+    plays: [
+      {
+        id: 227,
+        name: "Balanced",
+        solution: require("./227-balanced"),
+        date: "2025-05-01",
+      },
+    ],
+  },
 ];
