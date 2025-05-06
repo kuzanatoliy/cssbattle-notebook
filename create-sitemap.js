@@ -19,7 +19,7 @@ module.exports = ({ list, root }) =>
           .toString()
           .padStart(2, "0")}</lastmod>
       <changefreq>monthly</changefreq> 
-      <priority>1</priority>
+      <priority>1.0</priority>
     </url>
     <url>
       <loc>${HOST_NAME}${ROOT_PATH}${
@@ -32,7 +32,7 @@ module.exports = ({ list, root }) =>
           .toString()
           .padStart(2, "0")}</lastmod>
       <changefreq>monthly</changefreq> 
-      <priority>1</priority>
+      <priority>1.0</priority>
     </url>
   `
       : {}
