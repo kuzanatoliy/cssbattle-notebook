@@ -1596,19 +1596,25 @@ module.exports = [
   {
     id: 35,
     name: "Color",
-    date: "2025-05-02",
+    date: "2025-05-09",
     plays: [
       {
         id: 227,
         name: "Balanced",
         solution: require("./227-balanced"),
-        date: "2025-05-02",
+        date: "2025-05-09",
       },
       {
         id: 228,
         name: "Another Tree",
         solution: require("./228-another-tree"),
-        date: "2025-05-02",
+        date: "2025-05-09",
+      },
+      {
+        id: 229,
+        name: "Flower",
+        solution: require("./229-flower"),
+        date: "2025-05-09",
       },
     ],
   },
