@@ -1616,6 +1616,12 @@ module.exports = [
         solution: require("./229-flower"),
         date: "2025-05-09",
       },
+      {
+        id: 230,
+        name: "Connection",
+        solution: require("./230-connection"),
+        date: "2025-05-09",
+      },
     ],
   },
 ];
