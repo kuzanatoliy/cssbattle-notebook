@@ -1,23 +1,20 @@
 module.exports = `
-<dl><p>
+<p><p>
 <style>
   * {
     background: #F4DCBF;
     * {
       background: #D95362;
       margin: 135px 185px;
-      -webkit-box-reflect: var(--d) 30px;
-      dl {
-        background: #F4DCBF;
+      p {
+        margin: 0;
         position: fixed;
-        inset: -40vh -60px 30px;
-        --d: below;
-        p {
-          width: 60px;
-          height: 120px;
-          margin: 0;
-          border-radius: 0 9in;
-          --d: right;
+        inset: 5vh 215px 55vh 125px;
+        border-radius: 0 9in;
+        -webkit-box-reflect: below 30px;
+        & + p {
+          inset-inline: 215px 125px;
+          scale: -1 1;
         }
       }
     }
