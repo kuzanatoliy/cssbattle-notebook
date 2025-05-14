@@ -7,13 +7,13 @@ module.exports = `
       background: #D95362;
       margin: 135px 185px;
       p {
-        margin: 0;
         position: fixed;
-        inset: 5vh 215px 55vh 125px;
+        inset: -30vw 30px 30px -60px;
         border-radius: 0 9in;
         -webkit-box-reflect: below 30px;
         & + p {
-          inset-inline: 215px 125px;
+          left: 30px;
+          right: -60px;
           scale: -1 1;
         }
       }
