@@ -4,14 +4,15 @@ const createPlay = require("./create-play");
 const createPlaysList = require("./create-plays-list");
 const createRoot = require("./create-root");
 const createSitemap = require("./create-sitemap");
-const createSitemapindex = require("./create-sitemapindex");
 const data = require("./plays/data");
 
-const prepareName = (name) => name.toLocaleLowerCase().replaceAll(" ", "_");
+const prepareName = (name) =>
+  name.toLocaleLowerCase().replaceAll(" ", "_").replaceAll("'", "");
 
 const runDeploy = async () => {
   await rm("dist", { recursive: true, force: true });
   await mkdir("dist");
+  let mapList;
 
   const list = await Promise.all(
     data.map(async ({ id, name, plays, date }) => {
@@ -55,19 +56,11 @@ const runDeploy = async () => {
         })
       );
 
-      writeFile(
-        `dist/${folderName}/sitemap.xml`,
-        createSitemap({
-          list: playsList,
-          root: { mapPath: `${folderName}` },
-        })
-      );
-
       return {
         path: folderName,
         name,
         id,
-        mapPath: `${folderName}/sitemap.xml`,
+        mapPath: `${folderName}`,
         date,
         playsList,
       };
@@ -78,15 +71,7 @@ const runDeploy = async () => {
 
   writeFile(`dist/index.html`, createRoot({ list, canonicalPath: "" }));
 
-  writeFile(
-    `dist/root.xml`,
-    createSitemap({ list: [], root: { mapPath: "" } })
-  );
-
-  writeFile(
-    `dist/sitemap.xml`,
-    createSitemapindex({ list, root: { mapPath: `root.xml` } })
-  );
+  writeFile(`dist/sitemap.xml`, createSitemap({ list }));
 };
 
 runDeploy();
