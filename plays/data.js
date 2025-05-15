@@ -1628,6 +1628,12 @@ module.exports = [
         solution: require("./231-crosshair"),
         date: "2025-05-15",
       },
+      {
+        id: 232,
+        name: "GAAD",
+        solution: require("./232-gaad"),
+        date: "2025-05-15",
+      },
     ],
   },
 ];
