@@ -15,7 +15,7 @@ module.exports = `
       p {
         background: #48BF7D;
         height: 40px;
-        margin: 0 90px
+        margin: 0 90px;
       }
       dl {
         position: fixed;
