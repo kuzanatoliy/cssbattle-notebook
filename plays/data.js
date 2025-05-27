@@ -1640,6 +1640,12 @@ module.exports = [
         solution: require("./233-pendulum"),
         date: "2025-05-28",
       },
+      {
+        id: 234,
+        name: "Pieces",
+        solution: require("./234-pieces"),
+        date: "2025-05-28",
+      },
     ],
   },
 ];
