@@ -1654,6 +1654,12 @@ module.exports = [
     date: "2025-07-15",
     plays: [
       {
+        id: 235,
+        name: "Website",
+        solution: require("./235-website"),
+        date: "2025-07-15",
+      },
+      {
         id: 236,
         name: "Concentrate",
         solution: require("./236-concentrate"),
