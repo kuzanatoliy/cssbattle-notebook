@@ -1666,6 +1666,12 @@ module.exports = [
         date: "2025-07-15",
       },
       {
+        id: 237,
+        name: "Round castle",
+        solution: require("./237-round-castle"),
+        date: "2025-07-15",
+      },
+      {
         id: 238,
         name: "Rising sun",
         solution: require("./238-rising-sun"),
