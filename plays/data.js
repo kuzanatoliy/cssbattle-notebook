@@ -1659,6 +1659,12 @@ module.exports = [
         solution: require("./236-concentrate"),
         date: "2025-07-15",
       },
+      {
+        id: 238,
+        name: "Rising sun",
+        solution: require("./238-rising-sun"),
+        date: "2025-07-15",
+      },
     ],
   },
 ];
