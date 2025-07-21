@@ -1683,6 +1683,12 @@ module.exports = [
         solution: require("./239-waves"),
         date: "2025-07-15",
       },
+      {
+        id: 240,
+        name: "Snapshot",
+        solution: require("./240-snapshot"),
+        date: "2025-07-15",
+      },
     ],
   },
 ];
