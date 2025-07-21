@@ -1677,6 +1677,12 @@ module.exports = [
         solution: require("./238-rising-sun"),
         date: "2025-07-15",
       },
+      {
+        id: 239,
+        name: "Waves",
+        solution: require("./239-waves"),
+        date: "2025-07-15",
+      },
     ],
   },
 ];
