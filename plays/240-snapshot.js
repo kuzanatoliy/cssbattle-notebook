@@ -3,26 +3,26 @@ module.exports = `
 <style>
   *, p {
     position: fixed;
-    background: #558C90;
+    background: var(--b, #558C90);
     body {
-      border-radius: 40px;
+      border-radius: 42q;
     }
     * {
-      background: #325853;
-      inset: 42px 102px;
+      --b: #325853;
+      inset: 44q 108q;
       p {
-        background: #558C90;
-        inset: 114px 0;
+        --b: #558C90;
+        inset: 121q 0;
       }
       dl {
-        inset: 94px 150px;
+        inset: 99q 159q;
         border: solid #F4DA64;
         border-width: 10px 20px;
         p {
-          inset: 124px 210px 124px 170px;
-          -webkit-box-reflect: var(--d, right) 20px;
+          inset: 131q 222q 131q 180q;
+          -webkit-box-reflect: var(--d, right) 5vw;
           & + p {
-            inset: 0 190px 144px;
+            inset: 0 201q 152q;
             --d: below;
           }
         }
