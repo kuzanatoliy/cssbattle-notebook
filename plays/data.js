@@ -210,7 +210,7 @@ module.exports = [
         id: 30,
         name: "Horizon",
         solution: require("./030-horizon"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
     ],
   },
