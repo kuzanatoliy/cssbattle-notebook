@@ -44,7 +44,7 @@ module.exports = [
         id: 7,
         name: "Leafy Trail",
         solution: require("./007-leafy-trail"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
       {
         id: 8,
