@@ -309,7 +309,7 @@ module.exports = [
         id: 43,
         name: "Wrench",
         solution: require("./043-wrench"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
       {
         id: 44,
