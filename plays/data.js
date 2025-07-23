@@ -1051,7 +1051,7 @@ module.exports = [
         id: 148,
         name: "Eight",
         solution: require("./148-eight"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
       {
         id: 149,
