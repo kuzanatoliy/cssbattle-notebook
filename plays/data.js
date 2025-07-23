@@ -204,7 +204,7 @@ module.exports = [
         id: 29,
         name: "Suffocate",
         solution: require("./029-suffocate"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
       {
         id: 30,
