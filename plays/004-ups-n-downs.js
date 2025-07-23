@@ -1,24 +1,21 @@
 module.exports = `
-<p/><p a/><p/><p a b/><p/><p a b/>
+<p><p c><p><p c s><p><p c s>
 <style>
   * {
-    margin: 0;
-  }
-  body { 
     background: #62306D;
-    padding: 50px;
-  }
-  p {
-    float: left;
-    width: 100px;
-    height: 100px;
-  }
-  [a] {
-    background: #F7EC7D;
-    border-radius: 50% 50% 0 0;
-  }
-  [b] {
-    transform: rotate(180deg);
+    margin: 25px;
+    p {
+      margin: 0;
+      float: left;
+      padding: 50px;
+      border-radius: 9in 9in 0 0;
+    }
+    [c] {
+      background: #F7EC7D;
+    }
+    [s] {
+      scale: -1;
+    }
   }
 </style>
 `

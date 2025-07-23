@@ -26,7 +26,7 @@ module.exports = [
         id: 4,
         name: "Ups n Downs",
         solution: require("./004-ups-n-downs"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
       {
         id: 5,
