@@ -315,7 +315,7 @@ module.exports = [
         id: 44,
         name: "Stripes",
         solution: require("./044-stripes"),
-        date: "2023-10-26",
+        date: "2025-07-15",
       },
     ],
   },
