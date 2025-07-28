@@ -1689,6 +1689,12 @@ module.exports = [
         solution: require("./240-snapshot"),
         date: "2025-07-15",
       },
+      {
+        id: 242,
+        name: "Orbital tiles",
+        solution: require("./242-orbital-tiles"),
+        date: "2025-07-15",
+      },
     ],
   },
 ];
