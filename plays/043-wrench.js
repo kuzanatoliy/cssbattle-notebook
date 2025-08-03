@@ -1,22 +1,14 @@
 module.exports = `
-<p><p>
 <style>
-  body {
-    margin: 30px 0 0 145px;
-  background: #6592CF;
-  }
-  p {
-    margin: 0;
-    width: 40px;
-    height: 182px;
-    border: solid 30px #243D83;
-    border-radius: 0 100px 100px 0;
-    border-left: none;
-    float: left;
-  }
-  p + p {
-    margin-left: -30px;
-    transform: rotate(180deg);
+  * {
+    background: #6592CF;
+    * {
+      margin: 30px 185px 28px 145px;
+      border: solid 30px #243D83;
+      border-left: none;
+      border-radius: 0 9in 9in 0;
+      -webkit-box-reflect: right -30px;
+    }
   }
 </style>
 `;

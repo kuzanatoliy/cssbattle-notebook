@@ -71,3 +71,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 34: Border](https://kuzanatoliy.github.io/cssbattle-notebook/34_border/)
 
 [Battle 35: Color](https://kuzanatoliy.github.io/cssbattle-notebook/35_color/)
+
+[Battle 36: Transform](https://kuzanatoliy.github.io/cssbattle-notebook/36_transform/)
