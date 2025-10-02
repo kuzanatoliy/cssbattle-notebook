@@ -1,7 +1,11 @@
 module.exports = {
   ci: {
     collect: {
-      url: ["https://kuzanatoliy.github.io/cssbattle-notebook"],
+      url: [
+        "https://kuzanatoliy.github.io/cssbattle-notebook/",
+        "https://kuzanatoliy.github.io/cssbattle-notebook/1_pilot_battle/",
+        "https://kuzanatoliy.github.io/cssbattle-notebook/1_pilot_battle/1_simply_square.html",
+      ],
       // startServerCommand: "node server.js",
     },
     assert: {
