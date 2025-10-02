@@ -2,7 +2,7 @@ name: lighthouse
 on:
   schedule:
     - cron: "0 0 1 1 *"
-  workflow_dispatch
+  workflow_dispatch:
 jobs:
   pipeline:
     runs-on: ubuntu-latest
