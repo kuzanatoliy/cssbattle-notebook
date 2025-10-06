@@ -14,7 +14,7 @@ module.exports = [
         id: 2,
         name: "Carrom",
         solution: require("./002-carrom"),
-        date: "2023-10-26",
+        date: "2025-10-06",
       },
       {
         id: 3,
