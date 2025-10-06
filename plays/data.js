@@ -8,7 +8,7 @@ module.exports = [
         id: 1,
         name: "Simply Square",
         solution: require("./001-simply-square"),
-        date: "2025-05-28",
+        date: "2025-10-06",
       },
       {
         id: 2,
