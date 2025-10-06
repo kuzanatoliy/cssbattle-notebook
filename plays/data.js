@@ -1714,6 +1714,12 @@ module.exports = [
         solution: require("./243-corn"),
         date: "2025-10-06",
       },
+      {
+        id: 244,
+        name: "Medusa",
+        solution: require("./244-medusa"),
+        date: "2025-10-06",
+      },
     ],
   },
 ];
