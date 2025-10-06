@@ -32,7 +32,7 @@ module.exports = [
         id: 5,
         name: "Acid Rain",
         solution: require("./005-acid-rain"),
-        date: "2023-10-26",
+        date: "2025-10-06",
       },
       {
         id: 6,
