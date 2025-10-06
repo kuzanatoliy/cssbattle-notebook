@@ -18,4 +18,4 @@ module.exports = `
     background: #EEB850;
   }
 </style>
-`
+`;

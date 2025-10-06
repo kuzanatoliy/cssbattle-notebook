@@ -20,7 +20,7 @@ module.exports = [
         id: 3,
         name: "Push Button",
         solution: require("./003-push-button"),
-        date: "2023-10-26",
+        date: "2025-10-06",
       },
       {
         id: 4,
