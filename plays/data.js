@@ -62,7 +62,7 @@ module.exports = [
         id: 10,
         name: "Cloaked Spirits",
         solution: require("./010-cloaked-sprits"),
-        date: "2023-10-26",
+        date: "2025-10-09",
       },
       {
         id: 11,
