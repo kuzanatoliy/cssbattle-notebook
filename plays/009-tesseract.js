@@ -1,33 +1,24 @@
 module.exports = `
-<p a><p b><p c>
+<p>
 <style>
   * {
-    margin: 0;
-    position: absolute;
-  }
-  body {
-    background: #222730;
-  }
-  p {
     background: #4CAAB3;
-    height: 150px;
-  }
-  [a] {
-    width: 400px;
-    top: 75px;
-  }
-  [b] {
-    width: 150px;
-    transform: rotate(45deg);
-    margin: 75px 125px;
-    box-shadow:0+0+0+50px#222730;
-  }
-  [c] {
-    height: 50px;
-    width: 50px;
-    background: #393E46;
-    border-radius: 50%;
-    margin: 125px 175px;
+    margin: 75px 0;
+    box-shadow: 0 0 0 var(--s, 75px) #222730;
+    * {
+      margin: 0 125px;
+      border-width: 50px;
+      rotate: 45deg;
+      --s: 50px;
+      padding: 50px;
+      * {
+        --s: 0;
+        padding: 25px;
+        margin: 0;
+        background: #393E46;
+        border-radius: 9in;
+      }
+    }
   }
 </style>
 `;
