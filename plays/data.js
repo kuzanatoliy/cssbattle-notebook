@@ -74,7 +74,7 @@ module.exports = [
         id: 12,
         name: "Wiggly Moustache",
         solution: require("./012-wiggly-moustache"),
-        date: "2023-10-26",
+        date: "2025-10-10",
       },
     ],
   },
