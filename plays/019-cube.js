@@ -1,33 +1,29 @@
 module.exports = `
-<p a><p b><p c>
+<p><p><p>
 <style>
   * {
-    margin: 48px 75px;
-    background: #0B2429;
-  }
-  p {
-    margin: 0;
-  }
-  [a], [b] {
-    width: 71px;
-    height: 72px;
-  }
-  [a] {
-    float: left;
-    margin: 0px -21px;
-    transform: skewY(-45deg);
-    background: #998235;
-  }
-  [b] {
-    margin: -16px 50px;
-    transform: skewY(45deg);
-    background: #1A4341;
-  }
-  [c] {
-    width: 100px;
-    height: 100px;
-    transform: rotate(45deg);
-    background: #F3AC3C;
+    margin: 40px 75px;
+    background: var(--b, #0B2429);
+    p {
+      width: 71px;
+      height: 72px;
+      float: left;
+      margin: 0px -21px;
+      transform: skewY(var(--s, -45deg));
+      --b: #998235;
+      & + p {
+        margin: -72px 50px;
+        --s: 45deg;
+        --b: #1A4341;
+        & + p {
+          margin: -16px 0;
+          width: 100px;
+          height: 100px;
+          transform: rotate(45deg);
+          --b: #F3AC3C;
+        }
+      }
+    }
   }
 </style>
 `;

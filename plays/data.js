@@ -130,7 +130,7 @@ module.exports = [
         id: 19,
         name: "Cube",
         solution: require("./019-cube"),
-        date: "2023-10-26",
+        date: "2025-10-11",
       },
       {
         id: 20,
