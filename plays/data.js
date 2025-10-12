@@ -2,25 +2,25 @@ module.exports = [
   {
     id: 1,
     name: "Pilot Battle",
-    date: "2025-10-11",
+    date: "2025-10-12",
     plays: [
       {
         id: 1,
         name: "Simply Square",
         solution: require("./001-simply-square"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 2,
         name: "Carrom",
         solution: require("./002-carrom"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 3,
         name: "Push Button",
         solution: require("./003-push-button"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 4,
@@ -32,13 +32,13 @@ module.exports = [
         id: 5,
         name: "Acid Rain",
         solution: require("./005-acid-rain"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 6,
         name: "Missing Slice",
         solution: require("./006-missing-slice"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 7,
@@ -50,38 +50,38 @@ module.exports = [
         id: 8,
         name: "Forking Crazy",
         solution: require("./008-forking-crazy"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 9,
         name: "Tesseract",
         solution: require("./009-tesseract"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 10,
         name: "Cloaked Spirits",
         solution: require("./010-cloaked-sprits"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 11,
         name: "Eye of sauron",
         solution: require("./011-eye-of-sauron"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 12,
         name: "Wiggly Moustache",
         solution: require("./012-wiggly-moustache"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
     ],
   },
   {
     id: 2,
     name: "Visibility",
-    date: "2025-10-11",
+    date: "2025-10-12",
     plays: [
       {
         id: 13,
@@ -99,7 +99,7 @@ module.exports = [
         id: 15,
         name: "Overlap",
         solution: require("./015-overlap"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 16,
@@ -124,19 +124,19 @@ module.exports = [
   {
     id: 3,
     name: "Cube",
-    date: "2025-10-11",
+    date: "2025-10-12",
     plays: [
       {
         id: 19,
         name: "Cube",
         solution: require("./019-cube"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 20,
         name: "Ticket",
         solution: require("./020-ticket"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
     ],
   },
@@ -1706,19 +1706,25 @@ module.exports = [
   {
     id: 37,
     name: "Height",
-    date: "2025-10-11",
+    date: "2025-10-12",
     plays: [
       {
         id: 243,
         name: "Corn",
         solution: require("./243-corn"),
-        date: "2025-10-11",
+        date: "2025-10-12",
       },
       {
         id: 244,
         name: "Medusa",
         solution: require("./244-medusa"),
-        date: "2025-10-11",
+        date: "2025-10-12",
+      },
+      {
+        id: 245,
+        name: "Knot",
+        solution: require("./245-knot"),
+        date: "2025-10-12",
       },
     ],
   },
