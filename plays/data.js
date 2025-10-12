@@ -1726,6 +1726,12 @@ module.exports = [
         solution: require("./245-knot"),
         date: "2025-10-12",
       },
+      {
+        id: 246,
+        name: "Limbs",
+        solution: require("./246-limbs"),
+        date: "2025-10-12",
+      },
     ],
   },
 ];
