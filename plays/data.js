@@ -93,7 +93,7 @@ module.exports = [
         id: 14,
         name: "Web Maker Logo",
         solution: require("./014-web_maker_logo"),
-        date: "2023-10-26",
+        date: "2025-10-14",
       },
       {
         id: 15,
