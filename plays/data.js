@@ -1733,9 +1733,15 @@ module.exports = [
         date: "2025-10-19",
       },
       {
+        id: 247,
+        name: "LEDs",
+        solution: require("./247-leds"),
+        date: "2025-10-19",
+      },
+      {
         id: 248,
         name: "Bolt",
-        solution: require("./246-limbs"),
+        solution: require("./248-bolt"),
         date: "2025-10-19",
       },
     ],
