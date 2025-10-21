@@ -14,7 +14,6 @@ jobs:
       - uses: lxhan/yc-install@v3
       - name: "create artifacts"
         run: |
-          echo "${{ secrets.YANDEX_CLOUD_SA_KEY }}" > key.json
           yc config set service-account-key key.json
       - name: "test"
         run: yc config list
