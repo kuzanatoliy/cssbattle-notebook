@@ -16,4 +16,4 @@ jobs:
       - name: "install yandex clound cli"
         run: curl -sSL https://storage.yandexcloud.net/yandexcloud-yc/install.sh | bash
       - name: "test"
-        run: ya -h
+        run: yc -h
