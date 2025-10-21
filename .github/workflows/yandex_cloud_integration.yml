@@ -4,8 +4,8 @@ jobs:
   pipeline:
     runs-on: ubuntu-latest
     environment: yandex_cloud_integration
-    env:
-      # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+    # env:
+    # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
     strategy:
       matrix:
         node-version: [22.x]
