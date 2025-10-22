@@ -12,6 +12,10 @@ jobs:
         with:
           fetch-depth: 0
       - uses: lxhan/yc-install@v3
+      - name: "create artifacts"
+        run: |
+          echo ${{ secrets.TEMP }} > key.json
+          yc config set service-account-key key.json
       # - name: "create artifacts"
       #  run: |
       #    echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
@@ -30,5 +34,5 @@ jobs:
       #    echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
       #    set -e
       #    exit $ERROR_CODE
-      - name: "test"
-        run: yc config list
+      # - name: "test"
+      #  run: yc config list
