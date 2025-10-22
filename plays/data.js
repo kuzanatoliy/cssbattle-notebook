@@ -167,7 +167,7 @@ module.exports = [
         id: 24,
         name: "Switches",
         solution: require("./024-switches"),
-        date: "2023-10-26",
+        date: "2025-10-22",
       },
       {
         id: 25,
