@@ -23,16 +23,14 @@ jobs:
       - name: check that bucket exists
         id: bucket-check
         continue-on-error: true
-        run: yc storage bucket get css-battle-notebook
-      #- name: check that bucket exists
-      #  id: bucket-check
-      #  continue-on-error: true
-      #  run: |
-      #    set +e
-      #    S3_CHECK_RESULT=$(aws s3api head-bucket --output text --bucket ${{ vars.AWS_BUCKET_NAME }} 2>&1)
-      #    ERROR_CODE=$?
-      #    echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
-      #    set -e
-      #    exit $ERROR_CODE
+        run: |
+          set +e
+          S3_CHECK_RESULT=$(yc storage bucket get ${{ vars.BUCKET_NAME }} 2>&1)
+          ERROR_CODE=$?
+          echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
+          echo $ERROR_CODE
+          echo $S3_CHECK_RESULT
+          set -e
+          exit $ERROR_CODE
       # - name: "test"
       #  run: yc config list
