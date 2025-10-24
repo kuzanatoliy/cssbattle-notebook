@@ -1,4 +1,4 @@
-name: aws_integration_cleanup
+name: yandex_cloud_integration_cleanup
 on: push
 jobs:
   pipeline:
@@ -11,6 +11,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - uses: lxhan/yc-install@v3
+      - name: "create cloud artifacts"
+        run: |
+          echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
+          yc config set service-account-key key.json
       - name: remove bucket
         run: |
           yc storage s3 rm s3://${{ vars.BUCKET_NAME }} --recursive 
