@@ -25,12 +25,16 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          S3_CHECK_RESULT=$(yc storage bucket get ${{ vars.BUCKET_NAME }} 2>&1)
+          STORAGE_CHECK_RESULT=$(yc storage bucket get ${{ vars.BUCKET_NAME }} 2>&1)
           ERROR_CODE=$?
-          echo S3_CHECK_RESULT=${S3_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
-          echo $ERROR_CODE
-          echo $S3_CHECK_RESULT
+          echo STORAGE_CHECK_RESULT=${STORAGE_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
           set -e
           exit $ERROR_CODE
-      # - name: "test"
-      #  run: yc config list
+      - name: check access
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          if echo "${{ steps.bucket-check.outputs.S3_CHECK_RESULT }}" | grep 'Failed to get credentials private key parsing failed';
+          then
+            echo "Access dined"
+            exit 254
+          fi
