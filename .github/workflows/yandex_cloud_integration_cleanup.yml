@@ -19,4 +19,4 @@ jobs:
       - name: remove bucket
         run: |
           yc storage s3 rm s3://${{ vars.BUCKET_NAME }} --recursive 
-          yc storage bucket delete ${{ vars.AWS_BUCKET_NAME }} --region ${{ vars.AWS_REGION }}
+          yc storage bucket delete ${{ vars.BUCKET_NAME }}
