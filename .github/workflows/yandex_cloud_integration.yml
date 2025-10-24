@@ -1,0 +1,57 @@
+name: yandex_cloud_integration
+on: workflow_dispatch
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    environment: yandex_cloud_integration
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: lxhan/yc-install@v3
+      - name: "create cloud artifacts"
+        run: |
+          echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
+          yc config set service-account-key key.json
+      - name: check that bucket exists
+        id: bucket-check
+        continue-on-error: true
+        run: |
+          set +e
+          STORAGE_CHECK_RESULT=$(yc storage bucket get ${{ vars.BUCKET_NAME }} 2>&1)
+          ERROR_CODE=$?
+          echo STORAGE_CHECK_RESULT=${STORAGE_CHECK_RESULT//[\(\)]/_} >> $GITHUB_OUTPUT
+          set -e
+          exit $ERROR_CODE
+      - name: check access
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          if echo "${{ steps.bucket-check.outputs.STORAGE_CHECK_RESULT }}" | grep 'Failed to get credentials private key parsing failed';
+          then
+            echo "Access dined"
+            exit 254
+          fi
+      - name: create bucket
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          yc storage bucket create ${{ vars.BUCKET_NAME }} --folder-id ${{vars.BUCKET_FOLDER_ID}} --max-size 2000000000 --public-read
+          echo '{ "index": "index.html" }' > web-config.json
+          yc storage bucket update --name ${{ vars.BUCKET_NAME }} --website-settings-from-file web-config.json
+      - name: clean bucket
+        run: yc storage s3 rm s3://${{ vars.BUCKET_NAME }} --recursive
+      - name: config
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          echo HOST_NAME=https://${{ vars.BUCKET_NAME }}.website.yandexcloud.net >> .env
+      - name: build
+        run: node --env-file=.env script.js
+      - name: seo
+        run: |
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
+      - name: publish
+        run: yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive
