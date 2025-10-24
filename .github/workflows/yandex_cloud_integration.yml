@@ -41,4 +41,4 @@ jobs:
           echo '{ "index": "index.html" }' > web-config.json
           yc storage bucket update --name ${{ vars.BUCKET_NAME }} --website-settings-from-file web-config.json
       - name: clean bucket
-        run: yc storage s3 rm s3://${{ vars.AWS_BUCKET_NAME }} --recursive
+        run: yc storage s3 rm s3://${{ vars.BUCKET_NAME }} --recursive
