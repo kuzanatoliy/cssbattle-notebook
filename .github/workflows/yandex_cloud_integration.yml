@@ -14,12 +14,8 @@ jobs:
       - uses: lxhan/yc-install@v3
       - name: "create artifacts"
         run: |
-          echo ${{ secrets.TEMP }} > key.json
+          echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
           yc config set service-account-key key.json
-      #- name: "create artifacts"
-      #  run: |
-      #    echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
-      #    yc config set service-account-key key.json
       - name: check that bucket exists
         id: bucket-check
         continue-on-error: true
@@ -38,3 +34,9 @@ jobs:
             echo "Access dined"
             exit 254
           fi
+      - name: create bucket
+        if: steps.bucket-check.outcome == 'failure'
+        run: |
+          yc storage bucket create ${{ vars.BUCKET_NAME }} --max-size 2000000000 --public-read
+          echo '{ "index": "index.html" }' > web-config.json
+          yc storage bucket update --name ${{ vars.BUCKET_NAME }} --website-settings-from-file web-config.json
