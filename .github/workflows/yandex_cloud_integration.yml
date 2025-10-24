@@ -37,6 +37,6 @@ jobs:
       - name: create bucket
         if: steps.bucket-check.outcome == 'failure'
         run: |
-          yc storage bucket create ${{ vars.BUCKET_NAME }} --max-size 2000000000 --public-read
+          yc storage bucket create ${{ vars.BUCKET_NAME }} --folder-id ${{vars.BUCKET_FOLDER_ID}} --max-size 2000000000 --public-read
           echo '{ "index": "index.html" }' > web-config.json
           yc storage bucket update --name ${{ vars.BUCKET_NAME }} --website-settings-from-file web-config.json
