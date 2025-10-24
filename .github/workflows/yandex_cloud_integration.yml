@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: lxhan/yc-install@v3
-      - name: "create artifacts"
+      - name: "create cloud artifacts"
         run: |
           echo ${{ secrets.YANDEX_CLOUD_SA_KEY }} > key.json
           yc config set service-account-key key.json
@@ -42,3 +42,16 @@ jobs:
           yc storage bucket update --name ${{ vars.BUCKET_NAME }} --website-settings-from-file web-config.json
       - name: clean bucket
         run: yc storage s3 rm s3://${{ vars.BUCKET_NAME }} --recursive
+      - name: config
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          echo HOST_NAME=https://${{ vars.BUCKET_NAME }}.yandexcloud.net >> .env
+      - name: build
+        run: node --env-file=.env script.js
+      - name: seo
+        run: |
+          cp favicon.svg dist/favicon.svg
+          cp manifest.json dist/manifest.json
+      - name: publish
+        run: aws s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive
