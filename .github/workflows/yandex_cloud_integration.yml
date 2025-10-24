@@ -46,7 +46,7 @@ jobs:
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          echo HOST_NAME=https://${{ vars.BUCKET_NAME }}.yandexcloud.net >> .env
+          echo HOST_NAME=https://${{ vars.BUCKET_NAME }}.website.yandexcloud.net >> .env
       - name: build
         run: node --env-file=.env script.js
       - name: seo
