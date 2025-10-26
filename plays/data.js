@@ -1745,8 +1745,14 @@ module.exports = [
         date: "2025-10-26",
       },
       {
+        id: 249,
+        name: "Letter R",
+        solution: require("./249-letter-r"),
+        date: "2025-10-26",
+      },
+      {
         id: 250,
-        name: "Bolt",
+        name: "Recursion",
         solution: require("./250-recursion"),
         date: "2025-10-26",
       },
