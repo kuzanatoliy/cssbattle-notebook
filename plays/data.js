@@ -173,7 +173,7 @@ module.exports = [
         id: 25,
         name: "Blossom",
         solution: require("./025-blossom"),
-        date: "2023-10-26",
+        date: "2025-10-29",
       },
       {
         id: 26,
