@@ -149,7 +149,7 @@ module.exports = [
         id: 21,
         name: "SitePoint Logo",
         solution: require("./021-sitepoint_logo"),
-        date: "2023-10-26",
+        date: "2025-10-29",
       },
       {
         id: 22,
