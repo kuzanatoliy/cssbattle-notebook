@@ -198,13 +198,13 @@ module.exports = [
   {
     id: 5,
     name: "Inline",
-    date: "2023-01-23",
+    date: "2025-10-29",
     plays: [
       {
         id: 29,
         name: "Suffocate",
         solution: require("./029-suffocate"),
-        date: "2025-07-15",
+        date: "2025-10-29",
       },
       {
         id: 30,
