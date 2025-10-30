@@ -223,7 +223,7 @@ module.exports = [
         id: 31,
         name: "Equals",
         solution: require("./031-equals"),
-        date: "2023-10-26",
+        date: "2025-10-29",
       },
       {
         id: 32,
