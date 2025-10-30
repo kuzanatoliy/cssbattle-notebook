@@ -217,7 +217,7 @@ module.exports = [
   {
     id: 6,
     name: "Conic",
-    date: "2023-01-23",
+    date: "2025-10-29",
     plays: [
       {
         id: 31,
@@ -229,7 +229,7 @@ module.exports = [
         id: 32,
         name: "Band-aid",
         solution: require("./032-band-aid"),
-        date: "2023-10-26",
+        date: "2025-10-29",
       },
     ],
   },

@@ -1,22 +1,23 @@
 module.exports = `
-<p><p>
+<dl><dl>
 <style>
   * {
-    margin: 0;
-  }
-  p {
-    position: fixed;
-    width: 200px;
-    height: 50px;
-    background: #F3AC3C;
-    top: 125px;
-    left: 100px;
-    transform: rotate(45deg);
-  }
-  p + p {
-    transform: rotate(-45deg);
-    background: #FBE18C;
-    box-shadow: inset 75px 0 #A3A368, inset -75px 0 #A3A368;
+    background: var(--b, #FFF);
+    * {
+      --b: #F3AC3C;
+      margin: 125px 100px;
+      height: 50px;
+      rotate: 45deg;
+      * {
+        margin: 0;
+        --b: #A3A368;
+        rotate: 90deg;
+        * {
+          --b: #FBE18C;
+          margin: 0 75px;
+        }
+      }
+    }
   }
 </style>
 `;
