@@ -73,3 +73,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 35: Color](https://kuzanatoliy.github.io/cssbattle-notebook/35_color/)
 
 [Battle 36: Transform](https://kuzanatoliy.github.io/cssbattle-notebook/36_transform/)
+
+[Battle 37: Height](https://kuzanatoliy.github.io/cssbattle-notebook/37_height/)
