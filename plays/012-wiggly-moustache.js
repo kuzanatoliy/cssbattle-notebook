@@ -1,46 +1,34 @@
 module.exports = `
-<div id='l'></div>
-<div id='c'></div>
-<div id='r'></div>
+<p><p c><p><p c s><p><p c s><dl>
 <style>
-  *{
+  * {
     background: #F5D6B4;
-    position: fixed;
-  }
-  #l, #r, #c{
-    width: 60px;
-    height: 30px;
-    border: 20px solid #D86F45;
-  }
-  #l, #r{
-    border-radius: 0 0 50px 50px;
-    border-top: 0;
-  }
-  #l{
-    margin: 142px 0 0 62px;
-  }
-  #r{
-    margin: 142px 0 0 222px;
-  }
-  #c{
-    margin: 92px 0 0 142px;
-    border-radius: 50px 50px 0 0;
-    border-bottom: 0;
-  }
-  #l:before, #r:after{
-    content: '';
-    width: 20px;
-    height: 10px;
-    position: absolute;
-    background: #D86F45;
-    border-radius: 20px 20px 0 0;
-    top: -10px;
-  }
-  #l:before{
-    left: -20px;
-  }
-  #r:after{
-    left: 60px;
+    * {
+      position: relative;
+      margin: 100px 80px;
+      [c] {
+        --c: #D86F45;
+        z-index: 1;
+      }
+      [s] {
+        scale: -1;
+      }
+      p {
+        border: solid 5vw var(--c, #F5D6B4);
+        border-bottom: none;
+        float: left;
+        margin: 0 -10px;
+        padding: 15px 30px;
+        border-radius: 9in 9in 0 0;
+        & + dl {
+          width: 20px;
+          height: 20px;
+          color: #D86F45;
+          box-shadow: 50vh 40px, -30vh 40px;
+          border-radius: 9in
+        }
+      }
+    }
   }
 </style>
 `;

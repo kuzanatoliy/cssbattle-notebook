@@ -8,7 +8,7 @@ module.exports = `
       background: #F3AC3C;
       height: 150px;
       width: 200px;
-      border-radius: 0 0 100px;
+      border-radius: 0 0 25vw;
       -webkit-box-reflect: right;
       & + p {
         scale: 1 -1;
