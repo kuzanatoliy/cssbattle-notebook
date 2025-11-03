@@ -4,6 +4,7 @@ const createPlay = require("./create-play");
 const createPlaysList = require("./create-plays-list");
 const createRoot = require("./create-root");
 const createSitemap = require("./create-sitemap");
+const createManifest = require("./create-manifest");
 const data = require("./plays/data");
 
 const prepareName = (name) =>
@@ -12,7 +13,6 @@ const prepareName = (name) =>
 const runDeploy = async () => {
   await rm("dist", { recursive: true, force: true });
   await mkdir("dist");
-  let mapList;
 
   const list = await Promise.all(
     data.map(async ({ id, name, plays, date }) => {
@@ -72,6 +72,8 @@ const runDeploy = async () => {
   writeFile(`dist/index.html`, createRoot({ list, canonicalPath: "" }));
 
   writeFile(`dist/sitemap.xml`, createSitemap({ list }));
+
+  writeFile(`dist/manifest.json`, createManifest());
 };
 
 runDeploy();

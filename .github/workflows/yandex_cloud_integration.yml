@@ -52,7 +52,6 @@ jobs:
       - name: seo
         run: |
           cp favicon.svg dist/favicon.svg
-          cp manifest.json dist/manifest.json
       - name: publish
         run: |
           yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive

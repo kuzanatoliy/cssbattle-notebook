@@ -32,7 +32,6 @@ jobs:
           cp googlefa9c60772e672462.html dist/googlefa9c60772e672462.html
           cp yandex_f56e6bf2af5f6379.html dist/yandex_f56e6bf2af5f6379.html
           cp favicon.svg dist/favicon.svg
-          cp manifest.json dist/manifest.json
       - name: deploy
         run: |
           git add -f dist

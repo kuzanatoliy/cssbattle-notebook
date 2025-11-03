@@ -68,6 +68,5 @@ jobs:
       - name: seo
         run: |
           cp favicon.svg dist/favicon.svg
-          cp manifest.json dist/manifest.json
       - name: publish
         run: aws s3 sync dist s3://${{ vars.AWS_BUCKET_NAME }}

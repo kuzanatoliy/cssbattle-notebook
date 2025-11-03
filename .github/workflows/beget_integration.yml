@@ -24,7 +24,6 @@ jobs:
       - name: seo
         run: |
           cp favicon.svg dist/favicon.svg
-          cp manifest.json dist/manifest.json
       - name: deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
