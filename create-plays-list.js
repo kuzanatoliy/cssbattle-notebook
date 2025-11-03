@@ -75,5 +75,5 @@ module.exports = ({ name, id, playsList, canonicalPath }) =>
         }
       }
     `,
-    parentUrl: `${ROOT_PATH}`,
+    parentUrl: `${ROOT_PATH}` || "/",
   });
