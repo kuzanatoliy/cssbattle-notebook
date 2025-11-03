@@ -1,5 +1,5 @@
 name: yandex_cloud_integration
-on: workflow_dispatch
+on: push
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -54,4 +54,6 @@ jobs:
           cp favicon.svg dist/favicon.svg
           cp manifest.json dist/manifest.json
       - name: publish
-        run: yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive
+        run: |
+          yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --exclude='*.svg' --recursive
+        #  yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --exclude * --include *.svg --content-type image/svg+xml --recursive
