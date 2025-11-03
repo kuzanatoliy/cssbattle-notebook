@@ -52,6 +52,12 @@ jobs:
       - name: seo
         run: |
           cp favicon.svg dist/favicon.svg
-          cp manifest.json dist/manifest.json
       - name: publish
-        run: yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive
+        run: |
+          yc storage s3 cp dist s3://${{ vars.BUCKET_NAME }} --recursive
+          yc storage s3 cp dist/favicon.svg s3://cssbattle-notebook/favicon.svg --no-guess-mime-type --content-type image/svg+xml
+          yc storage s3 cp dist/assets/back.svg s3://cssbattle-notebook/assets/back.svg --no-guess-mime-type --content-type image/svg+xml
+          yc storage s3 cp dist/assets/copy.svg s3://cssbattle-notebook/assets/copy.svg --no-guess-mime-type --content-type image/svg+xml
+          yc storage s3 cp dist/assets/download.svg s3://cssbattle-notebook/assets/download.svg --no-guess-mime-type --content-type image/svg+xml
+          yc storage s3 cp dist/assets/github-mark.svg s3://cssbattle-notebook/assets/github-mark.svg --no-guess-mime-type --content-type image/svg+xml
+          yc storage s3 cp dist/assets/linkedin-svgrepo-com.svg s3://cssbattle-notebook/assets/linkedin-svgrepo-com.svg --no-guess-mime-type --content-type image/svg+xml
