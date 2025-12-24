@@ -1,33 +1,18 @@
 module.exports = `
-<p><p><p><dl><p>
+<p>
 <style>
   * {
-    background: #5DBCF9;
+    background: #6BCF87;
     body {
-      margin: 30px 110px;
-      scale: -1;
-      * {
-        background: #21658A;
-        margin: 0;
-        height: 60px;
-        & + p {
-          margin: 0 20px;
-          height: 40px;
-          & + p {
-            margin: 0 40px;
-            height: 20px;
-            & + dl {
-              margin: 20px 40px;
-              height: 100px;
-              border-radius: 0 0 9in 9in;
-              p {
-                background: #5DBCF9;
-                height: 100px;
-                margin: 0 40px;
-              }
-            }
-          }
-        }
+      background: #294C0E;
+      margin: 40px 90px;
+      border-radius: 9in;
+      padding: 90px 0 0;
+      p {
+        background: radial-gradient(circle at 50% 0, #6BCF87 40px, 0, #294C0E 60px, 0, #6BCF87);
+        height: 90px;
+        border-radius: 0 0 9in 9in;
+        margin: 20px;
       }
     }
   }

@@ -1775,6 +1775,12 @@ module.exports = [
         solution: require("./252-pendant"),
         date: "2025-12-24",
       },
+      {
+        id: 253,
+        name: "Microbes",
+        solution: require("./253-microbes"),
+        date: "2025-12-24",
+      },
     ],
   },
 ];
