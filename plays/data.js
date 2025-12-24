@@ -1769,6 +1769,12 @@ module.exports = [
         solution: require("./251-the-door"),
         date: "2025-12-24",
       },
+      {
+        id: 252,
+        name: "Pendant",
+        solution: require("./252-pendant"),
+        date: "2025-12-24",
+      },
     ],
   },
 ];
