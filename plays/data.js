@@ -1758,4 +1758,29 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 38,
+    name: "Hyphens",
+    date: "2025-12-24",
+    plays: [
+      {
+        id: 251,
+        name: "Corn",
+        solution: require("./251-the-door"),
+        date: "2025-12-24",
+      },
+      {
+        id: 252,
+        name: "Pendant",
+        solution: require("./252-pendant"),
+        date: "2025-12-24",
+      },
+      {
+        id: 253,
+        name: "Microbes",
+        solution: require("./253-microbes"),
+        date: "2025-12-24",
+      },
+    ],
+  },
 ];

@@ -75,3 +75,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 36: Transform](https://kuzanatoliy.github.io/cssbattle-notebook/36_transform/)
 
 [Battle 37: Height](https://kuzanatoliy.github.io/cssbattle-notebook/37_height/)
+
+[Battle 38: Hyphens](https://kuzanatoliy.github.io/cssbattle-notebook/38_hyphens/)
