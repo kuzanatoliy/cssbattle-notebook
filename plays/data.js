@@ -1783,4 +1783,17 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 39,
+    name: "Inset",
+    date: "2026-03-07",
+    plays: [
+      {
+        id: 254,
+        name: "Unfitting",
+        solution: require("./254-unfitting"),
+        date: "2026-03-07",
+      },
+    ],
+  },
 ];
