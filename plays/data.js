@@ -1794,6 +1794,12 @@ module.exports = [
         solution: require("./254-unfitting"),
         date: "2026-03-07",
       },
+      {
+        id: 255,
+        name: "Crossroads",
+        solution: require("./255-crossroads"),
+        date: "2026-03-07",
+      },
     ],
   },
 ];
