@@ -1,9 +1,8 @@
 module.exports = `
-<dl><dl><dl><dl><dl><dl><dl><dl><p>
+<dl><dl><dl><dl><dl><dl><dl><dl><p><p>
 <style>
   * {
     background: #469DBA;
-    color: #469DBA;
     margin: 10px 35px;
     * * {
       margin: 0;
@@ -13,15 +12,18 @@ module.exports = `
       padding: 50px;
       * {
         rotate: 90deg;
-        transform-origin: 130px 80px;
+        transform-origin: 130px var(--y, 80px);
         * * * {
           padding: 35px;
           * {
-            transform-origin: 130px 95px;
+            --y: 95px;
             p {
+              margin: 70px -70px;
               border: 0;
               padding: 25px;
-              box-shadow: 70px 70px, 140px 140px;
+              & + p {
+                margin: 140px -140px;
+              }
             }
           }
         }

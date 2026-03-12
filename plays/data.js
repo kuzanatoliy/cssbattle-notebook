@@ -1088,7 +1088,7 @@ module.exports = [
         id: 153,
         name: "Checkers",
         solution: require("./153-checkers"),
-        date: "2023-03-11",
+        date: "2023-03-12",
       },
       {
         id: 154,
@@ -1559,7 +1559,7 @@ module.exports = [
         id: 221,
         name: "Entangled",
         solution: require("./221-entangled"),
-        date: "2023-03-11",
+        date: "2023-03-12",
       },
       {
         id: 222,
@@ -1786,19 +1786,19 @@ module.exports = [
   {
     id: 39,
     name: "Inset",
-    date: "2023-03-11",
+    date: "2023-03-12",
     plays: [
       {
         id: 254,
         name: "Unfitting",
         solution: require("./254-unfitting"),
-        date: "2023-03-11",
+        date: "2023-03-12",
       },
       {
         id: 255,
         name: "Crossroads",
         solution: require("./255-crossroads"),
-        date: "2023-03-11",
+        date: "2023-03-12",
       },
     ],
   },
