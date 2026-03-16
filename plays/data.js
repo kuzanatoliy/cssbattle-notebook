@@ -1806,6 +1806,12 @@ module.exports = [
         solution: require("./256-256th"),
         date: "2023-03-16",
       },
+      {
+        id: 257,
+        name: "Cluster",
+        solution: require("./257-cluster"),
+        date: "2023-03-16",
+      },
     ],
   },
 ];
