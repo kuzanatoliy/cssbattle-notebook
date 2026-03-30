@@ -1830,6 +1830,12 @@ module.exports = [
         solution: require("./260-divide"),
         date: "2026-03-30",
       },
+      {
+        id: 261,
+        name: "Road sign",
+        solution: require("./261-road-sign"),
+        date: "2026-03-30",
+      },
     ],
   },
 ];
