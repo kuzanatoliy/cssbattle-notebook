@@ -9,9 +9,8 @@ module.exports = `
       * {
         position: fixed;
         background: #ECDFEA;
-        padding: 30px 25vw;
-        top: 20px;
-        left: -80px;
+        inset: 5vw -80px;
+        height: 60px;
         border-radius: 5vw;
         & + p {
           top: 90px;
