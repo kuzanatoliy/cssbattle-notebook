@@ -1,38 +1,19 @@
 module.exports = `
-<dl><div><p><p></dl><dl>
+<p>
 <style>
   html {
-    background: #4C455B;
+    background: #50EEB4;
+    color: #0B7B52;
+    margin: 20px 34px 20px 210px;
     * {
-      margin: 70px 120px;
-      dl {
-        height: 80px;
-        margin: 40px 0;
-        color: #F5E3B5;
-        box-shadow: 0 -40px, 0 40px, 40px 0;
-        & + dl {
-          height: 40px;
-          scale: -1;
-        }
-        div {
-          -webkit-box-reflect: right -80px;
-          p {
-            background: #8AB8B6;
-            position: fixed;
-            padding: 30px;
-            top: 10px;
-            left: 20px;
-            rotate: 45deg;
-            border-radius: 9in 0 9in 9in;
-            & + p {
-              top: 30px;
-              left: 40px;
-              padding: 10px;
-              background: #4C455B;
-              border-radius: 9in;          
-            }
-          }
-        }
+      background: repeating-linear-gradient(90deg, #FFF 0, #FFF 24px, 0, #50EEB4 44px);
+      margin: 0;
+      -webkit-box-reflect: var(--r, left 5vw);
+      p {
+        width: 24px;
+        height: 24px;
+        box-shadow: 0 125q, 44px 89q, 93q 53q, 132px 17q;
+        --r: below 212px;
       }
     }
   }
