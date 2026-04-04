@@ -77,3 +77,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 37: Height](https://kuzanatoliy.github.io/cssbattle-notebook/37_height/)
 
 [Battle 38: Hyphens](https://kuzanatoliy.github.io/cssbattle-notebook/38_hyphens/)
+
+[Battle 39: Inset](https://kuzanatoliy.github.io/cssbattle-notebook/39_inset/)
