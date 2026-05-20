@@ -9,14 +9,14 @@ jobs:
       matrix:
         node-version: [24.x]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: clean
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          branchList=`git branch --remotes`
+          branchList=`git branch --remotes | grep -v "origin/HEAD -> *"`
           for branch in $branchList
           do
             name=`echo $branch | cut -d "/" -f 2`
