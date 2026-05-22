@@ -1,21 +1,22 @@
 module.exports = `
-<p a><p><p>
+<p><p><p>
 <style>
   * {
-    background: #32360E;
-    margin: 15px 40px;
-    [a] {
-      color: #A84A4B;
-      background: #E8AD6D;
-    }
+    background: #30383F;
     body {
-      rotate: 180deg;
-      p {
-        float: left;
-        margin: 0;
-        padding: 60px;
-        color: #E8AD6D;
-        box-shadow: inset 60px 60px;
+      background: #F4DCBF;
+      margin: 50px 20px;
+      * {
+        position: fixed;
+        inset: 0 170px;
+        & + p {
+          inset: 84px 30vw;
+          & + p {
+            color: #30383F;
+            inset: 109px 175px;
+            box-shadow: 155px 0, 155px -75px, 155px 75px, -155px 0, -155px -75px, -155px 75px;
+          }
+        }
       }
     }
   }
