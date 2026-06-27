@@ -23,7 +23,7 @@ const runDeploy = async () => {
       const playsList = await Promise.all(
         plays.map(async (item) => {
           const path = `${folderName}/${item.id}_${prepareName(
-            item.name
+            item.name,
           )}.html`;
 
           writeFile(
@@ -33,7 +33,7 @@ const runDeploy = async () => {
               name: item.name,
               solution: item.solution.trim(),
               parentUrl: folderName,
-            })
+            }),
           );
 
           return {
@@ -43,7 +43,7 @@ const runDeploy = async () => {
             mapPath: path,
             date: item.date,
           };
-        })
+        }),
       );
 
       writeFile(
@@ -53,7 +53,7 @@ const runDeploy = async () => {
           name,
           playsList,
           canonicalPath: `${folderName}/`,
-        })
+        }),
       );
 
       return {
@@ -64,14 +64,14 @@ const runDeploy = async () => {
         date,
         playsList,
       };
-    })
+    }),
   );
 
   cp("assets", "dist/assets", { recursive: true });
 
   writeFile(`dist/index.html`, createRoot({ list, canonicalPath: "" }));
 
-  writeFile(`dist/sitemap.xml`, createSitemap({ list }));
+  writeFile(`dist/sitemap-main.xml`, createSitemap({ list }));
 
   writeFile(`dist/manifest.json`, createManifest());
 };
