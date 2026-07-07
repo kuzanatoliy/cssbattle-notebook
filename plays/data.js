@@ -1418,7 +1418,7 @@ module.exports = [
         id: 201,
         name: "Triple Zero",
         solution: require("./201-triple-zero"),
-        date: "2024-05-01",
+        date: "2026-07-07",
       },
       {
         id: 202,
