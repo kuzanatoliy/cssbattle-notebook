@@ -1849,6 +1849,12 @@ module.exports = [
         solution: require("./262-pinwheel"),
         date: "2026-07-07",
       },
+      {
+        id: 265,
+        name: "Barcode",
+        solution: require("./265-barcode"),
+        date: "2026-07-07",
+      },
     ],
   },
 ];
