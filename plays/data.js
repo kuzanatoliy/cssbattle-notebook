@@ -1855,6 +1855,12 @@ module.exports = [
         solution: require("./265-barcode"),
         date: "2026-07-07",
       },
+      {
+        id: 266,
+        name: "Bridge",
+        solution: require("./266-bridge"),
+        date: "2026-07-07",
+      },
     ],
   },
 ];
