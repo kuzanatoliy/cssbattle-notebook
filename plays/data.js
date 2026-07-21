@@ -1879,6 +1879,12 @@ module.exports = [
         solution: require("./268-square-shift"),
         date: "2026-07-21",
       },
+      {
+        id: 269,
+        name: "Parentheses",
+        solution: require("./269-parentheses"),
+        date: "2026-07-21",
+      },
     ],
   },
 ];
