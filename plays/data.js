@@ -1873,6 +1873,12 @@ module.exports = [
         solution: require("./266-bridge"),
         date: "2026-07-21",
       },
+      {
+        id: 268,
+        name: "Square Shift",
+        solution: require("./268-square-shift"),
+        date: "2026-07-21",
+      },
     ],
   },
 ];
