@@ -79,3 +79,5 @@ The project contains targets of the [css battles](https://cssbattle.dev);
 [Battle 38: Hyphens](https://kuzanatoliy.github.io/cssbattle-notebook/38_hyphens/)
 
 [Battle 39: Inset](https://kuzanatoliy.github.io/cssbattle-notebook/39_inset/)
+
+[Battle 40: Padding](https://kuzanatoliy.github.io/cssbattle-notebook/40_padding/)
