@@ -2,16 +2,21 @@ module.exports = `
 <p><p>
 <style>
   * {
-    background: radial-gradient(circle, var(--b, #394257) var(--h, 60px), 0, #EED9D9);
+    background: #284A5B;
     * {
       position: fixed;
-      inset: 0;
-      --b: #6D8178;
+      background: #E38F66;
       margin: 0;
-      inset: 130px 100px;
-      p {
-        rotate: 90deg;
-        --h: 120px;
+      inset: 100px 95px 40px;
+      * {
+        inset: 80px 125px 40px;
+        & + * {
+          border: solid 10px #E38F66;
+          border-bottom: 0;
+          background: #284A5B;
+          inset: 40px 40vw;
+          border-radius: 9in 9in 0 0;
+        }
       }
     }
   }
