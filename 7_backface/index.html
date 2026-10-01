@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="https://kuzanatoliy.github.io/cssbattle-notebook/manifest.json" />
+    <link rel="icon" href="https://kuzanatoliy.github.io/cssbattle-notebook/favicon.svg" />
+    <title>CSS battle: solutions (#7 - Backface)</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Solution of CSS battle #7 - Backface" />
+    <meta name="keywords" content="html, css, cssbattle, coding, development, engineering, inclusive, community, programming, Backface" />
+    <meta name="author" content="Anatoli Kuzmiankou" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#02315E" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151515" />
+    <link rel="canonical" href="https://kuzanatoliy.github.io/cssbattle-notebook/7_backface/"/>
+    
+    <style>
+
+:root {
+  color-scheme: light dark;
+  
+  --lt-color-darkest: #02315E;
+  --lt-color-dark: #00457E;
+  --lt-color-normal: #2F70AF;
+  --lt-color-light: #B9848C;
+  --lt-color-lightest: #806491;
+  --dt-color-darkest: #151515;
+  --dt-color-dark: #303030;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-red: #ed2945;
+
+  --size-quarter: 0.125rem;
+  --size-half: 0.25rem;
+  --size-three-quarters: 0.375rem;
+  --size-single: 0.5rem;
+  --size-double: 1rem;
+  --size-triple: 1.5rem;
+  --size-quadruple: 2rem;
+
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile-l: 425px;
+  --breakpoint-mobile-m: 375px;
+  --breakpoint-mobile-s: 320px;
+
+  --page-background-color: var(--color-white);
+  --header-background-color: var(--lt-color-darkest);
+  --header-text-color: var(--color-white);
+  --footer-text-color: var(--lt-color-normal);
+  --control-text-color: var(--lt-color-darkest);
+  --control-border-color: var(--lt-color-normal);
+  --control-active-border-color: var(--lt-color-darkest);
+  --link-text-color: var(--lt-color-normal);
+  --link-active-text-color: var(--lt-color-darkest);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--dt-color-dark);
+    --header-background-color: var(--dt-color-darkest);
+    --header-text-color: var(--color-red);
+    --footer-text-color: var(--color-white);
+    --control-text-color: var(--color-white);
+    --control-border-color: var(--color-white);
+    --control-active-border-color: var(--color-red);
+    --link-text-color: var(--color-white);
+    --link-active-text-color: var(--color-red);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0;
+  font-size: 16px;
+  background-color: var(--page-background-color);
+  overflow-y: scroll;
+}
+
+header, main, footer {
+  margin: 0;
+  padding: var(--size-double)
+    calc((100% - var(--breakpoint-laptop)) / 2 + var(--size-double));
+}
+
+@media (max-width: 1056px) {
+  header, main, footer {
+    padding: var(--size-double);
+  }
+}
+
+main {
+  margin-top: var(--size-double);
+  flex: 1;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  gap: var(--size-double);
+  align-items: center;
+  color: var(--header-text-color);
+  position: sticky;
+  top: 0;
+  background: var(--header-background-color);
+  box-shadow: 0 var(--size-double) var(--size-double) var(--page-background-color);
+}
+
+footer {
+  font-weight: bold;
+  color: var(--footer-text-color);
+  text-align: center;
+  background: linear-gradient(transparent, var(--page-background-color) 25%);
+}
+
+header > h1 {
+  margin: 0;
+}
+
+header a {
+  border: none;
+  padding: var(--size-quarter);
+  border-radius: var(--size-half);
+}
+
+header a:active, header a:focus-visible {
+  outline: solid 2px var(--color-white);
+}
+
+header a:hover {
+  backdrop-filter: brightness(0.8);
+}
+
+header img {
+  height: var(--size-triple);
+  width: var(--size-triple);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--size-double) var(--size-quadruple);
+
+  * {
+    display: flex;
+    gap: var(--size-double);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    gap: var(--size-half);
+  }
+}
+
+.contact-icon {
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
+  background: var(--link-text-color);
+  height: var(--size-double);
+}
+
+.github {
+  mask-image: url('https://kuzanatoliy.github.io/cssbattle-notebook/assets/github-mark.svg');
+}
+
+.linkedin {
+  mask-image: url('https://kuzanatoliy.github.io/cssbattle-notebook/assets/linkedin-svgrepo-com.svg');
+}
+
+.link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--link-text-color);
+}
+
+.link:hover, a:focus-visible {
+  outline: none;
+  color: var(--link-active-text-color);
+}
+
+.link:focus-visible {
+  text-decoration: underline;
+}
+
+
+      main {
+        ul {
+          list-style-type: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          grid-gap: var(--size-triple);
+          margin: 0;
+          padding: 0;
+        }
+      
+        a {
+          display: block;
+          padding: var(--size-double);
+          border: solid 1px var(--control-border-color);
+          border-radius: var(--size-three-quarters);
+          text-decoration: none;
+          color: var(--control-text-color);
+          height: 100%;
+          box-sizing: border-box;
+        }
+
+        a:active, a:focus-visible {
+          border: none;
+          outline: solid 2px var(--control-active-border-color);
+        }
+
+        a:hover {
+          backdrop-filter: brightness(0.95);
+        }
+
+        a > h2 {
+          margin: 0;
+        }
+
+        a > div {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: var(--size-double);
+        }
+
+        a > div > battle-preview {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 4 / 3;
+        }
+      }
+    
+    
+    </style>
+    <script>
+
+    class BattlePreview extends HTMLElement {
+      #shadow;
+      #style;
+      #content;
+      #alt;
+      #src;
+      #observer;
+
+      static get observedAttributes() {
+        return ["src", "alt"];
+      }
+
+      constructor() {
+        super();
+        this.#shadow = this.attachShadow({mode: "closed"});
+
+        this.#observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              this.#observer.unobserve(this.#content);
+              fetch(this.#src)
+                .then((res) => {
+                  if (res.status === 200) {
+                    return res.blob();
+                  } else {
+                    throw "Not found";
+                  }
+                })
+                .then((blob) => {
+                  this.#content && this.#shadow.removeChild(this.#content);
+                  this.#content = document.createElement("img");
+                  this.#content.setAttribute("src", URL.createObjectURL(blob));
+                  this.#content.setAttribute("alt", this.#alt);
+                  this.#shadow.appendChild(this.#content);
+                })
+                .catch(() => {
+                  this.#content && this.#shadow.removeChild(this.#content);
+                  this.#content = document.createElement("div");
+                  this.#content.textContent = "Not found";
+                  this.#content.setAttribute("class", "not-found");
+                  this.#shadow.appendChild(this.#content);
+                });
+            }
+          });
+        }, {
+          root: null,
+          rootMargin: "20px",
+          threshold: 0,
+        });
+
+        this.#style = document.createElement("style");
+        this.#style.textContent = `
+          :host {
+            display: block;
+            font-size: 0;
+          }
+
+          @keyframes skeleton {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.4;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          .loading-skeleton {
+            height: 100%;
+            width: 100%;
+            background: #EAEAEA;
+            animation: 3s infinite alternate skeleton;
+          }
+
+          .not-found {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        `;
+
+        this.#shadow.appendChild(this.#style);
+        this.#shadow.innerHTML;
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "alt") {
+          this.#alt = newValue;
+          if (this.#content && this.#content.tagName.toLowerCase() === 'img') {
+            this.#content.setAttribute("alt", this.#alt);
+          }
+        }
+
+        if (name === "src" && newValue !== oldValue) {
+          this.#content && this.#shadow.removeChild(this.#content);
+          this.#content = document.createElement("div");
+          this.#content.setAttribute("class", "loading-skeleton");
+          this.#shadow.appendChild(this.#content);
+          this.#observer.observe(this.#content);
+          this.#src = newValue;
+        }
+      }
+    }
+
+    customElements.define("battle-preview", BattlePreview);
+
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="/cssbattle-notebook"><img src='../assets/back.svg' alt="Back"/></a>
+      <h1>7 - Backface</h1>
+    </header>
+    <main>
+
+<ul><li><a href=/cssbattle-notebook/7_backface/33_birdie.html><h2>33 - Birdie</h2><div>
+                <battle-preview
+                  alt="Preview of the Birdie play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/33.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/34_chrismas_tree.html><h2>34 - Chrismas Tree</h2><div>
+                <battle-preview
+                  alt="Preview of the Chrismas Tree play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/34.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/35_ice_cream.html><h2>35 - Ice Cream</h2><div>
+                <battle-preview
+                  alt="Preview of the Ice Cream play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/35.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/36_interleaved.html><h2>36 - Interleaved</h2><div>
+                <battle-preview
+                  alt="Preview of the Interleaved play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/36.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/37_tunnel.html><h2>37 - Tunnel</h2><div>
+                <battle-preview
+                  alt="Preview of the Tunnel play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/37.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/38_not_simply_square.html><h2>38 - Not Simply Square</h2><div>
+                <battle-preview
+                  alt="Preview of the Not Simply Square play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/38.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/39_sunset.html><h2>39 - Sunset</h2><div>
+                <battle-preview
+                  alt="Preview of the Sunset play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/39.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/40_letter_b.html><h2>40 - Letter B</h2><div>
+                <battle-preview
+                  alt="Preview of the Letter B play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/40.webp"
+                ></battle-preview>
+              </div></a></li><li><a href=/cssbattle-notebook/7_backface/41_fox_head.html><h2>41 - Fox Head</h2><div>
+                <battle-preview
+                  alt="Preview of the Fox Head play"
+                  src="https://kuzanatoliy.github.io/cssbattle-notebook/assets/previews/41.webp"
+                ></battle-preview>
+              </div></a></li></ul>
+
+    </main>
+    
+    <footer>
+      <div>Contacts:
+        <ul>
+          <li><i class='contact-icon github' /></i><a class='link' href='https://github.com/kuzanatoliy'>GitHub</a></li>
+          <li><i class='contact-icon linkedin'></i><a class='link' href='https://www.linkedin.com/in/anatoli-kuzmiankou-9a3b74b4'>LinkedIn</li></a>
+        </ul>
+      </div>
+      <div>© Kuzanatoliorg</div>
+    </footer>
+  </body>
+</html>
