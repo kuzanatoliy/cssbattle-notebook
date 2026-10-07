@@ -3,6 +3,10 @@ const fs = require("node:fs");
 
 http
   .createServer((req, res) => {
+    if (req.url === "/sw.js") {
+      res.setHeader("Content-Type", "application/javascript");
+    }
+
     if (req.url.split(".").length === 1) {
       req.url += "/index.html";
     }

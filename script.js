@@ -5,7 +5,9 @@ const createPlaysList = require("./create-plays-list");
 const createRoot = require("./create-root");
 const createSitemap = require("./create-sitemap");
 const createManifest = require("./create-manifest");
+const createServiceWorker = require("./create-srvice-worker");
 const data = require("./plays/data");
+const { HAS_OFFLINE_MODE } = require("./constants");
 
 const prepareName = (name) =>
   name.toLocaleLowerCase().replaceAll(" ", "_").replaceAll("'", "");
@@ -74,6 +76,10 @@ const runDeploy = async () => {
   writeFile(`dist/sitemap-main.xml`, createSitemap({ list }));
 
   writeFile(`dist/manifest.json`, createManifest());
+
+  if (HAS_OFFLINE_MODE) {
+    writeFile(`dist/sw.js`, createServiceWorker());
+  }
 };
 
 runDeploy();
