@@ -95,7 +95,11 @@ ${solution.toString().replaceAll("<", "&#60;").replaceAll(">", "&#62;")}
       const downloadButton = document.querySelector('.download-game');
       
       copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(\`${solution}\`)
+        if(navigator.clipboard) {
+          navigator.clipboard.writeText(\`${solution}\`)
+        } else {
+          alert('Clipboard is blocked in your browser');
+        }
       });
       
       downloadButton.addEventListener('click', () => {

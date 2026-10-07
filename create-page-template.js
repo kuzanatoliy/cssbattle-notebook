@@ -1,4 +1,5 @@
-const { HOST_NAME, ROOT_PATH } = require("./constants");
+const { HOST_NAME, ROOT_PATH, HAS_OFFLINE_MODE } = require("./constants");
+const createSrviceWorkerRegistration = require("./create-srvice-worker-registration");
 
 module.exports = ({
   title,
@@ -208,6 +209,8 @@ ${injectStyles ? injectStyles() : ""}
     
     </style>
     <script>
+
+${HAS_OFFLINE_MODE ? createSrviceWorkerRegistration() : ""}
 
     class BattlePreview extends HTMLElement {
       #shadow;
